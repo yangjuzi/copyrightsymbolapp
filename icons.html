@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNG / SVG Icons - Copyright Symbol Downloads</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes rocket-launch {
+            0% { 
+                transform: translate(0, 0) scale(0);
+                opacity: 1;
+            }
+            10% {
+                transform: translate(var(--rocket-x), var(--rocket-y)) scale(1);
+                opacity: 1;
+            }
+            100% { 
+                transform: translate(var(--rocket-x), var(--rocket-y)) scale(0.5);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes explosion {
+            0% { 
+                transform: translate(var(--x), var(--y)) scale(0);
+                opacity: 1;
+            }
+            20% {
+                transform: translate(var(--x), var(--y)) scale(1);
+                opacity: 1;
+            }
+            100% { 
+                transform: translate(var(--x), var(--y)) scale(2.5);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes sparkle {
+            0% { 
+                transform: translate(var(--sparkle-x), var(--sparkle-y)) scale(0) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                transform: translate(var(--sparkle-x), var(--sparkle-y)) scale(1) rotate(180deg);
+                opacity: 1;
+            }
+            100% { 
+                transform: translate(var(--sparkle-x), var(--sparkle-y)) scale(0) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes shockwave {
+            0% { 
+                transform: translate(var(--wave-x), var(--wave-y)) scale(0);
+                opacity: 0.8;
+            }
+            100% { 
+                transform: translate(var(--wave-x), var(--wave-y)) scale(4);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes trail {
+            0% { 
+                transform: translate(var(--trail-x), var(--trail-y)) scale(1);
+                opacity: 0.6;
+            }
+            100% { 
+                transform: translate(var(--trail-x), var(--trail-y)) scale(0);
+                opacity: 0;
+            }
+        }
+        
+        .rocket {
+            position: absolute;
+            width: 4px;
+            height: 12px;
+            background: linear-gradient(to top, #FFD700, #FF6B6B);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: rocket-launch 0.6s ease-out forwards;
+            pointer-events: none;
+            filter: blur(0.5px);
+        }
+        
+        .explosion-particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            animation: explosion 1.5s ease-out forwards;
+            pointer-events: none;
+        }
+        
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #FFF;
+            border-radius: 50%;
+            animation: sparkle 1s ease-out forwards;
+            pointer-events: none;
+        }
+        
+        .shockwave {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #FFD700;
+            border-radius: 50%;
+            animation: shockwave 0.8s ease-out forwards;
+            pointer-events: none;
+        }
+        
+        .trail {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            animation: trail 0.4s ease-out forwards;
+            pointer-events: none;
+        }
+        
+        .explosion-particle:nth-child(1n) { 
+            background: #FFD700; 
+            box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
+        }
+        .explosion-particle:nth-child(2n) { 
+            background: #FF6B6B; 
+            box-shadow: 0 0 10px #FF6B6B, 0 0 20px #FF6B6B;
+        }
+        .explosion-particle:nth-child(3n) { 
+            background: #4ECDC4; 
+            box-shadow: 0 0 10px #4ECDC4, 0 0 20px #4ECDC4;
+        }
+        .explosion-particle:nth-child(4n) { 
+            background: #45B7D1; 
+            box-shadow: 0 0 10px #45B7D1, 0 0 20px #45B7D1;
+        }
+        .explosion-particle:nth-child(5n) { 
+            background: #96CEB4; 
+            box-shadow: 0 0 10px #96CEB4, 0 0 20px #96CEB4;
+        }
+        .explosion-particle:nth-child(6n) { 
+            background: #FFEAA7; 
+            box-shadow: 0 0 10px #FFEAA7, 0 0 20px #FFEAA7;
+        }
+        .explosion-particle:nth-child(7n) { 
+            background: #DDA0DD; 
+            box-shadow: 0 0 10px #DDA0DD, 0 0 20px #DDA0DD;
+        }
+        .explosion-particle:nth-child(8n) { 
+            background: #98FB98; 
+            box-shadow: 0 0 10px #98FB98, 0 0 20px #98FB98;
+        }
+        
+        .hero-pattern {
+            background-color: #f8fafc;
+            background-image: 
+                radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%), 
+                radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%);
+        }
+        
+        .icon-preview {
+            transition: all 0.3s ease;
+        }
+        
+        .icon-preview:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .download-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .color-picker {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 3px solid white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .color-picker:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .color-picker.active {
+            border-color: #4F46E5;
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
+        }
+    </style>
+</head>
+<body class="hero-pattern text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-sm shadow-sm border-b border-gray-200/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-blue-600">© Symbol</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition-colors">Copy & Paste</a>
+                    <a href="generator.html" class="text-gray-700 hover:text-blue-600 transition-colors">Copyright Generator</a>
+                    <a href="codes.html" class="text-gray-700 hover:text-blue-600 transition-colors">Unicode / HTML Codes</a>
+                    <a href="icons.html" class="text-blue-600 font-semibold">PNG / SVG Icons</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Emoji Version</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Blog</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600 transition-colors">About Us</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Copy & Paste</a>
+                <a href="generator.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Copyright Generator</a>
+                <a href="codes.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Unicode / HTML Codes</a>
+                <a href="icons.html" class="block px-3 py-2 text-blue-600 font-semibold bg-blue-50 rounded-md">PNG / SVG Icons</a>
+                <a href="#" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Emoji Version</a>
+                <a href="#" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Blog</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">About Us</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-800 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse"></div>
+                <div class="absolute top-20 right-20 w-32 h-32 bg-purple-300/20 rounded-full blur-2xl animate-pulse"></div>
+                <div class="absolute bottom-10 left-1/4 w-24 h-24 bg-blue-300/15 rounded-full blur-xl animate-pulse"></div>
+            </div>
+            
+            <div class="relative z-10">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white drop-shadow-2xl">PNG / SVG Icons</h1>
+                <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                    Download professional copyright symbol icons in multiple formats, sizes, and colors
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <div class="bg-white/20 backdrop-blur-sm rounded-full px-6 py-2">
+                        <span class="text-sm font-medium">📥 Free Downloads</span>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur-sm rounded-full px-6 py-2">
+                        <span class="text-sm font-medium">🎨 Multiple Colors</span>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur-sm rounded-full px-6 py-2">
+                        <span class="text-sm font-medium">📏 Various Sizes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <!-- Customization Panel -->
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20 mb-8">
+            <div class="flex items-center mb-6">
+                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-white text-xl font-bold">🎨</span>
+                </div>
+                <h2 class="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Customize Your Icon</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Color Selection -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Choose Color</h3>
+                    <div class="grid grid-cols-4 gap-3">
+                        <div class="color-picker active" style="background-color: #000000" data-color="#000000"></div>
+                        <div class="color-picker" style="background-color: #FFFFFF; border-color: #ccc;" data-color="#FFFFFF"></div>
+                        <div class="color-picker" style="background-color: #3B82F6" data-color="#3B82F6"></div>
+                        <div class="color-picker" style="background-color: #EF4444" data-color="#EF4444"></div>
+                        <div class="color-picker" style="background-color: #10B981" data-color="#10B981"></div>
+                        <div class="color-picker" style="background-color: #F59E0B" data-color="#F59E0B"></div>
+                        <div class="color-picker" style="background-color: #8B5CF6" data-color="#8B5CF6"></div>
+                        <div class="color-picker" style="background-color: #EC4899" data-color="#EC4899"></div>
+                    </div>
+                </div>
+                
+                <!-- Size Selection -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Choose Size</h3>
+                    <select id="size-select" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                        <option value="16">16x16px</option>
+                        <option value="32">32x32px</option>
+                        <option value="64" selected>64x64px</option>
+                        <option value="128">128x128px</option>
+                        <option value="256">256x256px</option>
+                        <option value="512">512x512px</option>
+                    </select>
+                </div>
+                
+                <!-- Style Selection -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Choose Style</h3>
+                    <select id="style-select" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                        <option value="solid">Solid</option>
+                        <option value="outline">Outline</option>
+                        <option value="gradient">Gradient</option>
+                        <option value="shadow">Shadow</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Live Preview -->
+            <div class="mt-8 text-center">
+                <h3 class="text-lg font-semibold mb-4">Live Preview</h3>
+                <div class="inline-block p-8 bg-gray-50 rounded-xl">
+                    <canvas id="preview-canvas" width="200" height="200" class="border-2 border-dashed border-gray-300"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Icon Downloads -->
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20">
+            <div class="flex items-center mb-6">
+                <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-white text-xl font-bold">📥</span>
+                </div>
+                <h2 class="text-3xl font-bold bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent">Download Icons</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- PNG Downloads -->
+                <div class="icon-preview bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200 text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center">
+                        <span class="text-4xl">©</span>
+                    </div>
+                    <h3 class="font-semibold text-blue-800 mb-2">PNG Format</h3>
+                    <p class="text-sm text-gray-600 mb-4">Raster format with transparency</p>
+                    <div class="space-y-2">
+                        <button class="download-btn w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg download-png" data-size="16">
+                            16x16 PNG
+                        </button>
+                        <button class="download-btn w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg download-png" data-size="32">
+                            32x32 PNG
+                        </button>
+                        <button class="download-btn w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg download-png" data-size="64">
+                            64x64 PNG
+                        </button>
+                        <button class="download-btn w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg download-png" data-size="128">
+                            128x128 PNG
+                        </button>
+                        <button class="download-btn w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg download-png" data-size="256">
+                            256x256 PNG
+                        </button>
+                        <button class="download-btn w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg download-png" data-size="512">
+                            512x512 PNG
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- SVG Downloads -->
+                <div class="icon-preview bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200 text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center">
+                        <svg class="w-16 h-16" viewBox="0 0 100 100">
+                            <text x="50" y="75" text-anchor="middle" font-size="60" fill="currentColor">©</text>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-green-800 mb-2">SVG Format</h3>
+                    <p class="text-sm text-gray-600 mb-4">Scalable vector format</p>
+                    <div class="space-y-2">
+                        <button class="download-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg download-svg" data-style="solid">
+                            Solid SVG
+                        </button>
+                        <button class="download-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg download-svg" data-style="outline">
+                            Outline SVG
+                        </button>
+                        <button class="download-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg download-svg" data-style="gradient">
+                            Gradient SVG
+                        </button>
+                        <button class="download-btn w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-lg download-svg" data-style="shadow">
+                            Shadow SVG
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Icon Pack -->
+                <div class="icon-preview bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200 text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center">
+                        <span class="text-3xl">📦</span>
+                    </div>
+                    <h3 class="font-semibold text-purple-800 mb-2">Icon Pack</h3>
+                    <p class="text-sm text-gray-600 mb-4">Complete package</p>
+                    <div class="space-y-2">
+                        <button class="download-btn w-full bg-purple-500 hover:bg-purple-600 text-white py-2 px-4 rounded-lg download-pack" data-format="png">
+                            PNG Pack
+                        </button>
+                        <button class="download-btn w-full bg-purple-500 hover:bg-purple-600 text-white py-2 px-4 rounded-lg download-pack" data-format="svg">
+                            SVG Pack
+                        </button>
+                        <button class="download-btn w-full bg-purple-500 hover:bg-purple-600 text-white py-2 px-4 rounded-lg download-pack" data-format="all">
+                            Complete Pack
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Custom Request -->
+                <div class="icon-preview bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-6 border border-orange-200 text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center">
+                        <span class="text-3xl">🎯</span>
+                    </div>
+                    <h3 class="font-semibold text-orange-800 mb-2">Custom</h3>
+                    <p class="text-sm text-gray-600 mb-4">Need something specific?</p>
+                    <div class="space-y-2">
+                        <button class="download-btn w-full bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-lg" onclick="showCustomModal()">
+                            Custom Order
+                        </button>
+                        <a href="contact.html" class="download-btn w-full bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-lg inline-block text-center">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Usage Guide -->
+        <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 border border-purple-200 mt-8">
+            <div class="flex items-center mb-6">
+                <div class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-white text-xl font-bold">📚</span>
+                </div>
+                <h3 class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Usage Guide</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="font-semibold text-indigo-800 mb-3">PNG Format</h4>
+                    <ul class="text-sm text-gray-700 space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-indigo-500 mr-2">•</span>
+                            Best for web use and digital displays
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigo-500 mr-2">•</span>
+                            Fixed resolution, choose appropriate size
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigo-500 mr-2">•</span>
+                            Transparent background included
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigo-500 mr-2">•</span>
+                            Compatible with all design software
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-purple-800 mb-3">SVG Format</h4>
+                    <ul class="text-sm text-gray-700 space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-purple-500 mr-2">•</span>
+                            infinitely scalable without quality loss
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-500 mr-2">•</span>
+                            Perfect for print and large formats
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-500 mr-2">•</span>
+                            Editable in vector design software
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-500 mr-2">•</span>
+                            Smaller file size for web use
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl font-bold text-white">©</span>
+                        <span class="ml-2 text-lg font-semibold">CopyrightSymbol.app</span>
+                    </div>
+                    <p class="text-gray-300">Your trusted source for copyright symbols and information.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">About Us</h3>
+                    <p class="text-gray-300 mb-3">We provide easy access to copyright symbols and educate users about intellectual property rights and best practices.</p>
+                    <a href="about.html" class="text-purple-300 hover:text-purple-200 transition-colors inline-flex items-center">
+                        Learn more →
+                    </a>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Contact Us</h3>
+                    <div class="space-y-2">
+                        <p class="text-gray-300 flex items-center">
+                            <span class="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                            info@copyrightsymbol.app
+                        </p>
+                        <p class="text-gray-300 flex items-center">
+                            <span class="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                            support@copyrightsymbol.app
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Legal</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="terms.html" class="text-gray-300 hover:text-purple-200 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-purple-400 rounded-full mr-2"></span>
+                                Terms of Service
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy.html" class="text-gray-300 hover:text-purple-200 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-purple-400 rounded-full mr-2"></span>
+                                Privacy Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-purple-800/50 pt-8 text-center">
+                <p class="text-gray-400">© 2024 CopyrightSymbol.app. All rights reserved.</p>
+                <p class="text-gray-500 text-sm mt-2">Made with 💜 for creators worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Global variables
+        let selectedColor = '#000000';
+        let selectedSize = 64;
+        let selectedStyle = 'solid';
+
+        // Color picker functionality
+        const colorPickers = document.querySelectorAll('.color-picker');
+        colorPickers.forEach(picker => {
+            picker.addEventListener('click', () => {
+                colorPickers.forEach(p => p.classList.remove('active'));
+                picker.classList.add('active');
+                selectedColor = picker.dataset.color;
+                updatePreview();
+            });
+        });
+
+        // Size selector
+        const sizeSelect = document.getElementById('size-select');
+        sizeSelect.addEventListener('change', (e) => {
+            selectedSize = parseInt(e.target.value);
+            updatePreview();
+        });
+
+        // Style selector
+        const styleSelect = document.getElementById('style-select');
+        styleSelect.addEventListener('change', (e) => {
+            selectedStyle = e.target.value;
+            updatePreview();
+        });
+
+        // Update preview function
+        function updatePreview() {
+            const canvas = document.getElementById('preview-canvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Set up text properties
+            const fontSize = selectedSize * 0.8;
+            ctx.font = `${fontSize}px Arial`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            
+            // Apply style
+            switch (selectedStyle) {
+                case 'solid':
+                    ctx.fillStyle = selectedColor;
+                    ctx.fillText('©', canvas.width / 2, canvas.height / 2);
+                    break;
+                case 'outline':
+                    ctx.strokeStyle = selectedColor;
+                    ctx.lineWidth = 3;
+                    ctx.strokeText('©', canvas.width / 2, canvas.height / 2);
+                    break;
+                case 'gradient':
+                    const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+                    gradient.addColorStop(0, selectedColor);
+                    gradient.addColorStop(1, adjustColor(selectedColor, 50));
+                    ctx.fillStyle = gradient;
+                    ctx.fillText('©', canvas.width / 2, canvas.height / 2);
+                    break;
+                case 'shadow':
+                    ctx.shadowColor = selectedColor;
+                    ctx.shadowBlur = 10;
+                    ctx.shadowOffsetX = 3;
+                    ctx.shadowOffsetY = 3;
+                    ctx.fillStyle = selectedColor;
+                    ctx.fillText('©', canvas.width / 2, canvas.height / 2);
+                    break;
+            }
+        }
+
+        // Adjust color brightness
+        function adjustColor(color, amount) {
+            const num = parseInt(color.replace('#', ''), 16);
+            const amt = Math.round(2.55 * amount);
+            const R = (num >> 16) + amt;
+            const G = (num >> 8 & 0x00FF) + amt;
+            const B = (num & 0x0000FF) + amt;
+            return '#' + (0x1000000 + (R < 255 ? R < 1 ? 0 : R : 255) * 0x10000 +
+                (G < 255 ? G < 1 ? 0 : G : 255) * 0x100 +
+                (B < 255 ? B < 1 ? 0 : B : 255)).toString(16).slice(1);
+        }
+
+        // Generate and download PNG
+        function generatePNG(size, color, style) {
+            const canvas = document.createElement('canvas');
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+            
+            // Set up text properties
+            const fontSize = size * 0.8;
+            ctx.font = `${fontSize}px Arial`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            
+            // Apply style
+            switch (style) {
+                case 'solid':
+                    ctx.fillStyle = color;
+                    ctx.fillText('©', size / 2, size / 2);
+                    break;
+                case 'outline':
+                    ctx.strokeStyle = color;
+                    ctx.lineWidth = Math.max(1, size * 0.05);
+                    ctx.strokeText('©', size / 2, size / 2);
+                    break;
+                case 'gradient':
+                    const gradient = ctx.createLinearGradient(0, 0, size, size);
+                    gradient.addColorStop(0, color);
+                    gradient.addColorStop(1, adjustColor(color, 50));
+                    ctx.fillStyle = gradient;
+                    ctx.fillText('©', size / 2, size / 2);
+                    break;
+                case 'shadow':
+                    ctx.shadowColor = color;
+                    ctx.shadowBlur = size * 0.15;
+                    ctx.shadowOffsetX = size * 0.05;
+                    ctx.shadowOffsetY = size * 0.05;
+                    ctx.fillStyle = color;
+                    ctx.fillText('©', size / 2, size / 2);
+                    break;
+            }
+            
+            return canvas.toDataURL('image/png');
+        }
+
+        // Generate SVG content
+        function generateSVG(color, style) {
+            const svg = `<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                ${getSVGStyle(color, style)}
+                <text x="50" y="75" text-anchor="middle" font-size="60" fill="${style === 'outline' ? 'none' : 'currentColor'}" stroke="${style === 'outline' ? color : 'none'}" stroke-width="${style === 'outline' ? '3' : '0'}">©</text>
+            </svg>`;
+            return svg;
+        }
+
+        function getSVGStyle(color, style) {
+            switch (style) {
+                case 'gradient':
+                    return `<defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:${color};stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:${adjustColor(color, 50)};stop-opacity:1" />
+                        </linearGradient>
+                    </defs>`;
+                case 'shadow':
+                    return `<defs>
+                        <filter id="shadow">
+                            <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="${color}"/>
+                        </filter>
+                    </defs>`;
+                default:
+                    return '';
+            }
+        }
+
+        // Download functionality
+        function downloadFile(content, filename, type) {
+            const blob = new Blob([content], { type });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            // Create fireworks
+            const rect = a.getBoundingClientRect();
+            const x = rect.left + rect.width / 2;
+            const y = rect.top + rect.height / 2;
+            createSpectacularFireworks(x, y);
+        }
+
+        // PNG download handlers
+        document.querySelectorAll('.download-png').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const size = parseInt(btn.dataset.size);
+                const pngData = generatePNG(size, selectedColor, selectedStyle);
+                const base64Data = pngData.split(',')[1];
+                const binaryData = atob(base64Data);
+                const array = new Uint8Array(binaryData.length);
+                
+                for (let i = 0; i < binaryData.length; i++) {
+                    array[i] = binaryData.charCodeAt(i);
+                }
+                
+                const blob = new Blob([array], { type: 'image/png' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `copyright-symbol-${size}x${size}-${selectedStyle}.png`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                
+                // Create fireworks
+                const rect = btn.getBoundingClientRect();
+                const x = rect.left + btn.width / 2;
+                const y = rect.top + btn.height / 2;
+                createSpectacularFireworks(x, y);
+            });
+        });
+
+        // SVG download handlers
+        document.querySelectorAll('.download-svg').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const style = btn.dataset.style;
+                const svgContent = generateSVG(selectedColor, style);
+                downloadFile(svgContent, `copyright-symbol-${style}.svg`, 'image/svg+xml');
+            });
+        });
+
+        // Pack download handlers
+        document.querySelectorAll('.download-pack').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const format = btn.dataset.format;
+                // Simulate pack download (in real implementation, this would create a ZIP file)
+                alert(`${format.toUpperCase()} pack download would start here. This is a demo implementation.`);
+                
+                // Create fireworks
+                const rect = btn.getBoundingClientRect();
+                const x = rect.left + rect.width / 2;
+                const y = rect.top + rect.height / 2;
+                createSpectacularFireworks(x, y);
+            });
+        });
+
+        // Custom modal function
+        function showCustomModal() {
+            alert('Custom icon order feature coming soon! Please contact us at info@copyrightsymbol.app for specific requirements.');
+        }
+
+        // Fireworks functionality (same as generator.html)
+        function createSpectacularFireworks(x, y) {
+            const colors = ['#FFD700', '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#DDA0DD', '#98FB98'];
+            
+            for (let burst = 0; burst < 3; burst++) {
+                setTimeout(() => {
+                    const burstX = x + (Math.random() - 0.5) * 100;
+                    const burstY = y + (Math.random() - 0.5) * 100;
+                    createFireworkBurst(burstX, burstY, colors);
+                }, burst * 200);
+            }
+        }
+        
+        function createFireworkBurst(x, y, colors) {
+            createRocketTrail(x, y);
+            
+            setTimeout(() => {
+                const rocket = document.createElement('div');
+                rocket.className = 'rocket';
+                rocket.style.left = x + 'px';
+                rocket.style.top = y + 'px';
+                
+                const rocketHeight = -80 - Math.random() * 40;
+                rocket.style.setProperty('--rocket-x', '0px');
+                rocket.style.setProperty('--rocket-y', rocketHeight + 'px');
+                
+                document.body.appendChild(rocket);
+                
+                setTimeout(() => {
+                    createExplosion(x, y + rocketHeight, colors);
+                    rocket.remove();
+                }, 500);
+                
+                setTimeout(() => {
+                    rocket.remove();
+                }, 600);
+            }, 100);
+        }
+        
+        function createRocketTrail(x, y) {
+            for (let i = 0; i < 8; i++) {
+                setTimeout(() => {
+                    const trail = document.createElement('div');
+                    trail.className = 'trail';
+                    trail.style.left = (x + (Math.random() - 0.5) * 10) + 'px';
+                    trail.style.top = (y - i * 5) + 'px';
+                    trail.style.background = '#FFD700';
+                    
+                    trail.style.setProperty('--trail-x', (Math.random() - 0.5) * 20 + 'px');
+                    trail.style.setProperty('--trail-y', (-20 - Math.random() * 10) + 'px');
+                    
+                    document.body.appendChild(trail);
+                    
+                    setTimeout(() => {
+                        trail.remove();
+                    }, 400);
+                }, i * 30);
+            }
+        }
+        
+        function createExplosion(x, y, colors) {
+            const particleCount = 24;
+            
+            const shockwave = document.createElement('div');
+            shockwave.className = 'shockwave';
+            shockwave.style.left = x + 'px';
+            shockwave.style.top = y + 'px';
+            shockwave.style.setProperty('--wave-x', '0px');
+            shockwave.style.setProperty('--wave-y', '0px');
+            
+            document.body.appendChild(shockwave);
+            
+            setTimeout(() => {
+                shockwave.remove();
+            }, 800);
+            
+            for (let i = 0; i < particleCount; i++) {
+                setTimeout(() => {
+                    const particle = document.createElement('div');
+                    particle.className = 'explosion-particle';
+                    particle.style.left = x + 'px';
+                    particle.style.top = y + 'px';
+                    
+                    const angle = (i / particleCount) * Math.PI * 2;
+                    const distance = 60 + Math.random() * 80;
+                    const finalX = Math.cos(angle) * distance;
+                    const finalY = Math.sin(angle) * distance;
+                    
+                    particle.style.setProperty('--x', finalX + 'px');
+                    particle.style.setProperty('--y', finalY + 'px');
+                    
+                    document.body.appendChild(particle);
+                    
+                    setTimeout(() => {
+                        particle.remove();
+                    }, 1500);
+                }, i * 15);
+            }
+            
+            setTimeout(() => {
+                for (let i = 0; i < 16; i++) {
+                    const sparkle = document.createElement('div');
+                    sparkle.className = 'sparkle';
+                    sparkle.style.left = (x + (Math.random() - 0.5) * 120) + 'px';
+                    sparkle.style.top = (y + (Math.random() - 0.5) * 120) + 'px';
+                    
+                    const sparkleDistance = 30 + Math.random() * 50;
+                    const sparkleAngle = Math.random() * Math.PI * 2;
+                    const sparkleX = Math.cos(sparkleAngle) * sparkleDistance;
+                    const sparkleY = Math.sin(sparkleAngle) * sparkleDistance;
+                    
+                    sparkle.style.setProperty('--sparkle-x', sparkleX + 'px');
+                    sparkle.style.setProperty('--sparkle-y', sparkleY + 'px');
+                    
+                    document.body.appendChild(sparkle);
+                    
+                    setTimeout(() => {
+                        sparkle.remove();
+                    }, 1000);
+                }
+            }, 300);
+        }
+
+        // Initialize preview
+        updatePreview();
+    </script>
+</body>
+</html>
