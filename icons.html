@@ -77,7 +77,7 @@
             position: absolute;
             width: 4px;
             height: 12px;
-            background: linear-gradient(to top, #FFD700, #FF6B6B);
+            background: linear-gradient(to top, #EC4899, #F472B6);
             border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
             animation: rocket-launch 0.6s ease-out forwards;
             pointer-events: none;
@@ -107,7 +107,7 @@
             position: absolute;
             width: 20px;
             height: 20px;
-            border: 2px solid #FFD700;
+            border: 2px solid #EC4899;
             border-radius: 50%;
             animation: shockwave 0.8s ease-out forwards;
             pointer-events: none;
@@ -122,37 +122,9 @@
             pointer-events: none;
         }
         
-        .explosion-particle:nth-child(1n) { 
-            background: #FFD700; 
-            box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
-        }
-        .explosion-particle:nth-child(2n) { 
-            background: #FF6B6B; 
-            box-shadow: 0 0 10px #FF6B6B, 0 0 20px #FF6B6B;
-        }
-        .explosion-particle:nth-child(3n) { 
-            background: #4ECDC4; 
-            box-shadow: 0 0 10px #4ECDC4, 0 0 20px #4ECDC4;
-        }
-        .explosion-particle:nth-child(4n) { 
-            background: #45B7D1; 
-            box-shadow: 0 0 10px #45B7D1, 0 0 20px #45B7D1;
-        }
-        .explosion-particle:nth-child(5n) { 
-            background: #96CEB4; 
-            box-shadow: 0 0 10px #96CEB4, 0 0 20px #96CEB4;
-        }
-        .explosion-particle:nth-child(6n) { 
-            background: #FFEAA7; 
-            box-shadow: 0 0 10px #FFEAA7, 0 0 20px #FFEAA7;
-        }
-        .explosion-particle:nth-child(7n) { 
-            background: #DDA0DD; 
-            box-shadow: 0 0 10px #DDA0DD, 0 0 20px #DDA0DD;
-        }
-        .explosion-particle:nth-child(8n) { 
-            background: #98FB98; 
-            box-shadow: 0 0 10px #98FB98, 0 0 20px #98FB98;
+        .explosion-particle { 
+            background: #EC4899; 
+            box-shadow: 0 0 10px #EC4899, 0 0 20px #EC4899;
         }
         
         .hero-pattern {
@@ -195,8 +167,8 @@
         }
         
         .color-picker.active {
-            border-color: #4F46E5;
-            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
         }
     </style>
 </head>
@@ -206,23 +178,23 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <a href="index.html" class="text-2xl font-bold text-blue-600">© Symbol</a>
+                    <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">© Symbol</a>
                 </div>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition-colors">Copy & Paste</a>
-                    <a href="generator.html" class="text-gray-700 hover:text-blue-600 transition-colors">Copyright Generator</a>
-                    <a href="codes.html" class="text-gray-700 hover:text-blue-600 transition-colors">Unicode / HTML Codes</a>
-                    <a href="icons.html" class="text-blue-600 font-semibold">PNG / SVG Icons</a>
-                    <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Emoji Version</a>
-                    <a href="#" class="text-gray-700 hover:text-blue-600 transition-colors">Blog</a>
-                    <a href="about.html" class="text-gray-700 hover:text-blue-600 transition-colors">About Us</a>
-                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+                    <a href="index.html" class="text-gray-700 hover:text-indigo-600 transition-colors">Home</a>
+                    <a href="generator.html" class="text-gray-700 hover:text-indigo-600 transition-colors">Copyright Generator</a>
+                    <a href="codes.html" class="text-gray-700 hover:text-indigo-600 transition-colors">Unicode / HTML Codes</a>
+                    <a href="icons.html" class="text-indigo-600 font-semibold">PNG / SVG Icons</a>
+                    <a href="#" class="text-gray-700 hover:text-indigo-600 transition-colors">Emoji Version</a>
+                    <a href="#" class="text-gray-700 hover:text-indigo-600 transition-colors">Blog</a>
+                    <a href="about.html" class="text-gray-700 hover:text-indigo-600 transition-colors">About Us</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-indigo-600 transition-colors">Contact</a>
                 </div>
                 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors">
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-700 hover:text-indigo-600 hover:bg-gray-100 transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -233,41 +205,36 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Copy & Paste</a>
-                <a href="generator.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Copyright Generator</a>
-                <a href="codes.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Unicode / HTML Codes</a>
-                <a href="icons.html" class="block px-3 py-2 text-blue-600 font-semibold bg-blue-50 rounded-md">PNG / SVG Icons</a>
-                <a href="#" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Emoji Version</a>
-                <a href="#" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Blog</a>
-                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">About Us</a>
-                <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Contact</a>
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors">Home</a>
+                <a href="generator.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors">Copyright Generator</a>
+                <a href="codes.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors">Unicode / HTML Codes</a>
+                <a href="icons.html" class="block px-3 py-2 text-indigo-600 font-semibold bg-indigo-50 rounded-md">PNG / SVG Icons</a>
+                <a href="#" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors">Emoji Version</a>
+                <a href="#" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors">Blog</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors">About Us</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="py-16 bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-800 text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-            <div class="absolute inset-0 overflow-hidden">
-                <div class="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse"></div>
-                <div class="absolute top-20 right-20 w-32 h-32 bg-purple-300/20 rounded-full blur-2xl animate-pulse"></div>
-                <div class="absolute bottom-10 left-1/4 w-24 h-24 bg-blue-300/15 rounded-full blur-xl animate-pulse"></div>
-            </div>
+    <section class="py-16 bg-gradient-to-br from-indigo-50 to-purple-50 text-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             
-            <div class="relative z-10">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white drop-shadow-2xl">PNG / SVG Icons</h1>
-                <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <div>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">PNG / SVG Icons</h1>
+                <p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto">
                     Download professional copyright symbol icons in multiple formats, sizes, and colors
                 </p>
                 <div class="flex justify-center space-x-4">
-                    <div class="bg-white/20 backdrop-blur-sm rounded-full px-6 py-2">
-                        <span class="text-sm font-medium">📥 Free Downloads</span>
+                    <div class="bg-indigo-100 rounded-full px-6 py-2">
+                        <span class="text-sm font-medium text-indigo-700">📥 Free Downloads</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-sm rounded-full px-6 py-2">
-                        <span class="text-sm font-medium">🎨 Multiple Colors</span>
+                    <div class="bg-indigo-100 rounded-full px-6 py-2">
+                        <span class="text-sm font-medium text-indigo-700">🎨 Multiple Colors</span>
                     </div>
-                    <div class="bg-white/20 backdrop-blur-sm rounded-full px-6 py-2">
-                        <span class="text-sm font-medium">📏 Various Sizes</span>
+                    <div class="bg-indigo-100 rounded-full px-6 py-2">
+                        <span class="text-sm font-medium text-indigo-700">📏 Various Sizes</span>
                     </div>
                 </div>
             </div>
@@ -279,10 +246,10 @@
         <!-- Customization Panel -->
         <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20 mb-8">
             <div class="flex items-center mb-6">
-                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mr-4">
+                <div class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
                     <span class="text-white text-xl font-bold">🎨</span>
                 </div>
-                <h2 class="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Customize Your Icon</h2>
+                <h2 class="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Customize Your Icon</h2>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
@@ -304,7 +271,7 @@
                 <!-- Size Selection -->
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Choose Size</h3>
-                    <select id="size-select" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    <select id="size-select" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
                         <option value="16">16x16px</option>
                         <option value="32">32x32px</option>
                         <option value="64" selected>64x64px</option>
@@ -317,7 +284,7 @@
                 <!-- Style Selection -->
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Choose Style</h3>
-                    <select id="style-select" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    <select id="style-select" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
                         <option value="solid">Solid</option>
                         <option value="outline">Outline</option>
                         <option value="gradient">Gradient</option>
@@ -336,12 +303,12 @@
         </div>
 
         <!-- Icon Downloads -->
-        <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20">
+        <div class="bg-gradient-to-br from-indigo-50 to-purple-50/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20">
             <div class="flex items-center mb-6">
-                <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mr-4">
+                <div class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
                     <span class="text-white text-xl font-bold">📥</span>
                 </div>
-                <h2 class="text-3xl font-bold bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent">Download Icons</h2>
+                <h2 class="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Download Icons</h2>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -799,7 +766,7 @@
 
         // Fireworks functionality (same as generator.html)
         function createSpectacularFireworks(x, y) {
-            const colors = ['#FFD700', '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#DDA0DD', '#98FB98'];
+            const colors = ['#EC4899', '#F472B6', '#F9A8D4'];
             
             for (let burst = 0; burst < 3; burst++) {
                 setTimeout(() => {
@@ -843,7 +810,7 @@
                     trail.className = 'trail';
                     trail.style.left = (x + (Math.random() - 0.5) * 10) + 'px';
                     trail.style.top = (y - i * 5) + 'px';
-                    trail.style.background = '#FFD700';
+                    trail.style.background = '#EC4899';
                     
                     trail.style.setProperty('--trail-x', (Math.random() - 0.5) * 20 + 'px');
                     trail.style.setProperty('--trail-y', (-20 - Math.random() * 10) + 'px');

@@ -77,7 +77,7 @@
             position: absolute;
             width: 4px;
             height: 12px;
-            background: linear-gradient(to top, #FFD700, #FF6B6B);
+            background: linear-gradient(to top, #EC4899, #F472B6);
             border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
             animation: rocket-launch 0.6s ease-out forwards;
             pointer-events: none;
@@ -107,7 +107,7 @@
             position: absolute;
             width: 20px;
             height: 20px;
-            border: 2px solid #FFD700;
+            border: 2px solid #EC4899;
             border-radius: 50%;
             animation: shockwave 0.8s ease-out forwards;
             pointer-events: none;
@@ -122,37 +122,9 @@
             pointer-events: none;
         }
         
-        .explosion-particle:nth-child(1n) { 
-            background: #FFD700; 
-            box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
-        }
-        .explosion-particle:nth-child(2n) { 
-            background: #FF6B6B; 
-            box-shadow: 0 0 10px #FF6B6B, 0 0 20px #FF6B6B;
-        }
-        .explosion-particle:nth-child(3n) { 
-            background: #4ECDC4; 
-            box-shadow: 0 0 10px #4ECDC4, 0 0 20px #4ECDC4;
-        }
-        .explosion-particle:nth-child(4n) { 
-            background: #45B7D1; 
-            box-shadow: 0 0 10px #45B7D1, 0 0 20px #45B7D1;
-        }
-        .explosion-particle:nth-child(5n) { 
-            background: #96CEB4; 
-            box-shadow: 0 0 10px #96CEB4, 0 0 20px #96CEB4;
-        }
-        .explosion-particle:nth-child(6n) { 
-            background: #FFEAA7; 
-            box-shadow: 0 0 10px #FFEAA7, 0 0 20px #FFEAA7;
-        }
-        .explosion-particle:nth-child(7n) { 
-            background: #DDA0DD; 
-            box-shadow: 0 0 10px #DDA0DD, 0 0 20px #DDA0DD;
-        }
-        .explosion-particle:nth-child(8n) { 
-            background: #98FB98; 
-            box-shadow: 0 0 10px #98FB98, 0 0 20px #98FB98;
+        .explosion-particle { 
+            background: #EC4899; 
+            box-shadow: 0 0 10px #EC4899, 0 0 20px #EC4899;
         }
         
         .gradient-bg {
@@ -161,35 +133,33 @@
         
         .hero-pattern {
             background-color: #f8fafc;
-            background-image: 
-                radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%), 
-                radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%);
+            background-image: none;
         }
     </style>
 </head>
-<body class="hero-pattern text-black">
+<body class="hero-pattern text-gray-900">
     <!-- Navigation -->
     <nav class="bg-white/90 backdrop-blur-sm shadow-sm border-b border-gray-200/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <span class="text-2xl font-bold text-blue-600">© Symbol</span>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">© Symbol</span>
                 </div>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="#" class="text-black hover:text-blue-600 transition-colors">Copy & Paste</a>
-                    <a href="generator.html" class="text-black hover:text-blue-600 transition-colors">Copyright Generator</a>
-                    <a href="codes.html" class="text-black hover:text-blue-600 transition-colors">Unicode / HTML Codes</a>
-                    <a href="icons.html" class="text-black hover:text-blue-600 transition-colors">PNG / SVG Icons</a>
-                    <a href="#" class="text-black hover:text-blue-600 transition-colors">Emoji Version</a>
-                    <a href="#" class="text-black hover:text-blue-600 transition-colors">Blog</a>
-                    <a href="about.html" class="text-black hover:text-blue-600 transition-colors">About Us</a>
-                    <a href="contact.html" class="text-black hover:text-blue-600 transition-colors">Contact</a>
+                    <a href="#" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Copy & Paste</a>
+                    <a href="generator.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Copyright Generator</a>
+                    <a href="codes.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Unicode / HTML Codes</a>
+                    <a href="icons.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">PNG / SVG Icons</a>
+                    <a href="#" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Emoji Version</a>
+                    <a href="#" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Blog</a>
+                    <a href="about.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">About Us</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Contact</a>
                 </div>
                 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors">
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-700 hover:text-indigo-600 hover:bg-gray-100 transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -200,41 +170,35 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#" class="block px-3 py-2 text-black hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Copy & Paste</a>
-                <a href="generator.html" class="block px-3 py-2 text-black hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Copyright Generator</a>
-                <a href="codes.html" class="block px-3 py-2 text-black hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Unicode / HTML Codes</a>
-                <a href="#" class="block px-3 py-2 text-black hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">PNG / SVG Icons</a>
-                <a href="#" class="block px-3 py-2 text-black hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Emoji Version</a>
-                <a href="#" class="block px-3 py-2 text-black hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Blog</a>
-                <a href="about.html" class="block px-3 py-2 text-black hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">About Us</a>
-                <a href="contact.html" class="block px-3 py-2 text-black hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Contact</a>
+                <a href="#" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">Copy & Paste</a>
+                <a href="generator.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">Copyright Generator</a>
+                <a href="codes.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">Unicode / HTML Codes</a>
+                <a href="#" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">PNG / SVG Icons</a>
+                <a href="#" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">Emoji Version</a>
+                <a href="#" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">Blog</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">About Us</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="py-20 bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-800 text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-            <!-- Animated background elements -->
-            <div class="absolute inset-0 overflow-hidden">
-                <div class="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse"></div>
-                <div class="absolute top-20 right-20 w-32 h-32 bg-purple-300/20 rounded-full blur-2xl animate-pulse"></div>
-                <div class="absolute bottom-10 left-1/4 w-24 h-24 bg-blue-300/15 rounded-full blur-xl animate-pulse"></div>
-            </div>
+    <section class="py-20 bg-gradient-to-br from-indigo-50 to-purple-50 text-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             
-            <div class="relative z-10">
-                <h1 class="text-8xl md:text-9xl font-bold mb-8 text-white drop-shadow-2xl animate-pulse">©</h1>
-                <p class="text-xl md:text-2xl text-blue-100 mb-12 max-w-2xl mx-auto">
-                    Click to copy the copyright symbol to your clipboard with a magical effect
+            <div>
+                <h1 class="text-8xl md:text-9xl font-bold mb-8 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">©</h1>
+                <p class="text-xl md:text-2xl text-gray-700 mb-12 max-w-2xl mx-auto">
+                    Click to copy the copyright symbol to your clipboard
                 </p>
                 <div class="relative inline-block">
-                    <button id="copy-btn" class="bg-white text-purple-600 hover:bg-blue-50 font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 text-lg">
-                        ✨ Copy © Symbol ✨
+                    <button id="copy-btn" class="bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-bold py-6 px-12 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-xl">
+                        Copy © Symbol
                     </button>
                     <div id="fireworks-container" class="absolute inset-0 pointer-events-none"></div>
                 </div>
-                <div id="success-message" class="hidden mt-6 bg-green-500 text-white font-bold py-3 px-6 rounded-full inline-block shadow-lg animate-bounce">
-                    🎉 Copied to clipboard! 🎉
+                <div id="success-message" class="hidden mt-6 bg-gradient-to-r from-emerald-500 to-green-500 text-white font-bold py-3 px-6 rounded-xl inline-block shadow-lg">
+                    Copied to clipboard!
                 </div>
             </div>
         </div>
@@ -243,152 +207,152 @@
     <!-- Content Sections -->
     <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <!-- Copyright-Related Symbols -->
-        <section class="mb-16 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20">
+        <section class="mb-16 bg-white rounded-xl shadow-md p-8 border border-gray-100">
             <div class="flex items-center mb-6">
-                <div class="w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center mr-4">
-                    <span class="text-white text-xl font-bold">ℹ</span>
+                <div class="w-12 h-12 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-lg flex items-center justify-center mr-4">
+                    <span class="text-indigo-600 text-xl font-bold">ℹ</span>
                 </div>
-                <h2 class="text-3xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">Copyright-Related Symbols</h2>
+                <h2 class="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Copyright-Related Symbols</h2>
             </div>
             
             <div class="grid md:grid-cols-2 gap-6">
                 <!-- Copyright Symbol -->
-                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200 hover:shadow-lg transition-shadow">
+                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:shadow-md transition-shadow">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center">
                             <span class="text-4xl mr-3">©</span>
                             <div>
-                                <h3 class="text-xl font-semibold text-blue-800">Copyright</h3>
-                                <p class="text-sm text-black">Standard copyright symbol</p>
+                                <h3 class="text-xl font-semibold text-gray-900">Copyright</h3>
+                                <p class="text-sm text-gray-600">Standard copyright symbol</p>
                             </div>
                         </div>
-                        <button class="copy-symbol-btn bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium" data-symbol="©">
+                        <button class="copy-symbol-btn bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white px-4 py-2 rounded-lg transition-all text-sm font-medium shadow-sm hover:shadow-md" data-symbol="©">
                             Copy
                         </button>
                     </div>
                     <div class="space-y-2 text-sm">
-                        <p class="text-black"><strong>Usage:</strong> Indicates copyrighted works</p>
-                        <p class="text-black"><strong>Alt Code:</strong> Alt+0169</p>
-                        <p class="text-black"><strong>HTML:</strong> &copy; or &#169;</p>
+                        <p class="text-gray-700"><strong>Usage:</strong> Indicates copyrighted works</p>
+                        <p class="text-gray-700"><strong>Alt Code:</strong> Alt+0169</p>
+                        <p class="text-gray-700"><strong>HTML:</strong> &copy; or &#169;</p>
                     </div>
                 </div>
 
                 <!-- Registered Trademark -->
-                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200 hover:shadow-lg transition-shadow">
+                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:shadow-md transition-shadow">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center">
                             <span class="text-4xl mr-3">®</span>
                             <div>
-                                <h3 class="text-xl font-semibold text-green-800">Registered Trademark</h3>
-                                <p class="text-sm text-black">Officially registered trademark</p>
+                                <h3 class="text-xl font-semibold text-gray-900">Registered Trademark</h3>
+                                <p class="text-sm text-gray-600">Officially registered trademark</p>
                             </div>
                         </div>
-                        <button class="copy-symbol-btn bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium" data-symbol="®">
+                        <button class="copy-symbol-btn bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white px-4 py-2 rounded-lg transition-all text-sm font-medium shadow-sm hover:shadow-md" data-symbol="®">
                             Copy
                         </button>
                     </div>
                     <div class="space-y-2 text-sm">
-                        <p class="text-black"><strong>Usage:</strong> Federally registered trademarks</p>
-                        <p class="text-black"><strong>Alt Code:</strong> Alt+0174</p>
-                        <p class="text-black"><strong>HTML:</strong> &reg; or &#174;</p>
+                        <p class="text-gray-700"><strong>Usage:</strong> Federally registered trademarks</p>
+                        <p class="text-gray-700"><strong>Alt Code:</strong> Alt+0174</p>
+                        <p class="text-gray-700"><strong>HTML:</strong> &reg; or &#174;</p>
                     </div>
                 </div>
 
                 <!-- Trademark -->
-                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200 hover:shadow-lg transition-shadow">
+                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:shadow-md transition-shadow">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center">
                             <span class="text-4xl mr-3">™</span>
                             <div>
-                                <h3 class="text-xl font-semibold text-purple-800">Trademark</h3>
-                                <p class="text-sm text-black">Unregistered trademark symbol</p>
+                                <h3 class="text-xl font-semibold text-gray-900">Trademark</h3>
+                                <p class="text-sm text-gray-600">Unregistered trademark symbol</p>
                             </div>
                         </div>
-                        <button class="copy-symbol-btn bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium" data-symbol="™">
+                        <button class="copy-symbol-btn bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white px-4 py-2 rounded-lg transition-all text-sm font-medium shadow-sm hover:shadow-md" data-symbol="™">
                             Copy
                         </button>
                     </div>
                     <div class="space-y-2 text-sm">
-                        <p class="text-black"><strong>Usage:</strong> Unregistered trademarks or brand names</p>
-                        <p class="text-black"><strong>Alt Code:</strong> Alt+0153</p>
-                        <p class="text-black"><strong>HTML:</strong> &trade; or &#8482;</p>
+                        <p class="text-gray-700"><strong>Usage:</strong> Unregistered trademarks or brand names</p>
+                        <p class="text-gray-700"><strong>Alt Code:</strong> Alt+0153</p>
+                        <p class="text-gray-700"><strong>HTML:</strong> &trade; or &#8482;</p>
                     </div>
                 </div>
 
                 <!-- Sound Recording Copyright -->
-                <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border border-orange-200 hover:shadow-lg transition-shadow">
+                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:shadow-md transition-shadow">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center">
                             <span class="text-4xl mr-3">℗</span>
                             <div>
-                                <h3 class="text-xl font-semibold text-orange-800">Sound Recording</h3>
-                                <p class="text-sm text-black">Sound recording copyright</p>
+                                <h3 class="text-xl font-semibold text-gray-900">Sound Recording</h3>
+                                <p class="text-sm text-gray-600">Sound recording copyright</p>
                             </div>
                         </div>
-                        <button class="copy-symbol-btn bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium" data-symbol="℗">
+                        <button class="copy-symbol-btn bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white px-4 py-2 rounded-lg transition-all text-sm font-medium shadow-sm hover:shadow-md" data-symbol="℗">
                             Copy
                         </button>
                     </div>
                     <div class="space-y-2 text-sm">
-                        <p class="text-black"><strong>Usage:</strong> Copyright for sound recordings</p>
-                        <p class="text-black"><strong>Alt Code:</strong> Alt+8471</p>
-                        <p class="text-black"><strong>HTML:</strong> &#8471;</p>
+                        <p class="text-gray-700"><strong>Usage:</strong> Copyright for sound recordings</p>
+                        <p class="text-gray-700"><strong>Alt Code:</strong> Alt+8471</p>
+                        <p class="text-gray-700"><strong>HTML:</strong> &#8471;</p>
                     </div>
                 </div>
 
                 <!-- Service Mark -->
-                <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-6 border border-teal-200 hover:shadow-lg transition-shadow">
+                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:shadow-md transition-shadow">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center">
                             <span class="text-4xl mr-3">℠</span>
                             <div>
-                                <h3 class="text-xl font-semibold text-teal-800">Service Mark</h3>
-                                <p class="text-sm text-black">Service trademark symbol</p>
+                                <h3 class="text-xl font-semibold text-gray-900">Service Mark</h3>
+                                <p class="text-sm text-gray-600">Service trademark symbol</p>
                             </div>
                         </div>
-                        <button class="copy-symbol-btn bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium" data-symbol="℠">
+                        <button class="copy-symbol-btn bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white px-4 py-2 rounded-lg transition-all text-sm font-medium shadow-sm hover:shadow-md" data-symbol="℠">
                             Copy
                         </button>
                     </div>
                     <div class="space-y-2 text-sm">
-                        <p class="text-black"><strong>Usage:</strong> Trademarks for services (not products)</p>
-                        <p class="text-black"><strong>Alt Code:</strong> Alt+8480</p>
-                        <p class="text-black"><strong>HTML:</strong> &#8480;</p>
+                        <p class="text-gray-700"><strong>Usage:</strong> Trademarks for services (not products)</p>
+                        <p class="text-gray-700"><strong>Alt Code:</strong> Alt+8480</p>
+                        <p class="text-gray-700"><strong>HTML:</strong> &#8480;</p>
                     </div>
                 </div>
 
                 <!-- Publication Symbol -->
-                <div class="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-xl p-6 border border-amber-200 hover:shadow-lg transition-shadow">
+                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:shadow-md transition-shadow">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center">
                             <span class="text-4xl mr-3">📚</span>
                             <div>
-                                <h3 class="text-xl font-semibold text-amber-800">Publication</h3>
-                                <p class="text-sm text-black">Published work indicator</p>
+                                <h3 class="text-xl font-semibold text-gray-900">Publication</h3>
+                                <p class="text-sm text-gray-600">Published work indicator</p>
                             </div>
                         </div>
-                        <button class="copy-symbol-btn bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium" data-symbol="📚">
+                        <button class="copy-symbol-btn bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white px-4 py-2 rounded-lg transition-all text-sm font-medium shadow-sm hover:shadow-md" data-symbol="📚">
                             Copy
                         </button>
                     </div>
                     <div class="space-y-2 text-sm">
-                        <p class="text-black"><strong>Usage:</strong> Indicates published written works</p>
-                        <p class="text-black"><strong>Alt Code:</strong> N/A (Emoji)</p>
-                        <p class="text-black"><strong>HTML:</strong> &#128214; or 📚</p>
+                        <p class="text-gray-700"><strong>Usage:</strong> Indicates published written works</p>
+                        <p class="text-gray-700"><strong>Alt Code:</strong> N/A (Emoji)</p>
+                        <p class="text-gray-700"><strong>HTML:</strong> &#128214; or 📚</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- What is Copyright Symbol -->
-        <section class="mb-16 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20">
+        <section class="mb-16 bg-white rounded-xl shadow-md p-8 border border-gray-100">
             <div class="flex items-center mb-6">
-                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mr-4">
-                    <span class="text-white text-xl font-bold">©</span>
+                <div class="w-12 h-12 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-lg flex items-center justify-center mr-4">
+                    <span class="text-indigo-600 text-xl font-bold">©</span>
                 </div>
-                <h2 class="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">What is the Copyright Symbol?</h2>
+                <h2 class="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">What is the Copyright Symbol?</h2>
             </div>
-            <p class="text-lg text-black leading-relaxed">
+            <p class="text-lg text-gray-700 leading-relaxed">
                 The copyright symbol (©) is a universal symbol used to indicate that a work is protected by copyright law. 
                 It consists of the letter "C" enclosed in a circle and is recognized internationally as a mark of ownership 
                 for creative works such as literature, music, art, software, and other intellectual property.
@@ -396,21 +360,21 @@
         </section>
 
         <!-- How to Type -->
-        <section class="mb-16 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20">
+        <section class="mb-16 bg-white rounded-xl shadow-md p-8 border border-gray-100">
             <div class="flex items-center mb-6">
-                <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mr-4">
-                    <span class="text-white text-xl font-bold">⌨</span>
+                <div class="w-12 h-12 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-lg flex items-center justify-center mr-4">
+                    <span class="text-indigo-600 text-xl font-bold">⌨</span>
                 </div>
-                <h2 class="text-3xl font-bold bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent">How to Type the Copyright Symbol</h2>
+                <h2 class="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">How to Type the Copyright Symbol</h2>
             </div>
             
             <div class="grid md:grid-cols-3 gap-6 mb-8">
-                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-6 border border-blue-200">
-                    <h3 class="text-xl font-semibold mb-4 text-blue-800">🪟 Windows</h3>
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900">🪟 Windows</h3>
                     <div class="space-y-4">
                         <div>
-                            <h4 class="font-semibold text-blue-700 mb-2">Alt Code Method</h4>
-                            <ul class="list-disc list-inside text-black text-sm space-y-1">
+                            <h4 class="font-semibold text-gray-800 mb-2">Alt Code Method</h4>
+                            <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
                                 <li>Hold Alt key</li>
                                 <li>Type 0169 on numeric keypad</li>
                                 <li>Release Alt key</li>
@@ -418,8 +382,8 @@
                             </ul>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-blue-700 mb-2">Character Map</h4>
-                            <ul class="list-disc list-inside text-black text-sm space-y-1">
+                            <h4 class="font-semibold text-gray-800 mb-2">Character Map</h4>
+                            <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
                                 <li>Press Windows + R</li>
                                 <li>Type "charmap" and press Enter</li>
                                 <li>Find © symbol and click Select</li>
@@ -427,8 +391,8 @@
                             </ul>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-blue-700 mb-2">Emoji Panel</h4>
-                            <ul class="list-disc list-inside text-black text-sm space-y-1">
+                            <h4 class="font-semibold text-gray-800 mb-2">Emoji Panel</h4>
+                            <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
                                 <li>Press Windows + . (period)</li>
                                 <li>Search for "copyright"</li>
                                 <li>Click on © symbol</li>
@@ -437,20 +401,20 @@
                     </div>
                 </div>
                 
-                <div class="bg-gradient-to-br from-gray-50 to-slate-100 rounded-xl p-6 border border-gray-200">
-                    <h3 class="text-xl font-semibold mb-4 text-gray-800">🍎 Mac</h3>
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900">🍎 Mac</h3>
                     <div class="space-y-4">
                         <div>
-                            <h4 class="font-semibold text-gray-700 mb-2">Keyboard Shortcut</h4>
-                            <ul class="list-disc list-inside text-black text-sm space-y-1">
+                            <h4 class="font-semibold text-gray-800 mb-2">Keyboard Shortcut</h4>
+                            <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
                                 <li>Press Option + G</li>
                                 <li>Works in most applications</li>
                                 <li>Also try: Option + Shift + G (some keyboards)</li>
                             </ul>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-gray-700 mb-2">Character Viewer</h4>
-                            <ul class="list-disc list-inside text-black text-sm space-y-1">
+                            <h4 class="font-semibold text-gray-800 mb-2">Character Viewer</h4>
+                            <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
                                 <li>Press Control + Command + Space</li>
                                 <li>Search for "copyright"</li>
                                 <li>Double-click © symbol</li>
@@ -458,8 +422,8 @@
                             </ul>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-gray-700 mb-2">System Preferences</h4>
-                            <ul class="list-disc list-inside text-black text-sm space-y-1">
+                            <h4 class="font-semibold text-gray-800 mb-2">System Preferences</h4>
+                            <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
                                 <li>Open System Preferences</li>
                                 <li>Go to Keyboard → Input Sources</li>
                                 <li>Enable "Show Input menu in menu bar"</li>
@@ -469,32 +433,32 @@
                     </div>
                 </div>
                 
-                <div class="bg-gradient-to-br from-orange-50 to-red-100 rounded-xl p-6 border border-orange-200">
-                    <h3 class="text-xl font-semibold mb-4 text-orange-800">💻 Web & Code</h3>
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900">💻 Web & Code</h3>
                     <div class="space-y-4">
                         <div>
-                            <h4 class="font-semibold text-orange-700 mb-2">HTML Entities</h4>
-                            <ul class="list-disc list-inside text-black text-sm space-y-1">
-                                <li><code class="bg-orange-100 px-1 rounded">&copy;</code> (named entity)</li>
-                                <li><code class="bg-orange-100 px-1 rounded">&#169;</code> (decimal)</li>
-                                <li><code class="bg-orange-100 px-1 rounded">&#xA9;</code> (hexadecimal)</li>
+                            <h4 class="font-semibold text-gray-800 mb-2">HTML Entities</h4>
+                            <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                                <li><code class="bg-gray-200 px-1 rounded">&copy;</code> (named entity)</li>
+                                <li><code class="bg-gray-200 px-1 rounded">&#169;</code> (decimal)</li>
+                                <li><code class="bg-gray-200 px-1 rounded">&#xA9;</code> (hexadecimal)</li>
                                 <li>All produce: ©</li>
                             </ul>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-orange-700 mb-2">CSS Content</h4>
-                            <ul class="list-disc list-inside text-black text-sm space-y-1">
-                                <li><code class="bg-orange-100 px-1 rounded">content: "\\00A9";</code></li>
-                                <li><code class="bg-orange-100 px-1 rounded">content: "\\A9";</code></li>
+                            <h4 class="font-semibold text-gray-800 mb-2">CSS Content</h4>
+                            <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                                <li><code class="bg-gray-200 px-1 rounded">content: "\\00A9";</code></li>
+                                <li><code class="bg-gray-200 px-1 rounded">content: "\\A9";</code></li>
                                 <li>Use in ::before or ::after pseudo-elements</li>
                             </ul>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-orange-700 mb-2">JavaScript</h4>
-                            <ul class="list-disc list-inside text-black text-sm space-y-1">
-                                <li><code class="bg-orange-100 px-1 rounded">String.fromCharCode(169)</code></li>
-                                <li><code class="bg-orange-100 px-1 rounded">"\u00A9"</code></li>
-                                <li>Copy to clipboard: <code class="bg-orange-100 px-1 rounded">navigator.clipboard.writeText("©")</code></li>
+                            <h4 class="font-semibold text-gray-800 mb-2">JavaScript</h4>
+                            <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
+                                <li><code class="bg-gray-200 px-1 rounded">String.fromCharCode(169)</code></li>
+                                <li><code class="bg-gray-200 px-1 rounded">"\u00A9"</code></li>
+                                <li>Copy to clipboard: <code class="bg-gray-200 px-1 rounded">navigator.clipboard.writeText("©")</code></li>
                             </ul>
                         </div>
                     </div>
@@ -503,12 +467,12 @@
             
             <!-- Additional Methods -->
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200">
-                    <h3 class="text-xl font-semibold mb-4 text-purple-800">📱 Mobile Devices</h3>
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900">📱 Mobile Devices</h3>
                     <div class="space-y-3">
                         <div>
-                            <h4 class="font-semibold text-purple-700 mb-2">iPhone/iPad</h4>
-                            <ul class="list-disc list-inside text-black text-sm space-y-1">
+                            <h4 class="font-semibold text-gray-800 mb-2">iPhone/iPad</h4>
+                            <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
                                 <li>Open keyboard</li>
                                 <li>Switch to numbers/symbols keyboard</li>
                                 <li>Hold down the "C" key</li>
@@ -516,8 +480,8 @@
                             </ul>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-purple-700 mb-2">Android</h4>
-                            <ul class="list-disc list-inside text-black text-sm space-y-1">
+                            <h4 class="font-semibold text-gray-800 mb-2">Android</h4>
+                            <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
                                 <li>Open keyboard (Gboard)</li>
                                 <li>Tap ?123 key</li>
                                 <li>Tap =\< key</li>
@@ -527,20 +491,20 @@
                     </div>
                 </div>
                 
-                <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-6 border border-teal-200">
-                    <h3 class="text-xl font-semibold mb-4 text-teal-800">🛠️ Other Methods</h3>
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900">🛠️ Other Methods</h3>
                     <div class="space-y-3">
                         <div>
-                            <h4 class="font-semibold text-teal-700 mb-2">Microsoft Office</h4>
-                            <ul class="list-disc list-inside text-black text-sm space-y-1">
+                            <h4 class="font-semibold text-gray-800 mb-2">Microsoft Office</h4>
+                            <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
                                 <li>Insert → Symbol → More Symbols</li>
                                 <li>Find © in Special Characters</li>
                                 <li>AutoCorrect: (c) automatically becomes ©</li>
                             </ul>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-teal-700 mb-2">Linux/Unix</h4>
-                            <ul class="list-disc list-inside text-black text-sm space-y-1">
+                            <h4 class="font-semibold text-gray-800 mb-2">Linux/Unix</h4>
+                            <ul class="list-disc list-inside text-gray-700 text-sm space-y-1">
                                 <li>Compose key + O + C</li>
                                 <li>Ctrl+Shift+U then type A9</li>
                                 <li>Use Character Map application</li>
@@ -551,37 +515,37 @@
             </div>
             
             <!-- Quick Reference Table -->
-            <div class="mt-8 bg-gradient-to-br from-amber-50 to-yellow-50 rounded-xl p-6 border border-amber-200">
-                <h3 class="text-xl font-semibold mb-4 text-amber-800">⚡ Quick Reference</h3>
+            <div class="mt-8 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100">
+                <h3 class="text-xl font-semibold mb-4 text-gray-900">⚡ Quick Reference</h3>
                 <div class="overflow-x-auto">
                     <table class="w-full text-sm">
                         <thead>
-                            <tr class="border-b border-amber-200">
-                                <th class="text-left py-2 px-3 font-semibold text-amber-700">Platform</th>
-                                <th class="text-left py-2 px-3 font-semibold text-amber-700">Method</th>
-                                <th class="text-left py-2 px-3 font-semibold text-amber-700">Shortcut</th>
+                            <tr class="border-b border-gray-300">
+                                <th class="text-left py-2 px-3 font-semibold text-gray-700">Platform</th>
+                                <th class="text-left py-2 px-3 font-semibold text-gray-700">Method</th>
+                                <th class="text-left py-2 px-3 font-semibold text-gray-700">Shortcut</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="border-b border-amber-100">
-                                <td class="py-2 px-3 font-medium">Windows</td>
-                                <td class="py-2 px-3">Alt Code</td>
-                                <td class="py-2 px-3 font-mono bg-amber-100 rounded">Alt + 0169</td>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-2 px-3 font-medium text-gray-900">Windows</td>
+                                <td class="py-2 px-3 text-gray-700">Alt Code</td>
+                                <td class="py-2 px-3 font-mono bg-gray-200 rounded">Alt + 0169</td>
                             </tr>
-                            <tr class="border-b border-amber-100">
-                                <td class="py-2 px-3 font-medium">Mac</td>
-                                <td class="py-2 px-3">Keyboard</td>
-                                <td class="py-2 px-3 font-mono bg-amber-100 rounded">Option + G</td>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-2 px-3 font-medium text-gray-900">Mac</td>
+                                <td class="py-2 px-3 text-gray-700">Keyboard</td>
+                                <td class="py-2 px-3 font-mono bg-gray-200 rounded">Option + G</td>
                             </tr>
-                            <tr class="border-b border-amber-100">
-                                <td class="py-2 px-3 font-medium">HTML</td>
-                                <td class="py-2 px-3">Entity</td>
-                                <td class="py-2 px-3 font-mono bg-amber-100 rounded">&copy;</td>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-2 px-3 font-medium text-gray-900">HTML</td>
+                                <td class="py-2 px-3 text-gray-700">Entity</td>
+                                <td class="py-2 px-3 font-mono bg-gray-200 rounded">&copy;</td>
                             </tr>
                             <tr>
-                                <td class="py-2 px-3 font-medium">Mobile</td>
-                                <td class="py-2 px-3">Long Press</td>
-                                <td class="py-2 px-3 font-mono bg-amber-100 rounded">Hold C key</td>
+                                <td class="py-2 px-3 font-medium text-gray-900">Mobile</td>
+                                <td class="py-2 px-3 text-gray-700">Long Press</td>
+                                <td class="py-2 px-3 font-mono bg-gray-200 rounded">Hold C key</td>
                             </tr>
                         </tbody>
                     </table>
@@ -590,101 +554,101 @@
         </section>
 
         <!-- Common Uses -->
-        <section class="mb-16 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20">
+        <section class="mb-16 bg-white rounded-xl shadow-md p-8 border border-gray-100">
             <div class="flex items-center mb-6">
-                <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center mr-4">
-                    <span class="text-white text-xl font-bold">🎯</span>
+                <div class="w-12 h-12 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-lg flex items-center justify-center mr-4">
+                    <span class="text-indigo-600 text-xl font-bold">🎯</span>
                 </div>
-                <h2 class="text-3xl font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">Common Uses</h2>
+                <h2 class="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Common Uses</h2>
             </div>
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200 hover:shadow-lg transition-shadow">
-                    <div class="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-white text-lg">💻</span>
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100 hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center mb-4 shadow-sm">
+                        <span class="text-indigo-600 text-lg">💻</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-purple-800">Digital Content</h3>
-                    <p class="text-black">Websites, blogs, digital publications, and online media</p>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Digital Content</h3>
+                    <p class="text-gray-700">Websites, blogs, digital publications, and online media</p>
                 </div>
-                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-200 hover:shadow-lg transition-shadow">
-                    <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-white text-lg">📰</span>
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100 hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center mb-4 shadow-sm">
+                        <span class="text-indigo-600 text-lg">📰</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Print Media</h3>
-                    <p class="text-black">Books, magazines, newspapers, and printed materials</p>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Print Media</h3>
+                    <p class="text-gray-700">Books, magazines, newspapers, and printed materials</p>
                 </div>
-                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200 hover:shadow-lg transition-shadow">
-                    <div class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-white text-lg">🎮</span>
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100 hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center mb-4 shadow-sm">
+                        <span class="text-indigo-600 text-lg">🎮</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-green-800">Software</h3>
-                    <p class="text-black">Applications, games, and computer programs</p>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Software</h3>
+                    <p class="text-gray-700">Applications, games, and computer programs</p>
                 </div>
-                <div class="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-6 border border-orange-200 hover:shadow-lg transition-shadow">
-                    <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-white text-lg">🎨</span>
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100 hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center mb-4 shadow-sm">
+                        <span class="text-indigo-600 text-lg">🎨</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-orange-800">Creative Works</h3>
-                    <p class="text-black">Music, art, photography, and multimedia content</p>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Creative Works</h3>
+                    <p class="text-gray-700">Music, art, photography, and multimedia content</p>
                 </div>
             </div>
         </section>
 
         <!-- FAQ -->
-        <section class="mb-16 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20">
+        <section class="mb-16 bg-white rounded-xl shadow-md p-8 border border-gray-100">
             <div class="flex items-center mb-6">
-                <div class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
-                    <span class="text-white text-xl font-bold">❓</span>
+                <div class="w-12 h-12 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-lg flex items-center justify-center mr-4">
+                    <span class="text-indigo-600 text-xl font-bold">❓</span>
                 </div>
                 <h2 class="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Frequently Asked Questions</h2>
             </div>
             <div class="space-y-4">
-                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200 hover:shadow-lg transition-shadow">
-                    <h3 class="text-xl font-semibold mb-3 text-blue-800">🤔 Do I need to register my copyright to use the symbol?</h3>
-                    <p class="text-black">No, copyright protection exists automatically when you create an original work. However, registering with the copyright office provides additional legal benefits.</p>
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100 hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">🤔 Do I need to register my copyright to use the symbol?</h3>
+                    <p class="text-gray-700">No, copyright protection exists automatically when you create an original work. However, registering with the copyright office provides additional legal benefits.</p>
                 </div>
-                <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200 hover:shadow-lg transition-shadow">
-                    <h3 class="text-xl font-semibold mb-3 text-green-800">📝 What's the correct format for copyright notice?</h3>
-                    <p class="text-black">The standard format is © [year] [author name]. For example: © 2024 John Doe</p>
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100 hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">📝 What's the correct format for copyright notice?</h3>
+                    <p class="text-gray-700">The standard format is © [year] [author name]. For example: © 2024 John Doe</p>
                 </div>
-                <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl p-6 border border-yellow-200 hover:shadow-lg transition-shadow">
-                    <h3 class="text-xl font-semibold mb-3 text-yellow-800">⚖️ Is the copyright symbol required?</h3>
-                    <p class="text-black">No, it's not legally required in most countries, but it's recommended as it puts others on notice that your work is protected.</p>
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100 hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">⚖️ Is the copyright symbol required?</h3>
+                    <p class="text-gray-700">No, it's not legally required in most countries, but it's recommended as it puts others on notice that your work is protected.</p>
                 </div>
-                <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200 hover:shadow-lg transition-shadow">
-                    <h3 class="text-xl font-semibold mb-3 text-purple-800">⏰ How long does copyright protection last?</h3>
-                    <p class="text-black">In most countries, copyright protection lasts for the life of the author plus 50-70 years after their death.</p>
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100 hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">⏰ How long does copyright protection last?</h3>
+                    <p class="text-gray-700">In most countries, copyright protection lasts for the life of the author plus 50-70 years after their death.</p>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-12">
+    <footer class="bg-gradient-to-br from-gray-900 to-indigo-900 text-gray-300 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <div class="flex items-center mb-4">
-                        <span class="text-2xl font-bold text-white">©</span>
-                        <span class="ml-2 text-lg font-semibold">CopyrightSymbol.app</span>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">©</span>
+                        <span class="ml-2 text-lg font-semibold text-white">CopyrightSymbol.app</span>
                     </div>
-                    <p class="text-gray-300">Your trusted source for copyright symbols and information.</p>
+                    <p class="text-gray-400">Your trusted source for copyright symbols and information.</p>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4 text-white">About Us</h3>
-                    <p class="text-gray-300 mb-3">We provide easy access to copyright symbols and educate users about intellectual property rights and best practices.</p>
-                    <a href="about.html" class="text-purple-300 hover:text-purple-200 transition-colors inline-flex items-center">
+                    <p class="text-gray-400 mb-3">We provide easy access to copyright symbols and educate users about intellectual property rights and best practices.</p>
+                    <a href="about.html" class="text-indigo-400 hover:text-indigo-300 transition-colors inline-flex items-center">
                         Learn more →
                     </a>
                 </div>
                 <div>
                     <h3 class="text-lg font-semibold mb-4 text-white">Contact Us</h3>
                     <div class="space-y-2">
-                        <p class="text-gray-300 flex items-center">
-                            <span class="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                        <p class="text-gray-400 flex items-center">
+                            <span class="w-2 h-2 bg-indigo-400 rounded-full mr-2"></span>
                             info@copyrightsymbol.app
                         </p>
-                        <p class="text-gray-300 flex items-center">
-                            <span class="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                        <p class="text-gray-400 flex items-center">
+                            <span class="w-2 h-2 bg-indigo-400 rounded-full mr-2"></span>
                             support@copyrightsymbol.app
                         </p>
                     </div>
@@ -693,21 +657,21 @@
                     <h3 class="text-lg font-semibold mb-4 text-white">Legal</h3>
                     <ul class="space-y-2">
                         <li>
-                            <a href="terms.html" class="text-gray-300 hover:text-purple-200 transition-colors inline-flex items-center">
-                                <span class="w-1 h-1 bg-purple-400 rounded-full mr-2"></span>
+                            <a href="terms.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
                                 Terms of Service
                             </a>
                         </li>
                         <li>
-                            <a href="privacy.html" class="text-gray-300 hover:text-purple-200 transition-colors inline-flex items-center">
-                                <span class="w-1 h-1 bg-purple-400 rounded-full mr-2"></span>
+                            <a href="privacy.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
                                 Privacy Policy
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-purple-800/50 pt-8 text-center">
+            <div class="border-t border-indigo-800 pt-8 text-center">
                 <p class="text-gray-400">© 2024 CopyrightSymbol.app. All rights reserved.</p>
                 <p class="text-gray-500 text-sm mt-2">Made with 💜 for creators worldwide</p>
             </div>
@@ -729,7 +693,7 @@
         const fireworksContainer = document.getElementById('fireworks-container');
 
         function createSpectacularFireworks(x, y) {
-            const colors = ['#FFD700', '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#DDA0DD', '#98FB98'];
+            const colors = ['#EC4899', '#F472B6', '#F9A8D4'];
             
             // Create multiple firework bursts
             for (let burst = 0; burst < 3; burst++) {
@@ -957,7 +921,7 @@
 
         function createMiniFireworks(x, y) {
             // Create a smaller version of fireworks for symbol buttons
-            const colors = ['#FFD700', '#FF6B6B', '#4ECDC4', '#45B7D1'];
+            const colors = ['#EC4899', '#F472B6'];
             
             for (let i = 0; i < 8; i++) {
                 setTimeout(() => {
@@ -983,5 +947,17 @@
             }
         }
     </script>
+    <div style="display:none;">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K42KBDQPJY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K42KBDQPJY');
+</script>
+</div>
+
 </body>
 </html>
