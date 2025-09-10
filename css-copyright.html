@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <title>CSS Copyright Symbol - Generate CSS Code for © ® ™ Symbols | Free Tool</title>
+    
+    <!-- Enhanced Meta Tags -->
+    <meta name="description" content="Free CSS copyright symbol generator with content property examples. Create CSS code for © ® ™ symbols using ::before, ::after, and content property. Includes Unicode escape sequences, styling options, and responsive design examples.">
+    <meta name="keywords" content="css copyright symbol, css content property, css before after, copyright symbol css, css unicode, css pseudo-elements, css content copyright, copyright symbol generator css, css ::before, css ::after, css content property examples">
+    <meta name="author" content="CopyrightSymbol.app">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://copyrightsymbol.app/css-copyright.html">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="CSS Copyright Symbol - Generate CSS Code for © ® ™ Symbols">
+    <meta property="og:description" content="Free CSS copyright symbol generator. Create CSS code using content property, pseudo-elements, and Unicode escape sequences.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://copyrightsymbol.app/css-copyright.html">
+    <meta property="og:site_name" content="CopyrightSymbol.app">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CSS Copyright Symbol - Generate CSS Code for © ® ™ Symbols">
+    <meta name="twitter:description" content="Free CSS copyright symbol generator. Create CSS code using content property, pseudo-elements, and Unicode escape sequences.">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "CSS Copyright Symbol Generator",
+        "description": "Free online tool to generate CSS code for copyright symbols using content property and pseudo-elements",
+        "url": "https://copyrightsymbol.app/css-copyright.html",
+        "applicationCategory": "WebApplication",
+        "operatingSystem": "Web Browser",
+        "creator": {
+            "@type": "Organization",
+            "name": "CopyrightSymbol.app",
+            "url": "https://copyrightsymbol.app"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "inLanguage": "en",
+        "datePublished": "2024-01-01",
+        "dateModified": "2025-01-01"
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <style>
+        .code-block {
+            position: relative;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .demo-box {
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.125rem;
+        }
+        .copyright-before::before {
+            content: "\00A9";
+            margin-right: 0.5rem;
+            color: #6366f1;
+        }
+        .copyright-after::after {
+            content: "\00A9";
+            margin-left: 0.5rem;
+            color: #6366f1;
+        }
+        .tooltip {
+            position: relative;
+        }
+        .tooltip:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1f2937;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            white-space: nowrap;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+        .gradient-border {
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(45deg, #6366f1, #a855f7) border-box;
+            border: 2px solid transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-sm shadow-sm border-b border-gray-200/50 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">© Symbol</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Home</a>
+                    
+                    <!-- Tools Dropdown -->
+                    <div class="relative group">
+                        <button class="text-indigo-600 hover:text-indigo-700 transition-colors font-medium flex items-center space-x-1 py-2">
+                            <span>Tools</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="copy-paste.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copy & Paste</a>
+                                <a href="html-generator.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">HTML Generator</a>
+                                <a href="text-converter.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Text Converter</a>
+                                <a href="css-copyright.html" class="block px-4 py-2 bg-indigo-50 text-indigo-600 font-medium">CSS Copyright Symbol</a>
+                                <a href="png-download.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">PNG Download</a>
+                                <a href="svg-download.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">SVG Download</a>
+                                <a href="examples.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Examples</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Guides Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-indigo-600 transition-colors font-medium flex items-center space-x-1 py-2">
+                            <span>Guides</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="copyright-symbol-mac.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on Mac</a>
+                                <a href="copyright-symbol-on-keyboard.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on Keyboard</a>
+                                <a href="copyright-symbol-iphone.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on iPhone</a>
+                                <a href="copyright-symbol-in-word.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol in Word</a>
+                                <a href="copyright-symbol-on-mac-keyboard.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on Mac Keyboard</a>
+                                <a href="Copyright-Symbol-Comparison.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol Comparison</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-700 hover:text-indigo-600 hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">Home</a>
+                
+                <!-- Tools Mobile -->
+                <div class="px-3 py-2">
+                    <div class="text-gray-700 font-medium mb-2">Tools</div>
+                    <div class="ml-4 space-y-1">
+                        <a href="copy-paste.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copy & Paste</a>
+                        <a href="html-generator.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">HTML Generator</a>
+                        <a href="text-converter.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Text Converter</a>
+                        <a href="css-copyright.html" class="block px-3 py-2 bg-indigo-50 text-indigo-600 rounded-md transition-colors text-sm font-medium">CSS Copyright Symbol</a>
+                        <a href="png-download.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">PNG Download</a>
+                        <a href="svg-download.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">SVG Download</a>
+                        <a href="examples.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Examples</a>
+                    </div>
+                </div>
+                
+                <!-- Guides Mobile -->
+                <div class="px-3 py-2">
+                    <div class="text-gray-700 font-medium mb-2">Guides</div>
+                    <div class="ml-4 space-y-1">
+                        <a href="copyright-symbol-mac.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on Mac</a>
+                        <a href="copyright-symbol-on-keyboard.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on Keyboard</a>
+                        <a href="copyright-symbol-iphone.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on iPhone</a>
+                        <a href="copyright-symbol-in-word.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol in Word</a>
+                        <a href="copyright-symbol-on-mac-keyboard.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on Mac Keyboard</a>
+                        <a href="Copyright-Symbol-Comparison.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol Comparison</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                CSS Copyright Symbol
+            </h1>
+            <p class="text-xl text-gray-600">
+                Learn how to add copyright symbols using CSS content property
+            </p>
+        </div>
+
+        <!-- Basic Usage -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">Basic Usage</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">CSS Code</h3>
+                    <div class="code-block bg-gray-900 rounded-lg overflow-hidden">
+                        <button class="copy-btn absolute top-4 right-4 text-white px-4 py-2 rounded-lg text-sm transition-colors" data-copy=".copyright::before {
+  content: &quot;\\00A9&quot;;
+  margin-right: 0.5em;
+}">
+                            Copy
+                        </button>
+                        <pre><code class="language-css">.copyright::before {
+  content: "\\00A9";
+  margin-right: 0.5em;
+}</code></pre>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">Result</h3>
+                    <div class="demo-box bg-gray-50 rounded-lg border-2 border-dashed border-gray-300">
+                        <span class="copyright-before">2024 Your Company</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-3">The copyright symbol is added using CSS ::before pseudo-element</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unicode Values -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">Unicode Values for Copyright Symbols</h2>
+            
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Symbol</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Unicode</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">CSS Content</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Copy</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 text-2xl">©</td>
+                                <td class="px-6 py-4 font-medium">Copyright</td>
+                                <td class="px-6 py-4 font-mono text-sm">U+00A9</td>
+                                <td class="px-6 py-4 font-mono text-sm">"\\00A9"</td>
+                                <td class="px-6 py-4">
+                                    <button class="copy-unicode bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1 rounded text-sm transition-colors" data-copy="\\00A9">
+                                        Copy
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-2xl">®</td>
+                                <td class="px-6 py-4 font-medium">Registered Trademark</td>
+                                <td class="px-6 py-4 font-mono text-sm">U+00AE</td>
+                                <td class="px-6 py-4 font-mono text-sm">"\\00AE"</td>
+                                <td class="px-6 py-4">
+                                    <button class="copy-unicode bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1 rounded text-sm transition-colors" data-copy="\\00AE">
+                                        Copy
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-2xl">™</td>
+                                <td class="px-6 py-4 font-medium">Trademark</td>
+                                <td class="px-6 py-4 font-mono text-sm">U+2122</td>
+                                <td class="px-6 py-4 font-mono text-sm">"\\2122"</td>
+                                <td class="px-6 py-4">
+                                    <button class="copy-unicode bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1 rounded text-sm transition-colors" data-copy="\\2122">
+                                        Copy
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 text-2xl">℗</td>
+                                <td class="px-6 py-4 font-medium">Sound Recording</td>
+                                <td class="px-6 py-4 font-mono text-sm">U+2117</td>
+                                <td class="px-6 py-4 font-mono text-sm">"\\2117"</td>
+                                <td class="px-6 py-4">
+                                    <button class="copy-unicode bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1 rounded text-sm transition-colors" data-copy="\\2117">
+                                        Copy
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Examples -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">Practical Examples</h2>
+            
+            <div class="space-y-8">
+                <!-- Example 1: Footer Copyright -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">Footer Copyright Notice</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-medium mb-2">HTML</h4>
+                            <div class="code-block bg-gray-900 rounded-lg overflow-hidden">
+                                <button class="copy-btn text-white px-4 py-2 rounded-lg text-sm transition-colors" data-copy="&lt;footer class=&quot;site-footer&quot;&gt;
+  &lt;p class=&quot;copyright&quot;&gt;2024 Your Company&lt;/p&gt;
+&lt;/footer&gt;">
+                                    Copy
+                                </button>
+                                <pre><code class="language-html">&lt;footer class="site-footer"&gt;
+  &lt;p class="copyright"&gt;2024 Your Company&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-medium mb-2">CSS</h4>
+                            <div class="code-block bg-gray-900 rounded-lg overflow-hidden">
+                                <button class="copy-btn text-white px-4 py-2 rounded-lg text-sm transition-colors" data-copy=".copyright::before {
+  content: &quot;\\00A9&quot;;
+  margin-right: 0.5em;
+  color: #6366f1;
+}
+
+.site-footer {
+  padding: 2rem;
+  background: #f8fafc;
+  text-align: center;
+}">
+                                    Copy
+                                </button>
+                                <pre><code class="language-css">.copyright::before {
+  content: "\\00A9";
+  margin-right: 0.5em;
+  color: #6366f1;
+}
+
+.site-footer {
+  padding: 2rem;
+  background: #f8fafc;
+  text-align: center;
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+                        <p class="copyright-before">2024 Your Company</p>
+                    </div>
+                </div>
+
+                <!-- Example 2: Hover Effect -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">Hover Effect with Tooltip</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-medium mb-2">CSS</h4>
+                            <div class="code-block bg-gray-900 rounded-lg overflow-hidden">
+                                <button class="copy-btn text-white px-4 py-2 rounded-lg text-sm transition-colors" data-copy=".copyright-icon {
+  position: relative;
+  cursor: pointer;
+  color: #6366f1;
+}
+
+.copyright-icon::before {
+  content: &quot;\\00A9&quot;;
+  font-size: 1.2em;
+}
+
+.copyright-icon:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1f2937;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}">
+                                    Copy
+                                </button>
+                                <pre><code class="language-css">.copyright-icon {
+  position: relative;
+  cursor: pointer;
+  color: #6366f1;
+}
+
+.copyright-icon::before {
+  content: "\\00A9";
+  font-size: 1.2em;
+}
+
+.copyright-icon:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1f2937;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}</code></pre>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-medium mb-2">HTML</h4>
+                            <div class="code-block bg-gray-900 rounded-lg overflow-hidden">
+                                <button class="copy-btn text-white px-4 py-2 rounded-lg text-sm transition-colors" data-copy="&lt;span class=&quot;copyright-icon&quot; data-tooltip=&quot;Copyright protected&quot;&gt;&lt;/span&gt;">
+                                    Copy
+                                </button>
+                                <pre><code class="language-html">&lt;span class="copyright-icon" 
+      data-tooltip="Copyright protected"&gt;
+&lt;/span&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 p-4 bg-gray-50 rounded-lg flex justify-center">
+                        <span class="tooltip text-2xl text-indigo-600" data-tooltip="Copyright protected">©</span>
+                    </div>
+                </div>
+
+                <!-- Example 3: Animated Copyright -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">Animated Copyright Symbol</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-medium mb-2">CSS</h4>
+                            <div class="code-block bg-gray-900 rounded-lg overflow-hidden">
+                                <button class="copy-btn text-white px-4 py-2 rounded-lg text-sm transition-colors" data-copy="@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animated-copyright::before {
+  content: &quot;\\00A9&quot;;
+  display: inline-block;
+  animation: spin 2s linear infinite;
+  color: #6366f1;
+  margin-right: 0.5em;
+}">
+                                    Copy
+                                </button>
+                                <pre><code class="language-css">@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animated-copyright::before {
+  content: "\\00A9";
+  display: inline-block;
+  animation: spin 2s linear infinite;
+  color: #6366f1;
+  margin-right: 0.5em;
+}</code></pre>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-medium mb-2">Result</h4>
+                            <div class="demo-box bg-gray-50 rounded-lg border-2 border-dashed border-gray-300">
+                                <span class="animated-copyright">Loading Content...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example 4: Gradient Border -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">Copyright with Gradient Border</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-medium mb-2">CSS</h4>
+                            <div class="code-block bg-gray-900 rounded-lg overflow-hidden">
+                                <button class="copy-btn text-white px-4 py-2 rounded-lg text-sm transition-colors" data-copy=".gradient-copyright {
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(45deg, #6366f1, #a855f7) border-box;
+  border: 2px solid transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+
+.gradient-copyright::before {
+  content: &quot;\\00A9&quot;;
+  margin-right: 0.5em;
+  background: linear-gradient(45deg, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}">
+                                    Copy
+                                </button>
+                                <pre><code class="language-css">.gradient-copyright {
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(45deg, #6366f1, #a855f7) border-box;
+  border: 2px solid transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+
+.gradient-copyright::before {
+  content: "\\00A9";
+  margin-right: 0.5em;
+  background: linear-gradient(45deg, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}</code></pre>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-medium mb-2">Result</h4>
+                            <div class="demo-box bg-gray-50 rounded-lg border-2 border-dashed border-gray-300">
+                                <span class="gradient-copyright font-semibold">2024 Your Company</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Practices -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">Best Practices</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-green-50 border border-green-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-green-800 mb-3">✅ Do</h3>
+                    <ul class="space-y-2 text-green-700">
+                        <li class="flex items-start">
+                            <span class="mr-2">•</span>
+                            Use CSS content for decorative copyright symbols
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">•</span>
+                            Include proper alt text for screen readers when needed
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">•</span>
+                            Test across different browsers for consistency
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">•</span>
+                            Use appropriate font-size and spacing
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-red-800 mb-3">❌ Don't</h3>
+                    <ul class="space-y-2 text-red-700">
+                        <li class="flex items-start">
+                            <span class="mr-2">•</span>
+                            Don't use for important legal text without HTML fallback
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">•</span>
+                            Don't forget to escape backslashes in CSS
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">•</span>
+                            Don't rely on CSS for critical content
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">•</span>
+                            Don't use without proper font support
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Browser Support -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">Browser Support</h2>
+            
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="text-center p-4 bg-orange-50 rounded-lg">
+                        <div class="text-2xl mb-2">🔥</div>
+                        <div class="font-semibold">Chrome</div>
+                        <div class="text-sm text-gray-600">Full Support</div>
+                    </div>
+                    <div class="text-center p-4 bg-blue-50 rounded-lg">
+                        <div class="text-2xl mb-2">🦊</div>
+                        <div class="font-semibold">Firefox</div>
+                        <div class="text-sm text-gray-600">Full Support</div>
+                    </div>
+                    <div class="text-center p-4 bg-cyan-50 rounded-lg">
+                        <div class="text-2xl mb-2">🌐</div>
+                        <div class="font-semibold">Safari</div>
+                        <div class="text-sm text-gray-600">Full Support</div>
+                    </div>
+                    <div class="text-center p-4 bg-blue-100 rounded-lg">
+                        <div class="text-2xl mb-2">📎</div>
+                        <div class="font-semibold">Edge</div>
+                        <div class="text-sm text-gray-600">Full Support</div>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 mt-4 text-center">
+                    CSS content property with Unicode is supported in all modern browsers
+                </p>
+            </div>
+        </section>
+
+        <!-- Comprehensive CSS Guide -->
+        <div class="mt-16 space-y-12">
+            <!-- Understanding CSS Pseudo-elements -->
+            <section class="bg-white rounded-xl shadow-lg p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                        <span class="text-indigo-600 text-xl font-bold">🎨</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-900">Understanding CSS Pseudo-elements for Copyright Symbols</h2>
+                </div>
+                
+                <div class="prose prose-lg max-w-none text-gray-600 space-y-6">
+                    <p>
+                        CSS pseudo-elements are powerful tools that allow you to style specific parts of an element without adding extra HTML markup. The ::before and ::after pseudo-elements are particularly useful for inserting copyright symbols dynamically, providing flexibility and maintainability in your web designs.
+                    </p>
+                    
+                    <p>
+                        Using CSS pseudo-elements for copyright symbols offers several advantages over hardcoding them in HTML. It separates content from presentation, allows for easy updates across multiple elements, and provides better accessibility when combined with proper ARIA attributes and screen reader considerations.
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold text-gray-900">The CSS Content Property</h3>
+                    <p>
+                        The content property is the key to inserting text or symbols using pseudo-elements. It accepts various values including strings, Unicode escape sequences, counters, and even images. For copyright symbols, Unicode escape sequences provide the most reliable cross-browser compatibility.
+                    </p>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h4 class="font-bold text-gray-900 mb-3">Unicode Escape Sequences Explained:</h4>
+                        <pre class="bg-gray-900 text-gray-100 p-4 rounded overflow-x-auto"><code>/* Copyright symbol using Unicode escape */
+.copyright::before {
+    content: "\00A9";  /* Unicode for © symbol */
+}
+
+/* Registered trademark */
+.trademark::after {
+    content: "\00AE";  /* Unicode for ® symbol */
+}
+
+/* Sound recording copyright */
+.sound-recording::before {
+    content: "\2117";  /* Unicode for ℗ symbol */
+}</code></pre>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-gray-900">Advanced Styling Techniques</h3>
+                    <p>
+                        Beyond basic insertion, CSS pseudo-elements can be styled extensively to create visually appealing copyright notices. This includes positioning, colors, animations, hover effects, and responsive design considerations that enhance user experience while maintaining accessibility standards.
+                    </p>
+                    
+                    <p>
+                        Advanced techniques include using CSS variables for dynamic styling, implementing hover states for interactive elements, and creating animated copyright notices that draw attention without being intrusive. These approaches demonstrate professional web development practices and attention to detail.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Practical Implementation Examples -->
+            <section class="bg-white rounded-xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold mb-6 text-gray-900">Practical Implementation Examples</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Dynamic Copyright Notices</h3>
+                        <div class="space-y-4 text-gray-600">
+                            <p>
+                                Creating dynamic copyright notices using CSS pseudo-elements allows for consistent branding across your website while keeping the markup clean and semantic. This approach is particularly useful for large websites with multiple pages requiring copyright information.
+                            </p>
+                            <p>
+                                When implementing dynamic copyright notices, consider using CSS custom properties (variables) to maintain consistency and make global changes easier. This approach also supports theming and different styling requirements for various sections of your website.
+                            </p>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <pre class="text-sm"><code>:root {
+    --copyright-color: #6366f1;
+    --copyright-size: 0.875rem;
+}
+
+.footer-copyright::before {
+    content: "\00A9";
+    color: var(--copyright-color);
+    font-size: var(--copyright-size);
+    margin-right: 0.25rem;
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Responsive Design Considerations</h3>
+                        <div class="space-y-4 text-gray-600">
+                            <p>
+                                Copyright symbols implemented with CSS should adapt to different screen sizes and devices. Using relative units like em or rem ensures proper scaling, while media queries allow for different presentations on mobile versus desktop devices.
+                            </p>
+                            <p>
+                                Consider the visibility and prominence of copyright information on smaller screens. Mobile users may have different expectations regarding the placement and size of copyright notices compared to desktop users.
+                            </p>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <pre class="text-sm"><code>/* Responsive copyright symbol */
+.responsive-copyright::before {
+    content: "\00A9";
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .responsive-copyright::before {
+        font-size: 0.875rem;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Accessibility and SEO -->
+            <section class="bg-white rounded-xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold mb-6 text-gray-900">Accessibility and SEO Considerations</h2>
+                
+                <div class="space-y-6">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Screen Reader Compatibility</h3>
+                        <div class="prose prose-gray max-w-none">
+                            <p>
+                                While CSS pseudo-elements are visually effective, they may not be read by screen readers unless properly announced. Consider using ARIA attributes or ensuring that important copyright information is also available in the actual HTML content for accessibility compliance.
+                            </p>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>Use ARIA labels to provide context for screen readers</li>
+                                <li>Consider using actual HTML content for critical copyright information</li>
+                                <li>Test with screen readers to ensure proper announcement</li>
+                                <li>Provide alternative text descriptions when necessary</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">SEO Best Practices</h3>
+                        <div class="prose prose-gray max-w-none">
+                            <p>
+                                Copyright symbols in CSS pseudo-elements may not be indexed by search engines if they're not present in the HTML content. For SEO purposes, consider placing important copyright information in both HTML and CSS for maximum visibility and accessibility.
+                            </p>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>Include copyright information in HTML meta tags when appropriate</li>
+                                <li>Use CSS pseudo-elements for visual enhancement rather than critical content</li>
+                                <li>Ensure copyright information is available in page source for search engines</li>
+                                <li>Consider structured data for copyright information when relevant</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="bg-white rounded-xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold mb-6 text-gray-900">Frequently Asked Questions</h2>
+                
+                <div class="space-y-6">
+                    <div class="border-b border-gray-200 pb-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Can I use multiple copyright symbols in one CSS rule?</h3>
+                        <p class="text-gray-600">
+                            Yes, you can use multiple symbols by combining them in the content property or using multiple pseudo-elements. However, for better maintainability, it's often better to create separate classes for different symbols and combine them as needed in your HTML structure.
+                        </p>
+                    </div>
+                    
+                    <div class="border-b border-gray-200 pb-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Are CSS pseudo-elements supported in all browsers?</h3>
+                        <p class="text-gray-600">
+                            Modern browsers fully support ::before and ::after pseudo-elements. However, very old browsers (Internet Explorer 7 and earlier) may have limited support. For most modern web development, browser support is excellent and widely adopted.
+                        </p>
+                    </div>
+                    
+                    <div class="border-b border-gray-200 pb-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">How do I style the copyright symbol differently from the text?</h3>
+                        <p class="text-gray-600">
+                            You can style the pseudo-element independently from the parent element. Use properties like color, font-size, font-weight, and text-decoration to create visual distinction. CSS custom properties can help maintain consistent styling across your project.
+                        </p>
+                    </div>
+                    
+                    <div class="border-b border-gray-200 pb-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Can I use CSS variables in copyright symbol styling?</h3>
+                        <p class="text-gray-600">
+                            Absolutely! CSS custom properties (variables) are perfect for copyright symbol styling. They allow you to define colors, sizes, and other properties once and reuse them throughout your project, making updates and theming much easier.
+                        </p>
+                    </div>
+                    
+                    <div class="border-b border-gray-200 pb-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">How do I handle copyright symbols in printed media?</h3>
+                        <p class="text-gray-600">
+                            Use CSS print media queries to adjust copyright symbol styling for printed documents. Consider increasing size, adjusting colors for black and white printing, and ensuring proper positioning on the page. Print styles should complement your web design while optimizing for the print medium.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">What's the difference between :before and ::before?</h3>
+                        <p class="text-gray-600">
+                            The single colon (:) syntax is the CSS2 pseudo-element notation, while double colon (::) is the CSS3 syntax. Modern browsers support both, but ::before is the current standard. It's recommended to use the double colon syntax for new projects to maintain compatibility with future CSS standards.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Best Practices -->
+            <section class="bg-white rounded-xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold mb-6 text-gray-900">Best Practices for CSS Copyright Symbols</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Recommended Approaches</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                Use Unicode escape sequences for maximum compatibility
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                Combine CSS variables with pseudo-elements for theming
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                Test across different browsers and devices
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                Consider accessibility for screen reader users
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                Use relative units for responsive design
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                Provide fallback options for older browsers
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Common Pitfalls to Avoid</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">✗</span>
+                                Don't rely solely on CSS for critical copyright information
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">✗</span>
+                                Avoid using literal symbols in CSS content property
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">✗</span>
+                                Don't forget to test with screen readers
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">✗</span>
+                                Avoid overly complex pseudo-element chains
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">✗</span>
+                                Don't neglect print media considerations
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">✗</span>
+                                Avoid using important copyright symbols in CSS only
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Toast Notification -->
+        <div id="toast" class="fixed bottom-8 right-8 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-full transition-transform duration-300">
+            Copied to clipboard!
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-gray-900 to-indigo-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">©</span>
+                        <span class="ml-2 text-lg font-semibold text-white">CopyrightSymbol.app</span>
+                    </div>
+                    <p class="text-gray-400">Your trusted source for copyright symbols and information.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">About Us</h3>
+                    <p class="text-gray-400 mb-3">We provide easy access to copyright symbols and educate users about intellectual property rights and best practices.</p>
+                    <a href="about.html" class="text-indigo-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                        Learn more →
+                    </a>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Contact Us</h3>
+                    <div class="space-y-2">
+                        <p class="text-gray-400 flex items-center">
+                            <span class="w-2 h-2 bg-indigo-400 rounded-full mr-2"></span>
+                            info@copyrightsymbol.app
+                        </p>
+                        <p class="text-gray-400 flex items-center">
+                            <span class="w-2 h-2 bg-indigo-400 rounded-full mr-2"></span>
+                            support@copyrightsymbol.app
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Tools</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="copy-paste.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Copy & Paste
+                            </a>
+                        </li>
+                        <li>
+                            <a href="html-generator.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                HTML Generator
+                            </a>
+                        </li>
+                        <li>
+                            <a href="text-converter.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Text Converter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="css-copyright.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                CSS Copyright Symbol
+                            </a>
+                        </li>
+                        <li>
+                            <a href="png-download.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                PNG Download
+                            </a>
+                        </li>
+                        <li>
+                            <a href="svg-download.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                SVG Download
+                            </a>
+                        </li>
+                        <li>
+                            <a href="examples.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Examples
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Guides</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="copyright-symbol-mac.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Copyright Symbol on Mac
+                            </a>
+                        </li>
+                        <li>
+                            <a href="copyright-symbol-on-keyboard.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Copyright Symbol on Keyboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href="copyright-symbol-iphone.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Copyright Symbol on iPhone
+                            </a>
+                        </li>
+                        <li>
+                            <a href="copyright-symbol-in-word.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Copyright Symbol in Word
+                            </a>
+                        </li>
+                        <li>
+                            <a href="copyright-symbol-on-mac-keyboard.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Copyright Symbol on Mac Keyboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Copyright-Symbol-Comparison.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Copyright Symbol Comparison
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Legal</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="terms.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Terms of Service
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Privacy Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-indigo-800 pt-8 text-center">
+                <p class="text-gray-400">© 2025 CopyrightSymbol.app. All rights reserved.</p>
+                <p class="text-gray-500 text-sm mt-2">Made with 💜 for creators worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Initialize Prism for syntax highlighting
+        Prism.highlightAll();
+
+        // Copy functionality
+        const toast = document.getElementById('toast');
+
+        function showToast() {
+            toast.classList.remove('translate-y-full');
+            setTimeout(() => {
+                toast.classList.add('translate-y-full');
+            }, 2000);
+        }
+
+        // Copy code blocks
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', async () => {
+                const code = btn.getAttribute('data-copy');
+                
+                try {
+                    await navigator.clipboard.writeText(code);
+                    showToast();
+                } catch (err) {
+                    // Fallback
+                    const textArea = document.createElement('textarea');
+                    textArea.value = code;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    showToast();
+                }
+            });
+        });
+
+        // Copy Unicode values
+        document.querySelectorAll('.copy-unicode').forEach(btn => {
+            btn.addEventListener('click', async () => {
+                const unicode = btn.getAttribute('data-copy');
+                
+                try {
+                    await navigator.clipboard.writeText(unicode);
+                    showToast();
+                } catch (err) {
+                    // Fallback
+                    const textArea = document.createElement('textarea');
+                    textArea.value = unicode;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    showToast();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

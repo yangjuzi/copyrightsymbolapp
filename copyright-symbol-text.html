@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copyright Symbol Text Art - ASCII Art Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes confetti-fall {
+            0% { 
+                transform: translateY(0) rotateZ(0deg);
+                opacity: 1;
+            }
+            100% { 
+                transform: translateY(300px) rotateZ(720deg);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes confetti-scatter {
+            0% { 
+                transform: translate(0, 0) scale(1) rotate(0deg);
+                opacity: 1;
+            }
+            100% { 
+                transform: translate(var(--scatter-x), var(--scatter-y)) scale(0) rotate(540deg);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes sparkle {
+            0% { 
+                transform: translate(var(--sparkle-x), var(--sparkle-y)) scale(0) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                transform: translate(var(--sparkle-x), var(--sparkle-y)) scale(1) rotate(180deg);
+                opacity: 1;
+            }
+            100% { 
+                transform: translate(var(--sparkle-x), var(--sparkle-y)) scale(0) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #FFF;
+            border-radius: 50%;
+            animation: sparkle 1s ease-out forwards;
+            pointer-events: none;
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        
+        .confetti-square {
+            width: 100%;
+            height: 100%;
+            animation: confetti-fall 3s ease-out forwards;
+        }
+        
+        .confetti-circle {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            animation: confetti-scatter 2s ease-out forwards;
+        }
+        
+        .confetti-triangle {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            animation: confetti-scatter 2.5s ease-out forwards;
+        }
+        
+        .hero-pattern {
+            background-color: #ffffff;
+            background-image: none;
+        }
+        
+        .ascii-art {
+            font-family: 'Courier New', monospace;
+            line-height: 1.2;
+            white-space: pre;
+            overflow-x: auto;
+        }
+        
+        .text-preview {
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="hero-pattern text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-sm shadow-sm border-b border-gray-200/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">© Symbol</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Home</a>
+                    <a href="generator.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Copyright Generator</a>
+                    <a href="codes.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Unicode / HTML Codes</a>
+                    <a href="icons.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">PNG / SVG Icons</a>
+                    <a href="copyright-symbol-html.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">HTML Symbol Reference</a>
+                    <a href="copyright-symbol-text.html" class="text-indigo-600 font-semibold">Text Art Generator</a>
+                    <a href="about.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">About Us</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-700 hover:text-indigo-600 hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">Home</a>
+                <a href="generator.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">Copyright Generator</a>
+                <a href="codes.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">Unicode / HTML Codes</a>
+                <a href="icons.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">PNG / SVG Icons</a>
+                <a href="copyright-symbol-html.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">HTML Symbol Reference</a>
+                <a href="copyright-symbol-text.html" class="block px-3 py-2 text-indigo-600 font-semibold bg-indigo-50 rounded-md">Text Art Generator</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">About Us</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-indigo-50 to-purple-50 text-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex items-center justify-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-indigo-600 text-2xl font-bold">🎨</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Text Art Generator</h1>
+            </div>
+            <p class="text-xl text-gray-700 max-w-2xl mx-auto">
+                Create stunning ASCII art and text designs with copyright symbols. Perfect for emails, signatures, and creative projects!
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <!-- Text Art Generator -->
+        <section class="mb-16 bg-white rounded-xl shadow-md p-8 border border-gray-100">
+            <div class="flex items-center mb-6">
+                <div class="w-12 h-12 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-lg flex items-center justify-center mr-4">
+                    <span class="text-indigo-600 text-xl font-bold">✨</span>
+                </div>
+                <h2 class="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Create Your Text Art</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Input Section -->
+                <div>
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Enter Your Text</label>
+                        <input type="text" id="textInput" placeholder="Your text here..." 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
+                               value="COPYRIGHT">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Select Style</label>
+                        <select id="styleSelect" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors">
+                            <option value="block">Block Letters</option>
+                            <option value="banner">Banner Style</option>
+                            <option value="ascii">ASCII Art</option>
+                            <option value="simple">Simple Text</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Symbol Position</label>
+                        <div class="grid grid-cols-3 gap-3">
+                            <label class="flex items-center">
+                                <input type="radio" name="symbolPos" value="before" checked class="mr-2 text-indigo-600">
+                                <span class="text-sm">Before</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="symbolPos" value="after" class="mr-2 text-indigo-600">
+                                <span class="text-sm">After</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="symbolPos" value="both" class="mr-2 text-indigo-600">
+                                <span class="text-sm">Both Sides</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Additional Options</label>
+                        <div class="space-y-2">
+                            <label class="flex items-center">
+                                <input type="checkbox" id="addYear" class="mr-2 text-indigo-600">
+                                <span class="text-sm">Add Year (© 2024)</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" id="addBorder" class="mr-2 text-indigo-600">
+                                <span class="text-sm">Add Border</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button id="generateBtn" class="w-full bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        Generate Text Art
+                    </button>
+                </div>
+                
+                <!-- Preview Section -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Preview</label>
+                    <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100 text-preview">
+                        <div id="preview" class="ascii-art text-center text-2xl font-bold">
+                            © COPYRIGHT ©
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 flex gap-3">
+                        <button id="copyArtBtn" class="flex-1 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white font-medium py-2 px-4 rounded-lg transition-all shadow-sm hover:shadow-md">
+                            Copy Art
+                        </button>
+                        <button id="downloadBtn" class="flex-1 bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white font-medium py-2 px-4 rounded-lg transition-all shadow-sm hover:shadow-md">
+                            Download as TXT
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="mb-16 bg-white rounded-xl shadow-md p-8 border border-gray-100">
+            <div class="flex items-center mb-6">
+                <div class="w-12 h-12 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-lg flex items-center justify-center mr-4">
+                    <span class="text-indigo-600 text-xl font-bold">🖼️</span>
+                </div>
+                <h2 class="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Gallery</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-4 border border-indigo-100">
+                    <h3 class="font-semibold mb-2 text-gray-900">Classic Style</h3>
+                    <div class="ascii-art text-sm mb-3">╔══════════════════╗
+║  © COPYRIGHT 2024  ║
+╚══════════════════╝</div>
+                    <button class="copy-gallery-btn text-xs bg-indigo-100 hover:bg-indigo-200 text-indigo-700 px-3 py-1 rounded transition-colors" data-art="╔══════════════════╗&#10;║  © COPYRIGHT 2024  ║&#10;╚══════════════════╝">Copy</button>
+                </div>
+                
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-4 border border-indigo-100">
+                    <h3 class="font-semibold mb-2 text-gray-900">Simple Banner</h3>
+                    <div class="ascii-art text-sm mb-3">█████████████████████████████
+█═©═COPYRIGHT═2024═©═█
+█████████████████████████████</div>
+                    <button class="copy-gallery-btn text-xs bg-indigo-100 hover:bg-indigo-200 text-indigo-700 px-3 py-1 rounded transition-colors" data-art="█████████████████████████████&#10;█═©═COPYRIGHT═2024═©═█&#10;█████████████████████████████">Copy</button>
+                </div>
+                
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-4 border border-indigo-100">
+                    <h3 class="font-semibold mb-2 text-gray-900">ASCII Art</h3>
+                    <div class="ascii-art text-sm mb-3">  _____ _____ _____ _____ 
+ |   __|     |   __|   __|
+ |__   |  |  |  |  |__   |
+ |_____|_____|_____|_____|
+        © 2024</div>
+                    <button class="copy-gallery-btn text-xs bg-indigo-100 hover:bg-indigo-200 text-indigo-700 px-3 py-1 rounded transition-colors" data-art="  _____ _____ _____ _____ &#10; |   __|     |   __|   __|&#10; |__   |  |  |  |  |__   |&#10; |_____|_____|_____|_____&#10;        © 2024">Copy</button>
+                </div>
+                
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-4 border border-indigo-100">
+                    <h3 class="font-semibold mb-2 text-gray-900">Minimal Style</h3>
+                    <div class="ascii-art text-sm mb-3">┌─────────────────────┐
+│ © COPYRIGHT        │
+│ All Rights Reserved │
+└─────────────────────┘</div>
+                    <button class="copy-gallery-btn text-xs bg-indigo-100 hover:bg-indigo-200 text-indigo-700 px-3 py-1 rounded transition-colors" data-art="┌─────────────────────┐&#10;│ © COPYRIGHT        │&#10;│ All Rights Reserved │&#10;└─────────────────────┘">Copy</button>
+                </div>
+                
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-4 border border-indigo-100">
+                    <h3 class="font-semibold mb-2 text-gray-900">Double Line</h3>
+                    <div class="ascii-art text-sm mb-3">╔═══════════════════════╗
+║║   © COPYRIGHT 2024   ║║
+║║ All Rights Reserved  ║║
+╚═══════════════════════╝</div>
+                    <button class="copy-gallery-btn text-xs bg-indigo-100 hover:bg-indigo-200 text-indigo-700 px-3 py-1 rounded transition-colors" data-art="╔═══════════════════════╗&#10;║║   © COPYRIGHT 2024   ║║&#10;║║ All Rights Reserved  ║║&#10;╚═══════════════════════╝">Copy</button>
+                </div>
+                
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-4 border border-indigo-100">
+                    <h3 class="font-semibold mb-2 text-gray-900">Rounded Style</h3>
+                    <div class="ascii-art text-sm mb-3">╭─────────────────────────╮
+│  © COPYRIGHT 2024      │
+│  Created with Passion   │
+╰─────────────────────────╯</div>
+                    <button class="copy-gallery-btn text-xs bg-indigo-100 hover:bg-indigo-200 text-indigo-700 px-3 py-1 rounded transition-colors" data-art="╭─────────────────────────╮&#10;│  © COPYRIGHT 2024      │&#10;│  Created with Passion   │&#10;╰─────────────────────────╯">Copy</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Usage Tips -->
+        <section class="bg-white rounded-xl shadow-md p-8 border border-gray-100">
+            <div class="flex items-center mb-6">
+                <div class="w-12 h-12 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-lg flex items-center justify-center mr-4">
+                    <span class="text-indigo-600 text-xl font-bold">💡</span>
+                </div>
+                <h2 class="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Usage Tips</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100">
+                    <h3 class="text-lg font-semibold mb-3 text-gray-900">📧 Email Signatures</h3>
+                    <p class="text-gray-700">Use text art in your email signature for a professional touch. Copy and paste directly into your email client's signature settings.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100">
+                    <h3 class="text-lg font-semibold mb-3 text-gray-900">💬 Social Media</h3>
+                    <p class="text-gray-700">Perfect for social media bios, posts, and comments where you want to add a creative copyright notice.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100">
+                    <h3 class="text-lg font-semibold mb-3 text-gray-900">📝 Documents</h3>
+                    <p class="text-gray-700">Add styled copyright notices to plain text documents, README files, and code comments.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100">
+                    <h3 class="text-lg font-semibold mb-3 text-gray-900">🎨 Creative Projects</h3>
+                    <p class="text-gray-700">Use in text-based art, terminal applications, or any project that needs ASCII art styling.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-gray-900 to-indigo-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-t border-indigo-800 pt-8 text-center">
+                <p class="text-gray-400">© 2024 CopyrightSymbol.app. All rights reserved.</p>
+                <p class="text-gray-500 text-sm mt-2">Made with 💜 for creators worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Text art generation
+        const textInput = document.getElementById('textInput');
+        const styleSelect = document.getElementById('styleSelect');
+        const generateBtn = document.getElementById('generateBtn');
+        const preview = document.getElementById('preview');
+        const copyArtBtn = document.getElementById('copyArtBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
+
+        // Gallery copy buttons
+        const galleryCopyBtns = document.querySelectorAll('.copy-gallery-btn');
+
+        function generateTextArt() {
+            const text = textInput.value.toUpperCase() || 'COPYRIGHT';
+            const style = styleSelect.value;
+            const symbolPos = document.querySelector('input[name="symbolPos"]:checked').value;
+            const addYear = document.getElementById('addYear').checked;
+            const addBorder = document.getElementById('addBorder').checked;
+            const year = new Date().getFullYear();
+            
+            let result = '';
+            const symbol = '©';
+            
+            // Add symbol based on position
+            let textWithSymbol = text;
+            if (symbolPos === 'before') {
+                textWithSymbol = symbol + ' ' + text;
+            } else if (symbolPos === 'after') {
+                textWithSymbol = text + ' ' + symbol;
+            } else if (symbolPos === 'both') {
+                textWithSymbol = symbol + ' ' + text + ' ' + symbol;
+            }
+            
+            // Add year if checked
+            if (addYear) {
+                textWithSymbol += ' ' + year;
+            }
+            
+            switch(style) {
+                case 'block':
+                    result = generateBlockStyle(textWithSymbol, addBorder);
+                    break;
+                case 'banner':
+                    result = generateBannerStyle(textWithSymbol);
+                    break;
+                case 'ascii':
+                    result = generateASCIIStyle(textWithSymbol);
+                    break;
+                case 'simple':
+                    result = generateSimpleStyle(textWithSymbol, addBorder);
+                    break;
+                default:
+                    result = textWithSymbol;
+            }
+            
+            preview.textContent = result;
+        }
+
+        function generateBlockStyle(text, addBorder) {
+            const lines = text.split(' ');
+            let result = '';
+            
+            if (addBorder) {
+                const maxWidth = Math.max(...lines.map(l => l.length)) + 4;
+                result += '╔' + '═'.repeat(maxWidth) + '╗\n';
+                
+                lines.forEach(line => {
+                    const padding = ' '.repeat((maxWidth - line.length) / 2);
+                    result += '║' + padding + line + padding + '║\n';
+                });
+                
+                result += '╚' + '═'.repeat(maxWidth) + '╝';
+            } else {
+                result = lines.join('\n');
+            }
+            
+            return result;
+        }
+
+        function generateBannerStyle(text) {
+            const width = text.length + 4;
+            let result = '';
+            
+            result += '█'.repeat(width + 4) + '\n';
+            result += '█═ ' + text + ' ═█\n';
+            result += '█'.repeat(width + 4);
+            
+            return result;
+        }
+
+        function generateASCIIStyle(text) {
+            const words = text.split(' ');
+            let result = '';
+            
+            // Simple ASCII art for each letter
+            const asciiLetters = {
+                'C': ['  _____ ', ' / ____ ', '| |    ', '| |____', '\\_____|'],
+                'O': ['  ____  ', ' / __ \\ ', '| |  | |', '| |__| |', ' \\____/ '],
+                'P': ['  ____  ', ' / __ \\ ', '| |  | |', '| |__| |', '\\____/ '],
+                'Y': ['__   __ ', '\\ \\ / / ', ' \\ V /  ', '  | |   ', '  |_|   '],
+                'R': ['  ____  ', ' / __ \\ ', '| |  | |', '| |__| |', '\\____/ '],
+                'I': [' _____ ', '|_   _|', '  | |  ', '  | |  ', '  |_|  '],
+                'G': ['  ____  ', ' / __ \\ ', '| |  | |', '| |__| |', '\\____/ '],
+                'H': [' _   _ ', '| | | |', '| |_| |', '|  _  |', '|_| |_|'],
+                'T': [' _______', '|__   __|', '   | |   ', '   | |   ', '   |_|   '],
+                '©': ['   ©©   ', '  ©  ©  ', ' ©    © ', '©      ©', ' ©    © ']
+            };
+            
+            // Generate ASCII art for first word only
+            const firstWord = words[0];
+            if (firstWord.length <= 6) {  // Limit to 6 letters
+                for (let row = 0; row < 5; row++) {
+                    for (let char of firstWord) {
+                        result += (asciiLetters[char] || ['     '])[row] + ' ';
+                    }
+                    result += '\n';
+                }
+            } else {
+                result = text;
+            }
+            
+            // Add remaining text
+            if (words.length > 1) {
+                result += '\n' + words.slice(1).join(' ');
+            }
+            
+            return result;
+        }
+
+        function generateSimpleStyle(text, addBorder) {
+            if (addBorder) {
+                const width = text.length + 4;
+                let result = '';
+                
+                result += '┌' + '─'.repeat(width) + '┐\n';
+                result += '│ ' + text + ' │\n';
+                result += '└' + '─'.repeat(width) + '┘';
+                
+                return result;
+            }
+            return text;
+        }
+
+        // Event listeners
+        generateBtn.addEventListener('click', () => {
+            generateTextArt();
+            createConfettiBurst(generateBtn.offsetLeft + generateBtn.offsetWidth/2, generateBtn.offsetTop + generateBtn.offsetHeight/2, true);
+        });
+
+        textInput.addEventListener('input', generateTextArt);
+        styleSelect.addEventListener('change', generateTextArt);
+        document.querySelectorAll('input[name="symbolPos"]').forEach(radio => {
+            radio.addEventListener('change', generateTextArt);
+        });
+        document.getElementById('addYear').addEventListener('change', generateTextArt);
+        document.getElementById('addBorder').addEventListener('change', generateTextArt);
+
+        // Copy art functionality
+        copyArtBtn.addEventListener('click', async () => {
+            const text = preview.textContent;
+            
+            try {
+                await navigator.clipboard.writeText(text);
+                
+                // Show success feedback
+                copyArtBtn.textContent = 'Copied!';
+                copyArtBtn.classList.add('bg-emerald-500', 'hover:bg-emerald-600');
+                copyArtBtn.classList.remove('from-indigo-500', 'to-purple-500', 'hover:from-indigo-600', 'hover:to-purple-600');
+                
+                createMiniFireworks(copyArtBtn.offsetLeft + copyArtBtn.offsetWidth/2, copyArtBtn.offsetTop + copyArtBtn.offsetHeight/2);
+                createConfettiBurst(copyArtBtn.offsetLeft + copyArtBtn.offsetWidth/2, copyArtBtn.offsetTop + copyArtBtn.offsetHeight/2, true);
+                
+                setTimeout(() => {
+                    copyArtBtn.textContent = 'Copy Art';
+                    copyArtBtn.classList.remove('bg-emerald-500', 'hover:bg-emerald-600');
+                    copyArtBtn.classList.add('from-indigo-500', 'to-purple-500', 'hover:from-indigo-600', 'hover:to-purple-600');
+                }, 2000);
+                
+            } catch (err) {
+                // Fallback
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                copyArtBtn.textContent = 'Copied!';
+                setTimeout(() => {
+                    copyArtBtn.textContent = 'Copy Art';
+                }, 2000);
+            }
+        });
+
+        // Download functionality
+        downloadBtn.addEventListener('click', () => {
+            const text = preview.textContent;
+            const blob = new Blob([text], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'copyright-text-art.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            createMiniFireworks(downloadBtn.offsetLeft + downloadBtn.offsetWidth/2, downloadBtn.offsetTop + downloadBtn.offsetHeight/2);
+            createConfettiBurst(downloadBtn.offsetLeft + downloadBtn.offsetWidth/2, downloadBtn.offsetTop + downloadBtn.offsetHeight/2, true);
+        });
+
+        // Gallery copy functionality
+        galleryCopyBtns.forEach(btn => {
+            btn.addEventListener('click', async () => {
+                const art = btn.getAttribute('data-art');
+                const originalText = btn.textContent;
+                
+                try {
+                    await navigator.clipboard.writeText(art);
+                    
+                    btn.textContent = 'Copied!';
+                    btn.classList.add('bg-emerald-200', 'text-emerald-800');
+                    
+                    createMiniFireworks(btn.offsetLeft + btn.offsetWidth/2, btn.offsetTop + btn.offsetHeight/2);
+                    
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.classList.remove('bg-emerald-200', 'text-emerald-800');
+                    }, 2000);
+                    
+                } catch (err) {
+                    // Fallback
+                    const textArea = document.createElement('textarea');
+                    textArea.value = art;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    
+                    btn.textContent = 'Copied!';
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                    }, 2000);
+                }
+            });
+        });
+
+        // Fireworks and confetti functions
+        function createMiniFireworks(x, y) {
+            const colors = ['#EC4899', '#F472B6'];
+            
+            for (let i = 0; i < 8; i++) {
+                setTimeout(() => {
+                    const sparkle = document.createElement('div');
+                    sparkle.className = 'sparkle';
+                    sparkle.style.left = (x + (Math.random() - 0.5) * 60) + 'px';
+                    sparkle.style.top = (y + (Math.random() - 0.5) * 60) + 'px';
+                    
+                    const sparkleDistance = 20 + Math.random() * 30;
+                    const sparkleAngle = Math.random() * Math.PI * 2;
+                    const sparkleX = Math.cos(sparkleAngle) * sparkleDistance;
+                    const sparkleY = Math.sin(sparkleAngle) * sparkleDistance;
+                    
+                    sparkle.style.setProperty('--sparkle-x', sparkleX + 'px');
+                    sparkle.style.setProperty('--sparkle-y', sparkleY + 'px');
+                    
+                    document.body.appendChild(sparkle);
+                    
+                    setTimeout(() => {
+                        sparkle.remove();
+                    }, 1000);
+                }, i * 50);
+            }
+        }
+        
+        function createConfettiBurst(x, y, isMini = false) {
+            const colors = ['#EC4899', '#F472B6', '#F9A8D4', '#8B5CF6', '#6366F1', '#A78BFA', '#C084FC'];
+            const confettiCount = isMini ? 15 : 30;
+            
+            for (let i = 0; i < confettiCount; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = x + 'px';
+                    confetti.style.top = y + 'px';
+                    
+                    const color = colors[Math.floor(Math.random() * colors.length)];
+                    const shape = Math.random();
+                    
+                    if (shape < 0.33) {
+                        // Square
+                        const square = document.createElement('div');
+                        square.className = 'confetti-square';
+                        square.style.backgroundColor = color;
+                        confetti.appendChild(square);
+                    } else if (shape < 0.66) {
+                        // Circle
+                        const circle = document.createElement('div');
+                        circle.className = 'confetti-circle';
+                        circle.style.backgroundColor = color;
+                        confetti.appendChild(circle);
+                    } else {
+                        // Triangle
+                        const triangle = document.createElement('div');
+                        triangle.className = 'confetti-triangle';
+                        triangle.style.borderBottomColor = color;
+                        confetti.appendChild(triangle);
+                    }
+                    
+                    // Random scatter direction
+                    const scatterX = (Math.random() - 0.5) * (isMini ? 100 : 200);
+                    const scatterY = (Math.random() - 0.5) * (isMini ? 100 : 200) - 50;
+                    confetti.style.setProperty('--scatter-x', scatterX + 'px');
+                    confetti.style.setProperty('--scatter-y', scatterY + 'px');
+                    
+                    // Random rotation
+                    confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+                    
+                    document.body.appendChild(confetti);
+                    
+                    // Remove after animation
+                    setTimeout(() => {
+                        confetti.remove();
+                    }, isMini ? 2000 : 3000);
+                }, i * (isMini ? 20 : 30));
+            }
+        }
+
+        // Initialize with default text
+        generateTextArt();
+    </script>
+</body>
+</html>

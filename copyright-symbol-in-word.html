@@ -5,141 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" href="/favicon.png">
-    <title>Contact Us - Copyright Symbol</title>
+    <title>Copyright Symbol in Word - Complete Guide</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @keyframes rocket-launch {
-            0% { 
-                transform: translate(0, 0) scale(0);
-                opacity: 1;
-            }
-            10% {
-                transform: translate(var(--rocket-x), var(--rocket-y)) scale(1);
-                opacity: 1;
-            }
-            100% { 
-                transform: translate(var(--rocket-x), var(--rocket-y)) scale(0.5);
-                opacity: 0;
-            }
-        }
-        
-        @keyframes explosion {
-            0% { 
-                transform: translate(var(--x), var(--y)) scale(0);
-                opacity: 1;
-            }
-            20% {
-                transform: translate(var(--x), var(--y)) scale(1);
-                opacity: 1;
-            }
-            100% { 
-                transform: translate(var(--x), var(--y)) scale(2.5);
-                opacity: 0;
-            }
-        }
-        
-        @keyframes sparkle {
-            0% { 
-                transform: translate(var(--sparkle-x), var(--sparkle-y)) scale(0) rotate(0deg);
-                opacity: 1;
-            }
-            50% {
-                transform: translate(var(--sparkle-x), var(--sparkle-y)) scale(1) rotate(180deg);
-                opacity: 1;
-            }
-            100% { 
-                transform: translate(var(--sparkle-x), var(--sparkle-y)) scale(0) rotate(360deg);
-                opacity: 0;
-            }
-        }
-        
-        @keyframes shockwave {
-            0% { 
-                transform: translate(var(--wave-x), var(--wave-y)) scale(0);
-                opacity: 0.8;
-            }
-            100% { 
-                transform: translate(var(--wave-x), var(--wave-y)) scale(4);
-                opacity: 0;
-            }
-        }
-        
-        @keyframes trail {
-            0% { 
-                transform: translate(var(--trail-x), var(--trail-y)) scale(1);
-                opacity: 0.6;
-            }
-            100% { 
-                transform: translate(var(--trail-x), var(--trail-y)) scale(0);
-                opacity: 0;
-            }
-        }
-        
-        .rocket {
-            position: absolute;
-            width: 4px;
-            height: 12px;
-            background: linear-gradient(to top, #EC4899, #F472B6);
-            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-            animation: rocket-launch 0.6s ease-out forwards;
-            pointer-events: none;
-            filter: blur(0.5px);
-        }
-        
-        .explosion-particle {
-            position: absolute;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            animation: explosion 1.5s ease-out forwards;
-            pointer-events: none;
-        }
-        
-        .sparkle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: #FFF;
-            border-radius: 50%;
-            animation: sparkle 1s ease-out forwards;
-            pointer-events: none;
-        }
-        
-        .shockwave {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            border: 2px solid #EC4899;
-            border-radius: 50%;
-            animation: shockwave 0.8s ease-out forwards;
-            pointer-events: none;
-        }
-        
-        .trail {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            border-radius: 50%;
-            animation: trail 0.4s ease-out forwards;
-            pointer-events: none;
-        }
-        
-        .explosion-particle { 
-            background: #EC4899; 
-            box-shadow: 0 0 10px #EC4899, 0 0 20px #EC4899;
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
         .hero-pattern {
             background-color: #f8fafc;
-            background-image: none;
+            background-image: 
+                radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%), 
+                radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%);
+        }
+        
+        .copy-success {
+            animation: copyPulse 0.6s ease-out;
+        }
+        
+        @keyframes copyPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .word-ribbon {
+            background: linear-gradient(to bottom, #2a56a6, #1a4480);
+            color: white;
+        }
+        
+        .word-tab {
+            background: linear-gradient(to bottom, #f3f4f6, #e5e7eb);
+            border: 1px solid #d1d5db;
+            border-bottom: none;
+        }
+        
+        .keyboard-key {
+            background: linear-gradient(145deg, #f3f4f6, #e5e7eb);
+            box-shadow: 
+                2px 2px 5px rgba(0,0,0,0.1),
+                -1px -1px 3px rgba(255,255,255,0.7);
+            border: 1px solid #d1d5db;
+            transition: all 0.1s ease;
+        }
+        
+        .word-interface {
+            background: white;
+            border: 1px solid #d1d5db;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
     </style>
 </head>
-<body class="hero-pattern text-gray-900">
+<body class="hero-pattern text-black">
     <!-- Navigation -->
     <nav class="bg-white/90 backdrop-blur-sm shadow-sm border-b border-gray-200/50 sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -186,7 +99,7 @@
                                 <a href="copyright-symbol-mac.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on Mac</a>
                                 <a href="copyright-symbol-on-keyboard.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on Keyboard</a>
                                 <a href="copyright-symbol-iphone.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on iPhone</a>
-                                <a href="copyright-symbol-in-word.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol in Word</a>
+                                <a href="copyright-symbol-in-word.html" class="block px-4 py-2 bg-indigo-50 text-indigo-600 font-medium">Copyright Symbol in Word</a>
                                 <a href="copyright-symbol-on-mac-keyboard.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on Mac Keyboard</a>
                                 <a href="Copyright-Symbol-Comparison.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol Comparison</a>
                             </div>
@@ -229,7 +142,7 @@
                         <a href="copyright-symbol-mac.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on Mac</a>
                         <a href="copyright-symbol-on-keyboard.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on Keyboard</a>
                         <a href="copyright-symbol-iphone.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on iPhone</a>
-                        <a href="copyright-symbol-in-word.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol in Word</a>
+                        <a href="copyright-symbol-in-word.html" class="block px-3 py-2 bg-indigo-50 text-indigo-600 font-medium rounded-md">Copyright Symbol in Word</a>
                         <a href="copyright-symbol-on-mac-keyboard.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on Mac Keyboard</a>
                         <a href="Copyright-Symbol-Comparison.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol Comparison</a>
                     </div>
@@ -238,117 +151,276 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-indigo-50 to-purple-50 text-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex items-center justify-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-indigo-600 text-2xl font-bold">📝</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Copyright Symbol in Word</h1>
+            </div>
+            <p class="text-xl text-gray-700 max-w-2xl mx-auto">
+                Complete guide to inserting copyright symbols in Microsoft Word
+            </p>
+        </div>
+    </section>
+
     <!-- Main Content -->
     <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h1 class="text-4xl font-bold text-gray-900 mb-6">Contact Us</h1>
+        <!-- Word Interface Preview -->
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20 mb-8">
+            <h2 class="text-2xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">📋 Insert Tab Method</h2>
             
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Get in Touch</h2>
-                    <p class="text-gray-700 mb-6">
-                        We'd love to hear from you! Whether you have questions about copyright symbols, suggestions for our website, 
-                        or need help with our tools, feel free to reach out to us.
-                    </p>
-                    
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-semibold text-gray-900">Email</h3>
-                                <p class="text-gray-600">info@copyrightsymbol.app</p>
-                            </div>
+            <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100">
+                <div class="mb-6">
+                    <div class="word-interface rounded-lg overflow-hidden max-w-2xl mx-auto">
+                        <div class="word-ribbon px-4 py-2 flex items-center space-x-4">
+                            <span class="font-medium">File</span>
+                            <span class="font-medium bg-white/20 px-2 py-1 rounded">Home</span>
+                            <span class="font-medium bg-blue-300 px-3 py-1 rounded text-blue-900">Insert</span>
+                            <span class="font-medium">Design</span>
+                            <span class="font-medium">Layout</span>
                         </div>
-                        
-                        <div class="flex items-center space-x-3">
-                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
+                        <div class="p-4">
+                            <div class="grid grid-cols-8 gap-2 mb-4">
+                                <div class="word-tab p-2 rounded text-center text-sm">Table</div>
+                                <div class="word-tab p-2 rounded text-center text-sm">Pictures</div>
+                                <div class="word-tab p-2 rounded text-center text-sm bg-blue-100 border-blue-400">Symbols</div>
+                                <div class="word-tab p-2 rounded text-center text-sm">Media</div>
                             </div>
-                            <div>
-                                <h3 class="font-semibold text-gray-900">Support</h3>
-                                <p class="text-gray-600">support@copyrightsymbol.app</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center space-x-3">
-                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-semibold text-gray-900">Response Time</h3>
-                                <p class="text-gray-600">Within 24-48 hours</p>
+                            <div class="bg-gray-50 p-3 rounded border border-gray-200">
+                                <div class="text-center text-gray-600 mb-2">
+                                    <span class="text-lg">Symbol → More Symbols → Special Characters → ©</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div>
-                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Send us a Message</h2>
-                    <form class="space-y-4">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                            <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your name">
+                <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                    <li>Click the <strong>Insert</strong> tab in the ribbon</li>
+                    <li>Click the <strong>Symbols</strong> button in the Symbols group</li>
+                    <li>Select <strong>More Symbols</strong> from the dropdown</li>
+                    <li>In the Symbol dialog box, select <strong>Special Characters</strong> tab</li>
+                    <li>Scroll down and find <strong>Copyright Sign</strong></li>
+                    <li>Click <strong>Insert</strong> and then <strong>Close</strong></li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Keyboard Shortcuts -->
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20 mb-8">
+            <h2 class="text-2xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">⌨️ Keyboard Shortcuts</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Windows -->
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100">
+                    <h3 class="text-lg font-semibold mb-4 text-indigo-800">🪟 Windows</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-center space-x-3">
+                            <div class="keyboard-key px-3 py-2 rounded">Alt</div>
+                            <span class="text-gray-600">+</span>
+                            <div class="keyboard-key px-3 py-2 rounded font-mono">0169</div>
+                            <span class="text-gray-600">=</span>
+                            <span class="text-3xl">©</span>
                         </div>
-                        
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                            <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="your@email.com">
+                        <p class="text-sm text-gray-600 text-center">
+                            Use numeric keypad
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Mac -->
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100">
+                    <h3 class="text-lg font-semibold mb-4 text-indigo-800">🍎 Mac</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-center space-x-3">
+                            <div class="keyboard-key px-3 py-2 rounded">Option</div>
+                            <span class="text-gray-600">+</span>
+                            <div class="keyboard-key px-3 py-2 rounded">G</div>
+                            <span class="text-gray-600">=</span>
+                            <span class="text-3xl">©</span>
                         </div>
-                        
-                        <div>
-                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                            <select id="subject" name="subject" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                                <option value="">Select a topic</option>
-                                <option value="general">General Inquiry</option>
-                                <option value="support">Technical Support</option>
-                                <option value="suggestion">Suggestion</option>
-                                <option value="partnership">Partnership</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                            <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your message..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition-colors">
-                            Send Message
-                        </button>
-                    </form>
+                        <p class="text-sm text-gray-600 text-center">
+                            Works in Word for Mac
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-        
-        <div class="bg-white rounded-lg shadow-md p-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <div class="space-y-4">
-                <div class="border-b border-gray-200 pb-4">
-                    <h3 class="font-semibold text-gray-900 mb-2">How do I copy the copyright symbol?</h3>
-                    <p class="text-gray-700">Simply click the "Copy © Symbol" button on our homepage, or use the keyboard shortcuts provided in our guide.</p>
+
+        <!-- AutoCorrect Feature -->
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20 mb-8">
+            <h2 class="text-2xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">🔧 AutoCorrect Method</h2>
+            
+            <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100">
+                <h3 class="text-lg font-semibold mb-4 text-indigo-800">Set Up AutoCorrect</h3>
+                <div class="space-y-4">
+                    <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <li>Go to <strong>File</strong> → <strong>Options</strong></li>
+                        <li>Select <strong>Proofing</strong> tab</li>
+                        <li>Click <strong>AutoCorrect Options...</strong></li>
+                        <li>In "Replace:" type: <code class="bg-purple-100 px-2 py-1 rounded">(c)</code></li>
+                        <li>In "With:" type: <span class="text-2xl">©</span></li>
+                        <li>Click <strong>Add</strong>, then <strong>OK</strong></li>
+                    </ol>
+                    <div class="bg-pink-50 border-l-4 border-pink-400 p-4 rounded">
+                        <p class="text-sm text-pink-800">
+                            <strong>Pro tip:</strong> Word automatically converts (c) to © by default. If it's not working, check your AutoCorrect settings.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Symbol Dialog Box -->
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20 mb-8">
+            <h2 class="text-2xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">🔍 Symbol Dialog Box Methods</h2>
+            
+            <div class="space-y-6">
+                <!-- Subset Method -->
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100">
+                    <h3 class="text-lg font-semibold mb-3 text-indigo-800">Method 1: General Punctuation</h3>
+                    <ol class="list-decimal list-inside space-y-1 text-gray-700 text-sm">
+                        <li>Insert → Symbols → More Symbols</li>
+                        <li>Set "Font:" to <strong>(normal text)</strong></li>
+                        <li>Set "Subset:" to <strong>General Punctuation</strong></li>
+                        <li>Find and select ©</li>
+                        <li>Click Insert</li>
+                    </ol>
+                </div>
+
+                <!-- Unicode Method -->
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100">
+                    <h3 class="text-lg font-semibold mb-3 text-indigo-800">Method 2: Unicode Code</h3>
+                    <ol class="list-decimal list-inside space-y-1 text-gray-700 text-sm">
+                        <li>Insert → Symbols → More Symbols</li>
+                        <li>Click the <strong>Character Code</strong> box</li>
+                        <li>Type: <code class="bg-red-100 px-2 py-1 rounded">00A9</code></li>
+                        <li>Make sure "from:" is set to <strong>Unicode (hex)</strong></li>
+                        <li>The © symbol will be highlighted</li>
+                        <li>Click Insert</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Copy for Word -->
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20 mb-8">
+            <h2 class="text-2xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">📋 Quick Copy for Word</h2>
+            
+            <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100">
+                <div class="grid md:grid-cols-3 gap-6 text-center">
+                    <div>
+                        <div class="text-5xl mb-3">©</div>
+                        <button class="copy-btn bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium w-full" data-copy="©">
+                            Copy ©
+                        </button>
+                    </div>
+                    <div>
+                        <div class="text-5xl mb-3">®</div>
+                        <button class="copy-btn bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium w-full" data-copy="®">
+                            Copy ®
+                        </button>
+                    </div>
+                    <div>
+                        <div class="text-5xl mb-3">™</div>
+                        <button class="copy-btn bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium w-full" data-copy="™">
+                            Copy ™
+                        </button>
+                    </div>
+                </div>
+                <p class="text-center text-gray-600 mt-4 text-sm">
+                    Click to copy, then paste into Word
+                </p>
+            </div>
+        </div>
+
+        <!-- Word Versions -->
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20 mb-8">
+            <h2 class="text-2xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">🖥️ Word Version Differences</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h3 class="font-semibold text-gray-800 mb-2">Word 365/2021</h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Insert tab → Symbols</li>
+                        <li>• AutoCorrect enabled</li>
+                        <li>• Alt+0169 works</li>
+                    </ul>
                 </div>
                 
-                <div class="border-b border-gray-200 pb-4">
-                    <h3 class="font-semibold text-gray-900 mb-2">Is your service really free?</h3>
-                    <p class="text-gray-700">Yes! All our basic tools and guides are completely free to use. We may offer premium features in the future.</p>
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h3 class="font-semibold text-gray-800 mb-2">Word 2019</h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Same as 365</li>
+                        <li>• All methods work</li>
+                        <li>• Full symbol support</li>
+                    </ul>
                 </div>
                 
-                <div class="border-b border-gray-200 pb-4">
-                    <h3 class="font-semibold text-gray-900 mb-2">Can I use your symbols commercially?</h3>
-                    <p class="text-gray-700">The copyright symbol itself is not copyrighted and can be used freely. However, the content you create with it may be subject to copyright law.</p>
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h3 class="font-semibold text-gray-800 mb-2">Word 2016/2013</h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Insert → Symbol</li>
+                        <li>• Slightly different UI</li>
+                        <li>• Same shortcuts</li>
+                    </ul>
                 </div>
                 
-                <div>
-                    <h3 class="font-semibold text-gray-900 mb-2">Do you provide legal advice?</h3>
-                    <p class="text-gray-700">No, we provide educational resources and tools, but we don't offer legal advice. For specific legal questions, please consult with a qualified attorney.</p>
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h3 class="font-semibold text-gray-800 mb-2">Word for Mac</h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Option + G shortcut</li>
+                        <li>• Insert menu → Symbol</li>
+                        <li>• AutoCorrect works</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h3 class="font-semibold text-gray-800 mb-2">Word Online</h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Insert → Symbols</li>
+                        <li>• Limited symbols</li>
+                        <li>• Copy-paste best</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h3 class="font-semibold text-gray-800 mb-2">Word Mobile</h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• ... menu → Insert</li>
+                        <li>• Symbol tab</li>
+                        <li>• © in basic symbols</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tips & Best Practices -->
+        <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl shadow-xl p-8 border border-white/20">
+            <h2 class="text-2xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">💡 Tips & Best Practices</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white/70 rounded-lg p-4">
+                    <h3 class="font-semibold text-indigo-800 mb-2">📝 Document Tips</h3>
+                    <ul class="space-y-1 text-gray-700 text-sm">
+                        <li>• Place © at bottom of first page</li>
+                        <li>• Include year: © 2024</li>
+                        <li>• Add owner name: © 2024 Name</li>
+                        <li>• Use in headers/footers</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white/70 rounded-lg p-4">
+                    <h3 class="font-semibold text-indigo-800 mb-2">⚡ Efficiency Tips</h3>
+                    <ul class="space-y-1 text-gray-700 text-sm">
+                        <li>• Create AutoCorrect entry</li>
+                        <li>• Add to Quick Access Toolbar</li>
+                        <li>• Use keyboard shortcuts</li>
+                        <li>• Copy from this guide</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -505,6 +577,44 @@
         
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+        });
+
+        // Copy functionality
+        const copyBtns = document.querySelectorAll('.copy-btn');
+        
+        copyBtns.forEach(btn => {
+            btn.addEventListener('click', async () => {
+                const textToCopy = btn.getAttribute('data-copy');
+                const originalText = btn.textContent;
+                
+                try {
+                    await navigator.clipboard.writeText(textToCopy);
+                    
+                    // Show success feedback
+                    btn.textContent = 'Copied!';
+                    btn.classList.add('copy-success');
+                    
+                    // Reset after 2 seconds
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.classList.remove('copy-success');
+                    }, 2000);
+                    
+                } catch (err) {
+                    // Fallback
+                    const textArea = document.createElement('textarea');
+                    textArea.value = textToCopy;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    
+                    btn.textContent = 'Copied!';
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                    }, 2000);
+                }
+            });
         });
     </script>
 </body>

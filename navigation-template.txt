@@ -1,0 +1,97 @@
+  <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-sm shadow-sm border-b border-gray-200/50 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">© Symbol</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium py-2">Home</a>
+                    
+                    <!-- Tools Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-indigo-600 transition-colors font-medium flex items-center space-x-1 py-2">
+                            <span>Tools</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="copy-paste.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copy & Paste</a>
+                                <a href="html-generator.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">HTML Generator</a>
+                                <a href="text-converter.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Text Converter</a>
+                                <a href="css-copyright.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">CSS Copyright Symbol</a>
+                                <a href="png-download.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">PNG Download</a>
+                                <a href="svg-download.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">SVG Download</a>
+                                <a href="examples.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Examples</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Guides Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-indigo-600 transition-colors font-medium flex items-center space-x-1 py-2">
+                            <span>Guides</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="copyright-symbol-mac.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on Mac</a>
+                                <a href="copyright-symbol-on-keyboard.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on Keyboard</a>
+                                <a href="copyright-symbol-iphone.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on iPhone</a>
+                                <a href="copyright-symbol-in-word.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol in Word</a>
+                                <a href="copyright-symbol-on-mac-keyboard.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on Mac Keyboard</a>
+                                <a href="Copyright-Symbol-Comparison.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol Comparison</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-700 hover:text-indigo-600 hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">Home</a>
+                
+                <!-- Tools Mobile -->
+                <div class="px-3 py-2">
+                    <div class="text-gray-700 font-medium mb-2">Tools</div>
+                    <div class="ml-4 space-y-1">
+                        <a href="copy-paste.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copy & Paste</a>
+                        <a href="html-generator.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">HTML Generator</a>
+                        <a href="text-converter.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Text Converter</a>
+                        <a href="css-copyright.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">CSS Copyright Symbol</a>
+                        <a href="png-download.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">PNG Download</a>
+                        <a href="svg-download.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">SVG Download</a>
+                        <a href="examples.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Examples</a>
+                    </div>
+                </div>
+                
+                <!-- Guides Mobile -->
+                <div class="px-3 py-2">
+                    <div class="text-gray-700 font-medium mb-2">Guides</div>
+                    <div class="ml-4 space-y-1">
+                        <a href="copyright-symbol-mac.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on Mac</a>
+                        <a href="copyright-symbol-on-keyboard.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on Keyboard</a>
+                        <a href="copyright-symbol-iphone.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on iPhone</a>
+                        <a href="copyright-symbol-in-word.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol in Word</a>
+                        <a href="copyright-symbol-on-mac-keyboard.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on Mac Keyboard</a>
+                        <a href="Copyright-Symbol-Comparison.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol Comparison</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>

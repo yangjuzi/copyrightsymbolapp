@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <title>Copyright Symbol Comparison - Complete Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hero-pattern {
+            background-color: #f8fafc;
+            background-image: 
+                radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%), 
+                radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%);
+        }
+        
+        .copy-success {
+            animation: copyPulse 0.6s ease-out;
+        }
+        
+        @keyframes copyPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .comparison-table {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .platform-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .platform-card:hover {
+            transform: translateY(-4px);
+            border-color: #6366f1;
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.2);
+        }
+        
+        .method-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .rating {
+            color: #fbbf24;
+        }
+    </style>
+</head>
+<body class="hero-pattern text-black">
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-sm shadow-sm border-b border-gray-200/50 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">© Symbol</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium py-2">Home</a>
+                    
+                    <!-- Tools Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-indigo-600 transition-colors font-medium flex items-center space-x-1 py-2">
+                            <span>Tools</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="copy-paste.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copy & Paste</a>
+                                <a href="html-generator.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">HTML Generator</a>
+                                <a href="text-converter.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Text Converter</a>
+                                <a href="css-copyright.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">CSS Copyright Symbol</a>
+                                <a href="png-download.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">PNG Download</a>
+                                <a href="svg-download.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">SVG Download</a>
+                                <a href="examples.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Examples</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Guides Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-indigo-600 transition-colors font-medium flex items-center space-x-1 py-2">
+                            <span>Guides</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="copyright-symbol-mac.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on Mac</a>
+                                <a href="copyright-symbol-on-keyboard.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on Keyboard</a>
+                                <a href="copyright-symbol-iphone.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on iPhone</a>
+                                <a href="copyright-symbol-in-word.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol in Word</a>
+                                <a href="copyright-symbol-on-mac-keyboard.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on Mac Keyboard</a>
+                                <a href="Copyright-Symbol-Comparison.html" class="block px-4 py-2 bg-indigo-50 text-indigo-600 font-medium">Copyright Symbol Comparison</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-700 hover:text-indigo-600 hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">Home</a>
+                
+                <!-- Tools Mobile -->
+                <div class="px-3 py-2">
+                    <div class="text-gray-700 font-medium mb-2">Tools</div>
+                    <div class="ml-4 space-y-1">
+                        <a href="copy-paste.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copy & Paste</a>
+                        <a href="html-generator.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">HTML Generator</a>
+                        <a href="text-converter.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Text Converter</a>
+                        <a href="css-copyright.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">CSS Copyright Symbol</a>
+                        <a href="png-download.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">PNG Download</a>
+                        <a href="svg-download.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">SVG Download</a>
+                        <a href="examples.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Examples</a>
+                    </div>
+                </div>
+                
+                <!-- Guides Mobile -->
+                <div class="px-3 py-2">
+                    <div class="text-gray-700 font-medium mb-2">Guides</div>
+                    <div class="ml-4 space-y-1">
+                        <a href="copyright-symbol-mac.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on Mac</a>
+                        <a href="copyright-symbol-on-keyboard.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on Keyboard</a>
+                        <a href="copyright-symbol-iphone.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on iPhone</a>
+                        <a href="copyright-symbol-in-word.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol in Word</a>
+                        <a href="copyright-symbol-on-mac-keyboard.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on Mac Keyboard</a>
+                        <a href="Copyright-Symbol-Comparison.html" class="block px-3 py-2 bg-indigo-50 text-indigo-600 font-medium rounded-md">Copyright Symbol Comparison</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-indigo-50 to-purple-50 text-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex items-center justify-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-indigo-600 text-2xl font-bold">📊</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Copyright Symbol Comparison</h1>
+            </div>
+            <p class="text-xl text-gray-700 max-w-2xl mx-auto">
+                Compare all methods to insert copyright symbols across different platforms and applications
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <!-- Quick Overview -->
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20 mb-8">
+            <h2 class="text-2xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">🏆 At a Glance: Best Methods by Platform</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="platform-card bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100">
+                    <div class="text-3xl mb-3">🪟</div>
+                    <h3 class="text-lg font-semibold text-indigo-800 mb-2">Windows</h3>
+                    <div class="method-tag bg-indigo-100 text-indigo-800 mb-3">Fastest</div>
+                    <p class="text-sm text-gray-700 mb-2">Alt + 0169</p>
+                    <div class="rating text-sm">★★★★☆</div>
+                </div>
+                
+                <div class="platform-card bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100">
+                    <div class="text-3xl mb-3">🍎</div>
+                    <h3 class="text-lg font-semibold text-indigo-800 mb-2">Mac</h3>
+                    <div class="method-tag bg-indigo-100 text-indigo-800 mb-3">Fastest</div>
+                    <p class="text-sm text-gray-700 mb-2">Option + G</p>
+                    <div class="rating text-sm">★★★★★</div>
+                </div>
+                
+                <div class="platform-card bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100">
+                    <div class="text-3xl mb-3">📱</div>
+                    <h3 class="text-lg font-semibold text-indigo-800 mb-2">iPhone/iPad</h3>
+                    <div class="method-tag bg-indigo-100 text-indigo-800 mb-3">Easiest</div>
+                    <p class="text-sm text-gray-700 mb-2">Emoji Keyboard</p>
+                    <div class="rating text-sm">★★★★☆</div>
+                </div>
+                
+                <div class="platform-card bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100">
+                    <div class="text-3xl mb-3">📝</div>
+                    <h3 class="text-lg font-semibold text-indigo-800 mb-2">Word</h3>
+                    <div class="method-tag bg-indigo-100 text-indigo-800 mb-3">Universal</div>
+                    <p class="text-sm text-gray-700 mb-2">Insert → Symbol</p>
+                    <div class="rating text-sm">★★★☆☆</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Comparison Table -->
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20 mb-8">
+            <h2 class="text-2xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">📋 Detailed Method Comparison</h2>
+            
+            <div class="comparison-table overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+                            <tr>
+                                <th class="px-6 py-4 text-left">Platform</th>
+                                <th class="px-6 py-4 text-left">Method 1</th>
+                                <th class="px-6 py-4 text-left">Method 2</th>
+                                <th class="px-6 py-4 text-left">Method 3</th>
+                                <th class="px-6 py-4 text-left">Ease of Use</th>
+                                <th class="px-6 py-4 text-left">Speed</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 font-semibold">Windows</td>
+                                <td class="px-6 py-4">
+                                    <div class="font-mono text-sm bg-gray-100 px-2 py-1 rounded">Alt + 0169</div>
+                                    <div class="text-xs text-gray-600">Alt Code</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="text-sm">Character Map</div>
+                                    <div class="text-xs text-gray-600">charmap.exe</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="text-sm">Copy & Paste</div>
+                                    <div class="text-xs text-gray-600">Universal</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="rating">★★★☆☆</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="rating">★★★★☆</div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 font-semibold">Mac</td>
+                                <td class="px-6 py-4">
+                                    <div class="font-mono text-sm bg-gray-100 px-2 py-1 rounded">Option + G</div>
+                                    <div class="text-xs text-gray-600">Keyboard</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="text-sm">Character Viewer</div>
+                                    <div class="text-xs text-gray-600">⌃⌘Space</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="text-sm">Text Replacement</div>
+                                    <div class="text-xs text-gray-600">(c) → ©</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="rating">★★★★★</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="rating">★★★★★</div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 font-semibold">iPhone</td>
+                                <td class="px-6 py-4">
+                                    <div class="text-sm">Emoji Keyboard</div>
+                                    <div class="text-xs text-gray-600">😊→⌘→©</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="text-sm">Text Replacement</div>
+                                    <div class="text-xs text-gray-600">(c) → ©</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="text-sm">Dictation</div>
+                                    <div class="text-xs text-gray-600">🎤 "copyright"</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="rating">★★★★☆</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="rating">★★★★☆</div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 font-semibold">Word</td>
+                                <td class="px-6 py-4">
+                                    <div class="text-sm">Insert Tab</div>
+                                    <div class="text-xs text-gray-600">Symbols → ©</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="text-sm">AutoCorrect</div>
+                                    <div class="text-xs text-gray-600">(c) → ©</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="text-sm">Keyboard</div>
+                                    <div class="text-xs text-gray-600">Alt+0169/Opt+G</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="rating">★★★☆☆</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="rating">★★★☆☆</div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 font-semibold">Web/HTML</td>
+                                <td class="px-6 py-4">
+                                    <div class="font-mono text-sm bg-gray-100 px-2 py-1 rounded">&copy;</div>
+                                    <div class="text-xs text-gray-600">HTML Entity</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="font-mono text-sm bg-gray-100 px-2 py-1 rounded">&#169;</div>
+                                    <div class="text-xs text-gray-600">Decimal</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="font-mono text-sm bg-gray-100 px-2 py-1 rounded">&#xA9;</div>
+                                    <div class="text-xs text-gray-600">Hex</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="rating">★★★★★</div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="rating">★★★★★</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pros and Cons -->
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/20 mb-8">
+            <h2 class="text-2xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">⚖️ Pros and Cons of Each Method</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Keyboard Shortcuts -->
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100">
+                    <h3 class="text-lg font-semibold mb-4 text-indigo-800">⌨️ Keyboard Shortcuts</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <span class="text-indigo-600 mr-2">✓</span>
+                            <div>
+                                <h4 class="font-semibold text-indigo-800">Pros</h4>
+                                <p class="text-sm text-gray-700">Fastest method, works in most apps, no need to switch windows</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-rose-600 mr-2">✗</span>
+                            <div>
+                                <h4 class="font-semibold text-rose-800">Cons</h4>
+                                <p class="text-sm text-gray-700">Requires memorization, different per platform, needs numpad on Windows</p>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <span class="method-tag bg-indigo-100 text-indigo-800">Best for: Power users</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Character Viewer/Map -->
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100">
+                    <h3 class="text-lg font-semibold mb-4 text-indigo-800">👁️ Character Viewer/Map</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <span class="text-indigo-600 mr-2">✓</span>
+                            <div>
+                                <h4 class="font-semibold text-indigo-800">Pros</h4>
+                                <p class="text-sm text-gray-700">Visual interface, no memorization needed, access to all symbols</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-rose-600 mr-2">✗</span>
+                            <div>
+                                <h4 class="font-semibold text-rose-800">Cons</h4>
+                                <p class="text-sm text-gray-700">Slower, requires switching apps/windows, multiple clicks</p>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <span class="method-tag bg-indigo-100 text-indigo-800">Best for: Beginners</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Replacement -->
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100">
+                    <h3 class="text-lg font-semibold mb-4 text-indigo-800">🔄 Text Replacement</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <span class="text-indigo-600 mr-2">✓</span>
+                            <div>
+                                <h4 class="font-semibold text-indigo-800">Pros</h4>
+                                <p class="text-sm text-gray-700">Automatic, works while typing, set once and forget</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-rose-600 mr-2">✗</span>
+                            <div>
+                                <h4 class="font-semibold text-rose-800">Cons</h4>
+                                <p class="text-sm text-gray-700">Requires setup, may not work in all apps, platform-specific</p>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <span class="method-tag bg-indigo-100 text-indigo-800">Best for: Frequent use</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copy & Paste -->
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100">
+                    <h3 class="text-lg font-semibold mb-4 text-indigo-800">📋 Copy & Paste</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <span class="text-indigo-600 mr-2">✓</span>
+                            <div>
+                                <h4 class="font-semibold text-indigo-800">Pros</h4>
+                                <p class="text-sm text-gray-700">Universal, works everywhere, no setup needed</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-rose-600 mr-2">✗</span>
+                            <div>
+                                <h4 class="font-semibold text-rose-800">Cons</h4>
+                                <p class="text-sm text-gray-700">Requires source to copy from, slowest method, context switching</p>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <span class="method-tag bg-indigo-100 text-indigo-800">Best for: Emergency use</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl shadow-xl p-8 border border-white/20 mb-8">
+            <h2 class="text-2xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">🎯 Our Recommendations</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white/70 rounded-xl p-6 text-center">
+                    <div class="text-4xl mb-3">🚀</div>
+                    <h3 class="text-lg font-semibold mb-2">For Speed</h3>
+                    <p class="text-gray-700 text-sm mb-4">Learn keyboard shortcuts</p>
+                    <div class="bg-indigo-100 rounded-lg p-3">
+                        <p class="text-xs font-mono text-indigo-800">Windows: Alt+0169</p>
+                        <p class="text-xs font-mono text-indigo-800">Mac: Option+G</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white/70 rounded-xl p-6 text-center">
+                    <div class="text-4xl mb-3">😊</div>
+                    <h3 class="text-lg font-semibold mb-2">For Beginners</h3>
+                    <p class="text-gray-700 text-sm mb-4">Use character viewer or copy-paste</p>
+                    <div class="bg-indigo-100 rounded-lg p-3">
+                        <p class="text-xs text-indigo-800">No memorization required</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white/70 rounded-xl p-6 text-center">
+                    <div class="text-4xl mb-3">⚡</div>
+                    <h3 class="text-lg font-semibold mb-2">For Power Users</h3>
+                    <p class="text-gray-700 text-sm mb-4">Set up text replacement</p>
+                    <div class="bg-indigo-100 rounded-lg p-3">
+                        <p class="text-xs font-mono text-indigo-800">Type (c) → get ©</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Copy Section -->
+        <div class="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-2xl shadow-xl p-8 text-white">
+            <h2 class="text-2xl font-bold mb-6">Quick Copy Anywhere</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="text-6xl mb-4">©</div>
+                    <button class="copy-btn bg-white text-indigo-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-medium transition-all w-full" data-copy="©">
+                        Copy Copyright
+                    </button>
+                </div>
+                <div class="text-center">
+                    <div class="text-6xl mb-4">®</div>
+                    <button class="copy-btn bg-white text-indigo-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-medium transition-all w-full" data-copy="®">
+                        Copy Registered
+                    </button>
+                </div>
+                <div class="text-center">
+                    <div class="text-6xl mb-4">™</div>
+                    <button class="copy-btn bg-white text-indigo-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-medium transition-all w-full" data-copy="™">
+                        Copy Trademark
+                    </button>
+                </div>
+            </div>
+            <p class="text-center mt-6 text-indigo-200">
+                Works on all platforms - the universal fallback method
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-gray-900 to-indigo-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-5 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">©</span>
+                        <span class="ml-2 text-lg font-semibold text-white">CopyrightSymbol.app</span>
+                    </div>
+                    <p class="text-gray-400">Your trusted source for copyright symbols and information.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">About Us</h3>
+                    <p class="text-gray-400 mb-3">We provide easy access to copyright symbols and educate users about intellectual property rights and best practices.</p>
+                    <a href="about.html" class="text-indigo-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                        Learn more →
+                    </a>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Contact Us</h3>
+                    <div class="space-y-2">
+                        <p class="text-gray-400 flex items-center">
+                            <span class="w-2 h-2 bg-indigo-400 rounded-full mr-2"></span>
+                            info@copyrightsymbol.app
+                        </p>
+                        <p class="text-gray-400 flex items-center">
+                            <span class="w-2 h-2 bg-indigo-400 rounded-full mr-2"></span>
+                            support@copyrightsymbol.app
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Tools</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="copy-paste.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Copy & Paste
+                            </a>
+                        </li>
+                        <li>
+                            <a href="html-generator.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                HTML Generator
+                            </a>
+                        </li>
+                        <li>
+                            <a href="text-converter.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Text Converter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="css-copyright.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                CSS Copyright Symbol
+                            </a>
+                        </li>
+                        <li>
+                            <a href="png-download.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                PNG Download
+                            </a>
+                        </li>
+                        <li>
+                            <a href="svg-download.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                SVG Download
+                            </a>
+                        </li>
+                        <li>
+                            <a href="examples.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Examples
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Guides</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="copyright-symbol-mac.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Copyright Symbol on Mac
+                            </a>
+                        </li>
+                        <li>
+                            <a href="copyright-symbol-on-keyboard.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Copyright Symbol on Keyboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href="copyright-symbol-iphone.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Copyright Symbol on iPhone
+                            </a>
+                        </li>
+                        <li>
+                            <a href="copyright-symbol-in-word.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Copyright Symbol in Word
+                            </a>
+                        </li>
+                        <li>
+                            <a href="copyright-symbol-on-mac-keyboard.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Copyright Symbol on Mac Keyboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Copyright-Symbol-Comparison.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Copyright Symbol Comparison
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Legal</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="terms.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Terms of Service
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Privacy Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-indigo-800 pt-8 text-center">
+                <p class="text-gray-400">© 2025 CopyrightSymbol.app. All rights reserved.</p>
+                <p class="text-gray-500 text-sm mt-2">Made with 💜 for creators worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Copy functionality
+        const copyBtns = document.querySelectorAll('.copy-btn');
+        
+        copyBtns.forEach(btn => {
+            btn.addEventListener('click', async () => {
+                const textToCopy = btn.getAttribute('data-copy');
+                const originalText = btn.textContent;
+                
+                try {
+                    await navigator.clipboard.writeText(textToCopy);
+                    
+                    // Show success feedback
+                    btn.textContent = 'Copied!';
+                    btn.classList.add('copy-success');
+                    
+                    // Reset after 2 seconds
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.classList.remove('copy-success');
+                    }, 2000);
+                    
+                } catch (err) {
+                    // Fallback
+                    const textArea = document.createElement('textarea');
+                    textArea.value = textToCopy;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    
+                    btn.textContent = 'Copied!';
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                    }, 2000);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

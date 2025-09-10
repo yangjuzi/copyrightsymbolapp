@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <title>Text Converter - Convert Copyright Symbols to Unicode, HTML, ASCII & More | Free Tool</title>
+    
+    <!-- Enhanced Meta Tags -->
+    <meta name="description" content="Free text converter tool to convert copyright symbols between Unicode, HTML entities, ASCII, and decimal formats. Instantly transform © ® ™ ℗ symbols for web development, documents, and digital content. Includes comprehensive conversion table and batch processing.">
+    <meta name="keywords" content="text converter, copyright symbol converter, unicode converter, html entity converter, ascii converter, symbol converter, copyright symbol unicode, html entity copyright, copyright symbol encoding, text encoding converter, special characters converter">
+    <meta name="author" content="CopyrightSymbol.app">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://copyrightsymbol.app/text-converter.html">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Text Converter - Convert Copyright Symbols to Unicode, HTML, ASCII & More">
+    <meta property="og:description" content="Free text converter tool for copyright symbols. Convert between Unicode, HTML entities, ASCII, and decimal formats instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://copyrightsymbol.app/text-converter.html">
+    <meta property="og:site_name" content="CopyrightSymbol.app">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Text Converter - Convert Copyright Symbols to Unicode, HTML, ASCII & More">
+    <meta name="twitter:description" content="Free text converter tool for copyright symbols. Convert between Unicode, HTML entities, ASCII, and decimal formats instantly.">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Copyright Symbol Text Converter",
+        "description": "Free online tool to convert copyright symbols between Unicode, HTML entities, ASCII, and decimal formats",
+        "url": "https://copyrightsymbol.app/text-converter.html",
+        "applicationCategory": "WebApplication",
+        "operatingSystem": "Web Browser",
+        "creator": {
+            "@type": "Organization",
+            "name": "CopyrightSymbol.app",
+            "url": "https://copyrightsymbol.app"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "inLanguage": "en",
+        "datePublished": "2024-01-01",
+        "dateModified": "2025-01-01"
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .conversion-table {
+            font-family: 'Courier New', monospace;
+        }
+        .tab-active {
+            border-bottom: 3px solid #4F46E5;
+            color: #4F46E5;
+        }
+        .symbol-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-sm shadow-sm border-b border-gray-200/50 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">© Symbol</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Home</a>
+                    
+                    <!-- Tools Dropdown -->
+                    <div class="relative group">
+                        <button class="text-indigo-600 hover:text-indigo-700 transition-colors font-medium flex items-center space-x-1 py-2">
+                            <span>Tools</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="copy-paste.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copy & Paste</a>
+                                <a href="html-generator.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">HTML Generator</a>
+                                <a href="text-converter.html" class="block px-4 py-2 bg-indigo-50 text-indigo-600 font-medium">Text Converter</a>
+                                <a href="css-copyright.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">CSS Copyright Symbol</a>
+                                <a href="png-download.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">PNG Download</a>
+                                <a href="svg-download.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">SVG Download</a>
+                                <a href="examples.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Examples</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Guides Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-indigo-600 transition-colors font-medium flex items-center space-x-1 py-2">
+                            <span>Guides</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="copyright-symbol-mac.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on Mac</a>
+                                <a href="copyright-symbol-on-keyboard.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on Keyboard</a>
+                                <a href="copyright-symbol-iphone.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on iPhone</a>
+                                <a href="copyright-symbol-in-word.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol in Word</a>
+                                <a href="copyright-symbol-on-mac-keyboard.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on Mac Keyboard</a>
+                                <a href="Copyright-Symbol-Comparison.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol Comparison</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-700 hover:text-indigo-600 hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">Home</a>
+                
+                <!-- Tools Mobile -->
+                <div class="px-3 py-2">
+                    <div class="text-gray-700 font-medium mb-2">Tools</div>
+                    <div class="ml-4 space-y-1">
+                        <a href="copy-paste.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copy & Paste</a>
+                        <a href="html-generator.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">HTML Generator</a>
+                        <a href="text-converter.html" class="block px-3 py-2 bg-indigo-50 text-indigo-600 rounded-md transition-colors text-sm font-medium">Text Converter</a>
+                        <a href="css-copyright.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">CSS Copyright Symbol</a>
+                        <a href="png-download.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">PNG Download</a>
+                        <a href="svg-download.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">SVG Download</a>
+                        <a href="examples.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Examples</a>
+                    </div>
+                </div>
+                
+                <!-- Guides Mobile -->
+                <div class="px-3 py-2">
+                    <div class="text-gray-700 font-medium mb-2">Guides</div>
+                    <div class="ml-4 space-y-1">
+                        <a href="copyright-symbol-mac.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on Mac</a>
+                        <a href="copyright-symbol-on-keyboard.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on Keyboard</a>
+                        <a href="copyright-symbol-iphone.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on iPhone</a>
+                        <a href="copyright-symbol-in-word.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol in Word</a>
+                        <a href="copyright-symbol-on-mac-keyboard.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on Mac Keyboard</a>
+                        <a href="Copyright-Symbol-Comparison.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol Comparison</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                Text Converter
+            </h1>
+            <p class="text-xl text-gray-600">
+                Convert copyright symbols between Unicode, HTML entities, ASCII, and more
+            </p>
+        </div>
+
+        <!-- Converter Section -->
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold mb-6 text-gray-900">Convert Text</h2>
+            
+            <div class="mb-6">
+                <label for="input-text" class="block text-sm font-medium text-gray-700 mb-2">
+                    Enter text or symbols to convert
+                </label>
+                <textarea id="input-text" rows="4" 
+                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
+                          placeholder="Type or paste your text here..."></textarea>
+            </div>
+
+            <div class="mb-6">
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Conversion Type
+                </label>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
+                    <label class="flex items-center p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition-colors">
+                        <input type="radio" name="conversion" value="all" class="mr-3" checked>
+                        <span class="text-sm font-medium">All Formats</span>
+                    </label>
+                    <label class="flex items-center p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition-colors">
+                        <input type="radio" name="conversion" value="unicode" class="mr-3">
+                        <span class="text-sm font-medium">To Unicode</span>
+                    </label>
+                    <label class="flex items-center p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition-colors">
+                        <input type="radio" name="conversion" value="html" class="mr-3">
+                        <span class="text-sm font-medium">To HTML</span>
+                    </label>
+                    <label class="flex items-center p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition-colors">
+                        <input type="radio" name="conversion" value="ascii" class="mr-3">
+                        <span class="text-sm font-medium">To ASCII</span>
+                    </label>
+                </div>
+            </div>
+
+            <button id="convert-btn" 
+                    class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                Convert Text
+            </button>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results-section" class="hidden">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="border-b border-gray-200">
+                    <div class="px-8 py-4 bg-gray-50">
+                        <h3 class="text-lg font-semibold text-gray-900">Conversion Results</h3>
+                    </div>
+                </div>
+                
+                <div class="p-8">
+                    <div id="conversion-results" class="space-y-6">
+                        <!-- Results will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Reference Table -->
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold mb-6 text-gray-900">Copyright Symbol Reference</h2>
+            
+            <div class="overflow-x-auto">
+                <table class="conversion-table w-full text-sm">
+                    <thead>
+                        <tr class="border-b-2 border-gray-200">
+                            <th class="text-left py-3 px-4 font-semibold">Symbol</th>
+                            <th class="text-left py-3 px-4 font-semibold">Name</th>
+                            <th class="text-left py-3 px-4 font-semibold">Unicode</th>
+                            <th class="text-left py-3 px-4 font-semibold">HTML Entity</th>
+                            <th class="text-left py-3 px-4 font-semibold">HTML Decimal</th>
+                            <th class="text-left py-3 px-4 font-semibold">HTML Hex</th>
+                            <th class="text-left py-3 px-4 font-semibold">ASCII</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 text-2xl">©</td>
+                            <td class="py-3 px-4 font-medium">Copyright</td>
+                            <td class="py-3 px-4">U+00A9</td>
+                            <td class="py-3 px-4">&copy;</td>
+                            <td class="py-3 px-4">&#169;</td>
+                            <td class="py-3 px-4">&#xA9;</td>
+                            <td class="py-3 px-4">(c)</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 text-2xl">®</td>
+                            <td class="py-3 px-4 font-medium">Registered Trademark</td>
+                            <td class="py-3 px-4">U+00AE</td>
+                            <td class="py-3 px-4">&reg;</td>
+                            <td class="py-3 px-4">&#174;</td>
+                            <td class="py-3 px-4">&#xAE;</td>
+                            <td class="py-3 px-4">(R)</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 text-2xl">™</td>
+                            <td class="py-3 px-4 font-medium">Trademark</td>
+                            <td class="py-3 px-4">U+2122</td>
+                            <td class="py-3 px-4">&trade;</td>
+                            <td class="py-3 px-4">&#8482;</td>
+                            <td class="py-3 px-4">&#x2122;</td>
+                            <td class="py-3 px-4">(TM)</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 text-2xl">℗</td>
+                            <td class="py-3 px-4 font-medium">Sound Recording</td>
+                            <td class="py-3 px-4">U+2117</td>
+                            <td class="py-3 px-4">(none)</td>
+                            <td class="py-3 px-4">&#8471;</td>
+                            <td class="py-3 px-4">&#x2117;</td>
+                            <td class="py-3 px-4">(P)</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-3 px-4 text-2xl">℠</td>
+                            <td class="py-3 px-4 font-medium">Service Mark</td>
+                            <td class="py-3 px-4">U+2120</td>
+                            <td class="py-3 px-4">(none)</td>
+                            <td class="py-3 px-4">&#8480;</td>
+                            <td class="py-3 px-4">&#x2120;</td>
+                            <td class="py-3 px-4">(SM)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Common Conversions -->
+        <div class="bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-2xl font-bold mb-6 text-gray-900">Common Conversions</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-900">ASCII to Unicode</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between p-2 bg-gray-50 rounded">
+                            <span>(c)</span>
+                            <button class="copy-quick text-indigo-600 hover:text-indigo-700" data-copy="©">©</button>
+                        </div>
+                        <div class="flex justify-between p-2 bg-gray-50 rounded">
+                            <span>(r)</span>
+                            <button class="copy-quick text-indigo-600 hover:text-indigo-700" data-copy="®">®</button>
+                        </div>
+                        <div class="flex justify-between p-2 bg-gray-50 rounded">
+                            <span>(tm)</span>
+                            <button class="copy-quick text-indigo-600 hover:text-indigo-700" data-copy="™">™</button>
+                        </div>
+                        <div class="flex justify-between p-2 bg-gray-50 rounded">
+                            <span>(p)</span>
+                            <button class="copy-quick text-indigo-600 hover:text-indigo-700" data-copy="℗">℗</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-900">Unicode to HTML</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between p-2 bg-gray-50 rounded">
+                            <span>©</span>
+                            <button class="copy-quick text-indigo-600 hover:text-indigo-700" data-copy="&copy;">&copy;</button>
+                        </div>
+                        <div class="flex justify-between p-2 bg-gray-50 rounded">
+                            <span>®</span>
+                            <button class="copy-quick text-indigo-600 hover:text-indigo-700" data-copy="&reg;">&reg;</button>
+                        </div>
+                        <div class="flex justify-between p-2 bg-gray-50 rounded">
+                            <span>™</span>
+                            <button class="copy-quick text-indigo-600 hover:text-indigo-700" data-copy="&trade;">&trade;</button>
+                        </div>
+                        <div class="flex justify-between p-2 bg-gray-50 rounded">
+                            <span>℗</span>
+                            <button class="copy-quick text-indigo-600 hover:text-indigo-700" data-copy="&#8471;">&#8471;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comprehensive Guide Section -->
+        <div class="mt-16 space-y-12">
+            <!-- Understanding Text Encoding -->
+            <section class="bg-white rounded-xl shadow-lg p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                        <span class="text-indigo-600 text-xl font-bold">🔤</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-900">Understanding Text Encoding for Copyright Symbols</h2>
+                </div>
+                
+                <div class="prose prose-lg max-w-none text-gray-600 space-y-6">
+                    <p>
+                        Text encoding is the foundation of how computers represent and display characters, including copyright symbols. Different encoding systems serve various purposes, from web development to document processing, and understanding these formats is essential for anyone working with digital content.
+                    </p>
+                    
+                    <p>
+                        The evolution of text encoding has been driven by the need to represent increasingly diverse character sets across different languages and symbols. From basic ASCII to modern Unicode, each encoding system addresses specific limitations and use cases that content creators and developers encounter in their daily work.
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold text-gray-900">Unicode: The Universal Character Set</h3>
+                    <p>
+                        Unicode has revolutionized text processing by providing a comprehensive character set that includes virtually every symbol and character used in writing systems worldwide. Copyright symbols like ©, ®, ™, and ℗ each have specific Unicode code points that ensure consistent display across different platforms and devices.
+                    </p>
+                    
+                    <p>
+                        The beauty of Unicode lies in its consistency and universality. When you use Unicode characters, you can be confident that your copyright symbols will display correctly regardless of the user's operating system, browser, or device. This makes Unicode the preferred choice for most modern web applications and digital content.
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold text-gray-900">HTML Entities: Web Development Standard</h3>
+                    <p>
+                        HTML entities provide a reliable way to include special characters in web pages without worrying about encoding issues. By using named entities like &copy; or numeric references like &#169;, developers ensure that copyright symbols display correctly even in environments with limited character support.
+                    </p>
+                    
+                    <p>
+                        The use of HTML entities is particularly important in web development for several reasons. They prevent parsing errors, ensure proper validation, and maintain compatibility with older browsers and systems that might not support direct Unicode input.
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold text-gray-900">ASCII Equivalents: Universal Compatibility</h3>
+                    <p>
+                        ASCII equivalents like (c), (r), and (tm) represent the most basic form of copyright symbol representation. While these don't provide the official symbols, they offer maximum compatibility across all systems, including those that don't support Unicode or special characters.
+                    </p>
+                    
+                    <p>
+                        These text-based alternatives remain valuable in certain contexts, such as plain text emails, legacy systems, or situations where character encoding cannot be guaranteed. They serve as a fallback option when official symbols aren't available or practical.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Practical Applications -->
+            <section class="bg-white rounded-xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold mb-6 text-gray-900">Practical Applications and Use Cases</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Web Development</h3>
+                        <div class="space-y-4 text-gray-600">
+                            <p>
+                                In web development, choosing the right format for copyright symbols depends on your specific needs. HTML entities are ideal for static content, while Unicode characters work well in modern applications with proper character encoding declarations.
+                            </p>
+                            <p>
+                                Content Management Systems often handle character encoding automatically, but understanding the underlying formats helps troubleshoot display issues and ensures consistent rendering across different templates and themes.
+                            </p>
+                            <p>
+                                Dynamic content generation requires careful consideration of encoding formats. When generating copyright notices programmatically, ensure your code properly handles different character sets and encoding standards.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Document Processing</h3>
+                        <div class="space-y-4 text-gray-600">
+                            <p>
+                                Different document formats have varying requirements for special characters. Microsoft Word, PDF files, and other document types may handle copyright symbols differently, requiring specific formatting approaches.
+                            </p>
+                            <p>
+                                When sharing documents across different platforms and systems, using Unicode characters generally provides the best compatibility. However, some legacy systems may require ASCII alternatives for proper display.
+                            </p>
+                            <p>
+                                Batch processing of documents often requires standardizing copyright symbol formats. Automated conversion tools can help ensure consistency across large document collections and maintain professional standards.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Implementation -->
+            <section class="bg-white rounded-xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold mb-6 text-gray-900">Technical Implementation Guide</h2>
+                
+                <div class="space-y-6">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Character Encoding Best Practices</h3>
+                        <div class="prose prose-gray max-w-none">
+                            <p>
+                                Implementing proper character encoding is essential for ensuring that copyright symbols display correctly across all platforms. Here are key considerations for different environments:
+                            </p>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>Always specify UTF-8 encoding in HTML documents using <code class="bg-gray-200 px-1 rounded">&lt;meta charset="UTF-8"&gt;</code></li>
+                                <li>Use HTML entities when content needs to be XML-compliant or validated</li>
+                                <li>Consider ASCII alternatives for maximum compatibility in plain text environments</li>
+                                <li>Test your content across different browsers and devices to ensure consistent display</li>
+                                <li>Be aware of encoding issues when copying and pasting between different applications</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Cross-Platform Considerations</h3>
+                        <div class="prose prose-gray max-w-none">
+                            <p>
+                                Different operating systems and applications may handle copyright symbols differently. Understanding these differences helps ensure your content displays correctly everywhere:
+                            </p>
+                            <ul class="list-disc pl-6 space-y-2">
+                                <li>Windows applications often support multiple input methods for special characters</li>
+                                <li>macOS provides excellent Unicode support through various input methods</li>
+                                <li>Mobile devices generally handle Unicode characters well in modern apps</li>
+                                <li>Legacy systems may require ASCII alternatives for proper display</li>
+                                <li>Email clients vary in their support for HTML entities and Unicode characters</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="bg-white rounded-xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold mb-6 text-gray-900">Frequently Asked Questions</h2>
+                
+                <div class="space-y-6">
+                    <div class="border-b border-gray-200 pb-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">What's the difference between Unicode and HTML entities?</h3>
+                        <p class="text-gray-600">
+                            Unicode is a universal character encoding standard that assigns unique numbers to characters, while HTML entities are special codes used in HTML to represent characters that might otherwise be interpreted as HTML code. Unicode characters (©) are more readable, while HTML entities (&copy;) ensure proper parsing in web documents.
+                        </p>
+                    </div>
+                    
+                    <div class="border-b border-gray-200 pb-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">When should I use ASCII equivalents instead of symbols?</h3>
+                        <p class="text-gray-600">
+                            Use ASCII equivalents like (c) and (r) when working with plain text environments, legacy systems, email clients that don't support HTML, or situations where character encoding cannot be guaranteed. They provide maximum compatibility but lack the official appearance of proper symbols.
+                        </p>
+                    </div>
+                    
+                    <div class="border-b border-gray-200 pb-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Why do my copyright symbols display as question marks?</h3>
+                        <p class="text-gray-600">
+                            This usually indicates a character encoding issue. Ensure your document is saved with UTF-8 encoding and that your HTML includes the proper charset declaration. Different systems may default to different encodings, causing special characters to display incorrectly.
+                        </p>
+                    </div>
+                    
+                    <div class="border-b border-gray-200 pb-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Can I use copyright symbols in programming code?</h3>
+                        <p class="text-gray-600">
+                            While possible, it's generally better to avoid special characters in programming code. Use string constants or variables with the proper symbol representations instead. Most programming languages support Unicode strings, but using special characters in code can cause issues with source control and text editors.
+                        </p>
+                    </div>
+                    
+                    <div class="border-b border-gray-200 pb-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">How do I ensure copyright symbols work in email?</h3>
+                        <p class="text-gray-600">
+                            For HTML emails, use HTML entities (&copy;) for best compatibility. For plain text emails, use ASCII equivalents ((c)) or ensure your email client supports Unicode encoding. Email clients vary widely in their support for special characters, so testing is essential.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">What's the best format for search engine optimization?</h3>
+                        <p class="text-gray-600">
+                            Search engines can read and understand both Unicode characters and HTML entities. For SEO purposes, using Unicode characters in visible content is generally preferred as it provides better readability for users. However, ensure your page uses proper UTF-8 encoding to avoid display issues.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Best Practices -->
+            <section class="bg-white rounded-xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold mb-6 text-gray-900">Best Practices for Symbol Usage</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Do's</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                Use Unicode characters for modern web applications
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                Use HTML entities for HTML document validation
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                Test your content across different browsers and devices
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                Specify UTF-8 encoding in your HTML documents
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                Consider ASCII alternatives for maximum compatibility
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-500 mr-2">✓</span>
+                                Keep backup copies of important documents with proper encoding
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Don'ts</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">✗</span>
+                                Assume all systems display Unicode characters correctly
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">✗</span>
+                                Mix different encoding formats in the same document
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">✗</span>
+                                Use special characters in programming source code
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">✗</span>
+                                Forget to test email content with special characters
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">✗</span>
+                                Rely solely on visual appearance without technical validation
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">✗</span>
+                                Use copyrighted symbols without proper authority
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Toast Notification -->
+        <div id="toast" class="fixed bottom-8 right-8 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-full transition-transform duration-300">
+            Copied to clipboard!
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-gray-900 to-indigo-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">©</span>
+                        <span class="ml-2 text-lg font-semibold text-white">CopyrightSymbol.app</span>
+                    </div>
+                    <p class="text-gray-400">Your trusted source for copyright symbols and information.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">About Us</h3>
+                    <p class="text-gray-400 mb-3">We provide easy access to copyright symbols and educate users about intellectual property rights and best practices.</p>
+                    <a href="about.html" class="text-indigo-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                        Learn more →
+                    </a>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Contact Us</h3>
+                    <div class="space-y-2">
+                        <p class="text-gray-400 flex items-center">
+                            <span class="w-2 h-2 bg-indigo-400 rounded-full mr-2"></span>
+                            info@copyrightsymbol.app
+                        </p>
+                        <p class="text-gray-400 flex items-center">
+                            <span class="w-2 h-2 bg-indigo-400 rounded-full mr-2"></span>
+                            support@copyrightsymbol.app
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Tools</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="copy-paste.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Copy & Paste
+                            </a>
+                        </li>
+                        <li>
+                            <a href="html-generator.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                HTML Generator
+                            </a>
+                        </li>
+                        <li>
+                            <a href="text-converter.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Text Converter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="css-copyright.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                CSS Copyright Symbol
+                            </a>
+                        </li>
+                        <li>
+                            <a href="png-download.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                PNG Download
+                            </a>
+                        </li>
+                        <li>
+                            <a href="svg-download.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                SVG Download
+                            </a>
+                        </li>
+                        <li>
+                            <a href="examples.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Examples
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Guides</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="copyright-symbol-mac.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Copyright Symbol on Mac
+                            </a>
+                        </li>
+                        <li>
+                            <a href="copyright-symbol-on-keyboard.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Copyright Symbol on Keyboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href="copyright-symbol-iphone.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Copyright Symbol on iPhone
+                            </a>
+                        </li>
+                        <li>
+                            <a href="copyright-symbol-in-word.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Copyright Symbol in Word
+                            </a>
+                        </li>
+                        <li>
+                            <a href="copyright-symbol-on-mac-keyboard.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Copyright Symbol on Mac Keyboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Copyright-Symbol-Comparison.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Copyright Symbol Comparison
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Legal</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="terms.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Terms of Service
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy.html" class="text-gray-400 hover:text-indigo-300 transition-colors inline-flex items-center">
+                                <span class="w-1 h-1 bg-indigo-400 rounded-full mr-2"></span>
+                                Privacy Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-indigo-800 pt-8 text-center">
+                <p class="text-gray-400">© 2025 CopyrightSymbol.app. All rights reserved.</p>
+                <p class="text-gray-500 text-sm mt-2">Made with 💜 for creators worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Conversion mappings
+        const conversions = {
+            '©': {
+                name: 'Copyright',
+                unicode: 'U+00A9',
+                htmlEntity: '&copy;',
+                htmlDecimal: '&#169;',
+                htmlHex: '&#xA9;',
+                ascii: '(c)'
+            },
+            '®': {
+                name: 'Registered Trademark',
+                unicode: 'U+00AE',
+                htmlEntity: '&reg;',
+                htmlDecimal: '&#174;',
+                htmlHex: '&#xAE;',
+                ascii: '(R)'
+            },
+            '™': {
+                name: 'Trademark',
+                unicode: 'U+2122',
+                htmlEntity: '&trade;',
+                htmlDecimal: '&#8482;',
+                htmlHex: '&#x2122;',
+                ascii: '(TM)'
+            },
+            '℗': {
+                name: 'Sound Recording',
+                unicode: 'U+2117',
+                htmlEntity: '(none)',
+                htmlDecimal: '&#8471;',
+                htmlHex: '&#x2117;',
+                ascii: '(P)'
+            },
+            '℠': {
+                name: 'Service Mark',
+                unicode: 'U+2120',
+                htmlEntity: '(none)',
+                htmlDecimal: '&#8480;',
+                htmlHex: '&#x2120;',
+                ascii: '(SM)'
+            },
+            // Reverse mappings
+            '(c)': '©',
+            '(C)': '©',
+            '(r)': '®',
+            '(R)': '®',
+            '(tm)': '™',
+            '(TM)': '™',
+            '(p)': '℗',
+            '(P)': '℗',
+            '(sm)': '℠',
+            '(SM)': '℠'
+        };
+
+        // Convert button
+        document.getElementById('convert-btn').addEventListener('click', convertText);
+        document.getElementById('input-text').addEventListener('input', debounce(convertText, 500));
+
+        function convertText() {
+            const input = document.getElementById('input-text').value;
+            const conversionType = document.querySelector('input[name="conversion"]:checked').value;
+            const resultsSection = document.getElementById('results-section');
+            const resultsContainer = document.getElementById('conversion-results');
+
+            if (!input.trim()) {
+                resultsSection.classList.add('hidden');
+                return;
+            }
+
+            let results = '';
+
+            if (conversionType === 'all') {
+                // Show all conversions for each symbol found
+                const symbols = Object.keys(conversions).filter(key => key.length === 1); // Only actual symbols
+                let foundSymbols = new Set();
+                
+                let convertedText = input;
+                symbols.forEach(symbol => {
+                    if (input.includes(symbol)) {
+                        foundSymbols.add(symbol);
+                    }
+                });
+
+                // Also check for ASCII equivalents
+                Object.keys(conversions).forEach(key => {
+                    if (key.length > 1 && input.includes(key)) {
+                        foundSymbols.add(conversions[key]);
+                    }
+                });
+
+                if (foundSymbols.size > 0) {
+                    results = '<div class="space-y-4">';
+                    foundSymbols.forEach(symbol => {
+                        const info = conversions[symbol];
+                        results += `
+                            <div class="border border-gray-200 rounded-lg p-6">
+                                <div class="flex items-center mb-4">
+                                    <span class="text-4xl mr-4">${symbol}</span>
+                                    <div>
+                                        <h4 class="text-lg font-semibold">${info.name}</h4>
+                                        <p class="text-gray-600">Click any format to copy</p>
+                                    </div>
+                                </div>
+                                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+                                    <button class="copy-result p-3 bg-gray-50 hover:bg-gray-100 rounded text-left transition-colors" data-copy="${symbol}">
+                                        <div class="text-xs text-gray-500 mb-1">Symbol</div>
+                                        <div class="font-mono">${symbol}</div>
+                                    </button>
+                                    <button class="copy-result p-3 bg-gray-50 hover:bg-gray-100 rounded text-left transition-colors" data-copy="${info.unicode}">
+                                        <div class="text-xs text-gray-500 mb-1">Unicode</div>
+                                        <div class="font-mono">${info.unicode}</div>
+                                    </button>
+                                    <button class="copy-result p-3 bg-gray-50 hover:bg-gray-100 rounded text-left transition-colors" data-copy="${info.htmlEntity}">
+                                        <div class="text-xs text-gray-500 mb-1">HTML Entity</div>
+                                        <div class="font-mono">${info.htmlEntity}</div>
+                                    </button>
+                                    <button class="copy-result p-3 bg-gray-50 hover:bg-gray-100 rounded text-left transition-colors" data-copy="${info.htmlDecimal}">
+                                        <div class="text-xs text-gray-500 mb-1">HTML Decimal</div>
+                                        <div class="font-mono">${info.htmlDecimal}</div>
+                                    </button>
+                                    <button class="copy-result p-3 bg-gray-50 hover:bg-gray-100 rounded text-left transition-colors" data-copy="${info.htmlHex}">
+                                        <div class="text-xs text-gray-500 mb-1">HTML Hex</div>
+                                        <div class="font-mono">${info.htmlHex}</div>
+                                    </button>
+                                    <button class="copy-result p-3 bg-gray-50 hover:bg-gray-100 rounded text-left transition-colors" data-copy="${info.ascii}">
+                                        <div class="text-xs text-gray-500 mb-1">ASCII</div>
+                                        <div class="font-mono">${info.ascii}</div>
+                                    </button>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    results += '</div>';
+                } else {
+                    results = '<p class="text-gray-500 text-center py-8">No copyright symbols found in your text.</p>';
+                }
+            } else {
+                // Convert to specific format
+                let convertedText = input;
+                
+                if (conversionType === 'unicode') {
+                    Object.keys(conversions).forEach(key => {
+                        if (key.length > 1) { // ASCII inputs
+                            convertedText = convertedText.replace(new RegExp(escapeRegExp(key), 'gi'), conversions[key]);
+                        }
+                    });
+                } else if (conversionType === 'html') {
+                    Object.keys(conversions).forEach(symbol => {
+                        if (conversions[symbol] && conversions[symbol].htmlEntity !== '(none)') {
+                            convertedText = convertedText.replace(new RegExp(escapeRegExp(symbol), 'g'), conversions[symbol].htmlEntity);
+                        }
+                    });
+                } else if (conversionType === 'ascii') {
+                    Object.keys(conversions).forEach(symbol => {
+                        if (symbol.length === 1 && conversions[symbol]) {
+                            convertedText = convertedText.replace(new RegExp(escapeRegExp(symbol), 'g'), conversions[symbol].ascii);
+                        }
+                    });
+                }
+
+                results = `
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <h4 class="text-lg font-semibold mb-4">Converted Text (${conversionType.toUpperCase()})</h4>
+                        <div class="bg-gray-50 rounded p-4 mb-4">
+                            <pre class="whitespace-pre-wrap">${convertedText}</pre>
+                        </div>
+                        <button class="copy-result bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg transition-colors" data-copy="${convertedText.replace(/"/g, '&quot;')}">
+                            Copy Converted Text
+                        </button>
+                    </div>
+                `;
+            }
+
+            resultsContainer.innerHTML = results;
+            resultsSection.classList.remove('hidden');
+
+            // Add copy functionality to results
+            document.querySelectorAll('.copy-result').forEach(btn => {
+                btn.addEventListener('click', () => copyToClipboard(btn.getAttribute('data-copy')));
+            });
+        }
+
+        // Quick copy buttons
+        document.querySelectorAll('.copy-quick').forEach(btn => {
+            btn.addEventListener('click', () => copyToClipboard(btn.getAttribute('data-copy')));
+        });
+
+        // Copy functionality
+        const toast = document.getElementById('toast');
+
+        function showToast() {
+            toast.classList.remove('translate-y-full');
+            setTimeout(() => {
+                toast.classList.add('translate-y-full');
+            }, 2000);
+        }
+
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                showToast();
+            } catch (err) {
+                // Fallback
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                showToast();
+            }
+        }
+
+        // Utility functions
+        function escapeRegExp(string) {
+            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+    </script>
+</body>
+</html>

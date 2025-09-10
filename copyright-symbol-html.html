@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copyright Symbol HTML Code - Complete Reference</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes confetti-fall {
+            0% { 
+                transform: translateY(0) rotateZ(0deg);
+                opacity: 1;
+            }
+            100% { 
+                transform: translateY(300px) rotateZ(720deg);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes confetti-scatter {
+            0% { 
+                transform: translate(0, 0) scale(1) rotate(0deg);
+                opacity: 1;
+            }
+            100% { 
+                transform: translate(var(--scatter-x), var(--scatter-y)) scale(0) rotate(540deg);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes sparkle {
+            0% { 
+                transform: translate(var(--sparkle-x), var(--sparkle-y)) scale(0) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                transform: translate(var(--sparkle-x), var(--sparkle-y)) scale(1) rotate(180deg);
+                opacity: 1;
+            }
+            100% { 
+                transform: translate(var(--sparkle-x), var(--sparkle-y)) scale(0) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #FFF;
+            border-radius: 50%;
+            animation: sparkle 1s ease-out forwards;
+            pointer-events: none;
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        
+        .confetti-square {
+            width: 100%;
+            height: 100%;
+            animation: confetti-fall 3s ease-out forwards;
+        }
+        
+        .confetti-circle {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            animation: confetti-scatter 2s ease-out forwards;
+        }
+        
+        .confetti-triangle {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            animation: confetti-scatter 2.5s ease-out forwards;
+        }
+        
+        .hero-pattern {
+            background-color: #ffffff;
+            background-image: none;
+        }
+    </style>
+</head>
+<body class="hero-pattern text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-sm shadow-sm border-b border-gray-200/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">© Symbol</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <!-- Guides Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-indigo-600 transition-colors font-medium flex items-center space-x-1 py-2">
+                            <span>Guides</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="copyright-symbol-mac.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on Mac</a>
+                                <a href="copyright-symbol-on-keyboard.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on Keyboard</a>
+                                <a href="copyright-symbol-iphone.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on iPhone</a>
+                                <a href="copyright-symbol-in-word.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol in Word</a>
+                                <a href="copyright-symbol-on-mac-keyboard.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol on Mac Keyboard</a>
+                                <a href="Copyright-Symbol-Comparison.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Copyright Symbol Comparison</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Home</a>
+                    <a href="generator.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Copyright Generator</a>
+                    <a href="codes.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Unicode / HTML Codes</a>
+                    <a href="icons.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">PNG / SVG Icons</a>
+                    <a href="copyright-symbol-html.html" class="text-indigo-600 font-semibold">HTML Symbol Reference</a>
+                    <a href="copyright-symbol-text.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Text Art Generator</a>
+                    <a href="about.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">About Us</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-indigo-600 transition-colors font-medium">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-700 hover:text-indigo-600 hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">Home</a>
+                <a href="generator.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">Copyright Generator</a>
+                <a href="codes.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">Unicode / HTML Codes</a>
+                <a href="icons.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">PNG / SVG Icons</a>
+                <!-- Guides Mobile -->
+                <div class="px-3 py-2">
+                    <div class="text-gray-700 font-medium mb-2">Guides</div>
+                    <div class="ml-4 space-y-1">
+                        <a href="copyright-symbol-mac.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on Mac</a>
+                        <a href="copyright-symbol-on-keyboard.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on Keyboard</a>
+                        <a href="copyright-symbol-iphone.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on iPhone</a>
+                        <a href="copyright-symbol-in-word.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol in Word</a>
+                        <a href="copyright-symbol-on-mac-keyboard.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol on Mac Keyboard</a>
+                        <a href="Copyright-Symbol-Comparison.html" class="block px-3 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors text-sm">Copyright Symbol Comparison</a>
+                    </div>
+                </div>
+                <a href="copyright-symbol-html.html" class="block px-3 py-2 text-indigo-600 font-semibold bg-indigo-50 rounded-md">HTML Symbol Reference</a>
+                <a href="copyright-symbol-text.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">Text Art Generator</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">About Us</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 rounded-md transition-colors font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-indigo-50 to-purple-50 text-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex items-center justify-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-indigo-600 text-2xl font-bold">⌨</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">HTML Symbol Reference</h1>
+            </div>
+            <p class="text-xl text-gray-700 max-w-2xl mx-auto">
+                Complete guide to using copyright symbols in HTML with entity codes, examples, and best practices
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <!-- HTML Entity Codes Table -->
+        <section class="mb-16 bg-white rounded-xl shadow-md p-8 border border-gray-100">
+            <div class="flex items-center mb-6">
+                <div class="w-12 h-12 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-lg flex items-center justify-center mr-4">
+                    <span class="text-indigo-600 text-xl font-bold">©</span>
+                </div>
+                <h2 class="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">HTML Entity Codes</h2>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b border-gray-200">
+                            <th class="text-left py-3 px-4 font-semibold text-gray-700">Symbol</th>
+                            <th class="text-left py-3 px-4 font-semibold text-gray-700">Name</th>
+                            <th class="text-left py-3 px-4 font-semibold text-gray-700">Named Entity</th>
+                            <th class="text-left py-3 px-4 font-semibold text-gray-700">Decimal</th>
+                            <th class="text-left py-3 px-4 font-semibold text-gray-700">Hexadecimal</th>
+                            <th class="text-left py-3 px-4 font-semibold text-gray-700">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-4 px-4 text-2xl">©</td>
+                            <td class="py-4 px-4 font-medium text-gray-900">Copyright Sign</td>
+                            <td class="py-4 px-4"><code class="bg-gray-100 px-2 py-1 rounded text-sm">&copy;</code></td>
+                            <td class="py-4 px-4"><code class="bg-gray-100 px-2 py-1 rounded text-sm">&#169;</code></td>
+                            <td class="py-4 px-4"><code class="bg-gray-100 px-2 py-1 rounded text-sm">&#xA9;</code></td>
+                            <td class="py-4 px-4">
+                                <button class="copy-html-btn bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all shadow-sm hover:shadow-md" data-code="&copy;">
+                                    Copy Code
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-4 px-4 text-2xl">®</td>
+                            <td class="py-4 px-4 font-medium text-gray-900">Registered Sign</td>
+                            <td class="py-4 px-4"><code class="bg-gray-100 px-2 py-1 rounded text-sm">&reg;</code></td>
+                            <td class="py-4 px-4"><code class="bg-gray-100 px-2 py-1 rounded text-sm">&#174;</code></td>
+                            <td class="py-4 px-4"><code class="bg-gray-100 px-2 py-1 rounded text-sm">&#xAE;</code></td>
+                            <td class="py-4 px-4">
+                                <button class="copy-html-btn bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all shadow-sm hover:shadow-md" data-code="&reg;">
+                                    Copy Code
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-4 px-4 text-2xl">™</td>
+                            <td class="py-4 px-4 font-medium text-gray-900">Trademark Sign</td>
+                            <td class="py-4 px-4"><code class="bg-gray-100 px-2 py-1 rounded text-sm">&trade;</code></td>
+                            <td class="py-4 px-4"><code class="bg-gray-100 px-2 py-1 rounded text-sm">&#8482;</code></td>
+                            <td class="py-4 px-4"><code class="bg-gray-100 px-2 py-1 rounded text-sm">&#x2122;</code></td>
+                            <td class="py-4 px-4">
+                                <button class="copy-html-btn bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all shadow-sm hover:shadow-md" data-code="&trade;">
+                                    Copy Code
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50">
+                            <td class="py-4 px-4 text-2xl">℗</td>
+                            <td class="py-4 px-4 font-medium text-gray-900">Sound Recording Copyright</td>
+                            <td class="py-4 px-4"><code class="bg-gray-100 px-2 py-1 rounded text-sm">None</code></td>
+                            <td class="py-4 px-4"><code class="bg-gray-100 px-2 py-1 rounded text-sm">&#8471;</code></td>
+                            <td class="py-4 px-4"><code class="bg-gray-100 px-2 py-1 rounded text-sm">&#x2117;</code></td>
+                            <td class="py-4 px-4">
+                                <button class="copy-html-btn bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all shadow-sm hover:shadow-md" data-code="&#8471;">
+                                    Copy Code
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-4 text-2xl">℠</td>
+                            <td class="py-4 px-4 font-medium text-gray-900">Service Mark</td>
+                            <td class="py-4 px-4"><code class="bg-gray-100 px-2 py-1 rounded text-sm">None</code></td>
+                            <td class="py-4 px-4"><code class="bg-gray-100 px-2 py-1 rounded text-sm">&#8480;</code></td>
+                            <td class="py-4 px-4"><code class="bg-gray-100 px-2 py-1 rounded text-sm">&#x2120;</code></td>
+                            <td class="py-4 px-4">
+                                <button class="copy-html-btn bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all shadow-sm hover:shadow-md" data-code="&#8480;">
+                                    Copy Code
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Usage Examples -->
+        <section class="mb-16 bg-white rounded-xl shadow-md p-8 border border-gray-100">
+            <div class="flex items-center mb-6">
+                <div class="w-12 h-12 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-lg flex items-center justify-center mr-4">
+                    <span class="text-indigo-600 text-xl font-bold">💡</span>
+                </div>
+                <h2 class="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Usage Examples</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900">Basic HTML Usage</h3>
+                    <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>&lt;p&gt;© 2024 Your Company Name. All rights reserved.&lt;/p&gt;</code></pre>
+                    <p class="mt-4 text-gray-700">Result: <p class="inline">© 2024 Your Company Name. All rights reserved.</p></p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900">Footer Copyright Notice</h3>
+                    <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>&lt;footer&gt;
+  &lt;p&gt;&copy; 2024 Your Website. 
+  &lt;a href="/privacy"&gt;Privacy Policy&lt;/a&gt; | 
+  &lt;a href="/terms"&gt;Terms of Service&lt;/a&gt;&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+                </div>
+                
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900">With Link</h3>
+                    <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>&lt;p&gt;Content &copy; 2024 &lt;a href="#"&gt;Author Name&lt;/a&gt;&lt;/p&gt;</code></pre>
+                    <p class="mt-4 text-gray-700">Result: <p class="inline">Content © 2024 <a href="#" class="text-indigo-600 hover:underline">Author Name</a></p></p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900">Multiple Symbols</h3>
+                    <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>&lt;p&gt;&reg; MyBrand&trade; is a &copy; 2024 
+MyCompany product.&lt;/p&gt;</code></pre>
+                    <p class="mt-4 text-gray-700">Result: <p class="inline">® MyBrand™ is a © 2024 MyCompany product.</p></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Practices -->
+        <section class="mb-16 bg-white rounded-xl shadow-md p-8 border border-gray-100">
+            <div class="flex items-center mb-6">
+                <div class="w-12 h-12 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-lg flex items-center justify-center mr-4">
+                    <span class="text-indigo-600 text-xl font-bold">✓</span>
+                </div>
+                <h2 class="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Best Practices</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100">
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">1. Use Named Entities When Possible</h3>
+                    <p class="text-gray-700">Named entities like <code class="bg-gray-200 px-1 rounded">&copy;</code> are more readable than numeric codes like <code class="bg-gray-200 px-1 rounded">&#169;</code>.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100">
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">2. Include Year and Owner</h3>
+                    <p class="text-gray-700">Always include the year and copyright owner name: <code class="bg-gray-200 px-1 rounded">&copy; 2024 Your Name</code>.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100">
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">3. Place in Footer</h3>
+                    <p class="text-gray-700">Copyright notices are typically placed in the website footer or at the bottom of content pages.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100">
+                    <h3 class="text-lg font-semibold mb-2 text-gray-900">4. Update Yearly</h3>
+                    <p class="text-gray-700">Remember to update the copyright year annually, or use a dynamic method like JavaScript or server-side code.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CSS Content Property -->
+        <section class="bg-white rounded-xl shadow-md p-8 border border-gray-100">
+            <div class="flex items-center mb-6">
+                <div class="w-12 h-12 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-lg flex items-center justify-center mr-4">
+                    <span class="text-indigo-600 text-xl font-bold">🎨</span>
+                </div>
+                <h2 class="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">CSS Content Property</h2>
+            </div>
+            
+            <p class="text-gray-700 mb-6">You can also add copyright symbols using CSS pseudo-elements:</p>
+            
+            <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-100">
+                <h3 class="text-lg font-semibold mb-4 text-gray-900">CSS Example</h3>
+                <pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto"><code>.copyright::before {
+  content: "\\00A9";  /* Unicode for copyright symbol */
+  margin-right: 0.5em;
+}
+
+.copyright::after {
+  content: " " attr(data-year) " " attr(data-owner);
+}</code></pre>
+                <p class="mt-4 text-gray-700">HTML: <code class="bg-gray-200 px-1 rounded">&lt;span class="copyright" data-year="2024" data-owner="Your Company"&gt;&lt;/span&gt;</code></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-gray-900 to-indigo-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-t border-indigo-800 pt-8 text-center">
+                <p class="text-gray-400">© 2024 CopyrightSymbol.app. All rights reserved.</p>
+                <p class="text-gray-500 text-sm mt-2">Made with 💜 for creators worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Copy functionality for HTML codes
+        const copyHtmlBtns = document.querySelectorAll('.copy-html-btn');
+        
+        copyHtmlBtns.forEach(btn => {
+            btn.addEventListener('click', async (e) => {
+                const code = btn.getAttribute('data-code');
+                const originalText = btn.textContent;
+                
+                try {
+                    await navigator.clipboard.writeText(code);
+                    
+                    // Show success feedback
+                    btn.textContent = 'Copied!';
+                    btn.classList.add('bg-emerald-500', 'hover:bg-emerald-600');
+                    btn.classList.remove('from-rose-500', 'to-pink-500', 'hover:from-rose-600', 'hover:to-pink-600');
+                    
+                    // Create mini fireworks effect
+                    const rect = btn.getBoundingClientRect();
+                    const x = rect.left + rect.width / 2;
+                    const y = rect.top + rect.height / 2;
+                    
+                    createMiniFireworks(x, y);
+                    createConfettiBurst(x, y, true);
+                    
+                    // Reset button after 2 seconds
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.classList.remove('bg-emerald-500', 'hover:bg-emerald-600');
+                        btn.classList.add('from-rose-500', 'to-pink-500', 'hover:from-rose-600', 'hover:to-pink-600');
+                    }, 2000);
+                    
+                } catch (err) {
+                    // Fallback for older browsers
+                    const textArea = document.createElement('textarea');
+                    textArea.value = code;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    
+                    btn.textContent = 'Copied!';
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                    }, 2000);
+                }
+            });
+        });
+
+        function createMiniFireworks(x, y) {
+            // Create a smaller version of fireworks for symbol buttons
+            const colors = ['#EC4899', '#F472B6'];
+            
+            for (let i = 0; i < 8; i++) {
+                setTimeout(() => {
+                    const sparkle = document.createElement('div');
+                    sparkle.className = 'sparkle';
+                    sparkle.style.left = (x + (Math.random() - 0.5) * 60) + 'px';
+                    sparkle.style.top = (y + (Math.random() - 0.5) * 60) + 'px';
+                    
+                    const sparkleDistance = 20 + Math.random() * 30;
+                    const sparkleAngle = Math.random() * Math.PI * 2;
+                    const sparkleX = Math.cos(sparkleAngle) * sparkleDistance;
+                    const sparkleY = Math.sin(sparkleAngle) * sparkleDistance;
+                    
+                    sparkle.style.setProperty('--sparkle-x', sparkleX + 'px');
+                    sparkle.style.setProperty('--sparkle-y', sparkleY + 'px');
+                    
+                    document.body.appendChild(sparkle);
+                    
+                    setTimeout(() => {
+                        sparkle.remove();
+                    }, 1000);
+                }, i * 50);
+            }
+        }
+        
+        function createConfettiBurst(x, y, isMini = false) {
+            const colors = ['#EC4899', '#F472B6', '#F9A8D4', '#8B5CF6', '#6366F1', '#A78BFA', '#C084FC'];
+            const confettiCount = isMini ? 15 : 30;
+            
+            for (let i = 0; i < confettiCount; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = x + 'px';
+                    confetti.style.top = y + 'px';
+                    
+                    const color = colors[Math.floor(Math.random() * colors.length)];
+                    const shape = Math.random();
+                    
+                    if (shape < 0.33) {
+                        // Square
+                        const square = document.createElement('div');
+                        square.className = 'confetti-square';
+                        square.style.backgroundColor = color;
+                        confetti.appendChild(square);
+                    } else if (shape < 0.66) {
+                        // Circle
+                        const circle = document.createElement('div');
+                        circle.className = 'confetti-circle';
+                        circle.style.backgroundColor = color;
+                        confetti.appendChild(circle);
+                    } else {
+                        // Triangle
+                        const triangle = document.createElement('div');
+                        triangle.className = 'confetti-triangle';
+                        triangle.style.borderBottomColor = color;
+                        confetti.appendChild(triangle);
+                    }
+                    
+                    // Random scatter direction
+                    const scatterX = (Math.random() - 0.5) * (isMini ? 100 : 200);
+                    const scatterY = (Math.random() - 0.5) * (isMini ? 100 : 200) - 50;
+                    confetti.style.setProperty('--scatter-x', scatterX + 'px');
+                    confetti.style.setProperty('--scatter-y', scatterY + 'px');
+                    
+                    // Random rotation
+                    confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+                    
+                    document.body.appendChild(confetti);
+                    
+                    // Remove after animation
+                    setTimeout(() => {
+                        confetti.remove();
+                    }, isMini ? 2000 : 3000);
+                }, i * (isMini ? 20 : 30));
+            }
+        }
+    </script>
+</body>
+</html>
