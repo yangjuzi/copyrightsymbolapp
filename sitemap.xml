@@ -119,7 +119,7 @@
     <url>
         <loc>https://copyrightsymbol.app/about.html</loc>
         <lastmod>2025-01-09</lastmod>
-        <changefreq>quarterly</changefreq>
+        <changefreq>yearly</changefreq>
         <priority>0.6</priority>
     </url>
     
@@ -127,7 +127,7 @@
     <url>
         <loc>https://copyrightsymbol.app/contact.html</loc>
         <lastmod>2025-01-09</lastmod>
-        <changefreq>quarterly</changefreq>
+        <changefreq>yearly</changefreq>
         <priority>0.6</priority>
     </url>
     
