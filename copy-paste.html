@@ -747,7 +747,7 @@
         </div>
 
         <!-- Success Message -->
-        <div id="success-toast" class="fixed bottom-8 right-8 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-full transition-transform duration-300 z-50">
+        <div id="success-toast" class="fixed bottom-8 right-8 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-full transition-transform duration-300 z-50 opacity-0">
             <div class="flex items-center">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
@@ -841,66 +841,69 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Toast notification
-        const toast = document.getElementById('success-toast');
-        const toastMessage = document.getElementById('toast-message');
+       // Toast notification
+const toast = document.getElementById('success-toast');
+const toastMessage = document.getElementById('toast-message');
 
-        function showToast(message) {
-            toastMessage.textContent = message;
-            toast.classList.remove('translate-y-full');
+// Ensure the toast is only shown when copying is successful, not on page load
+function showToast(message) {
+    toastMessage.textContent = message;
+    toast.classList.remove('translate-y-full');
+    setTimeout(() => {
+        toast.classList.add('translate-y-full');
+    }, 2000);
+}
+
+// Copy functionality
+document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+        const symbol = btn.getAttribute('data-symbol');
+        const originalText = btn.textContent;
+        
+        try {
+            await navigator.clipboard.writeText(symbol);
+            
+            // Visual feedback
+            btn.classList.add('copy-success');
+            btn.textContent = 'Copied!';
+            btn.classList.add('bg-green-600');
+            btn.classList.remove('bg-indigo-600', 'bg-blue-600', 'bg-green-600', 'bg-purple-600');
+            
+            showToast(`Copied ${symbol} to clipboard!`);
+            
+            // Reset button
             setTimeout(() => {
-                toast.classList.add('translate-y-full');
-            }, 2000);
-        }
-
-        // Copy functionality
-        document.querySelectorAll('.copy-btn').forEach(btn => {
-            btn.addEventListener('click', async () => {
-                const symbol = btn.getAttribute('data-symbol');
-                const originalText = btn.textContent;
+                btn.textContent = originalText;
+                btn.classList.remove('copy-success', 'bg-green-600');
                 
-                try {
-                    await navigator.clipboard.writeText(symbol);
-                    
-                    // Visual feedback
-                    btn.classList.add('copy-success');
-                    btn.textContent = 'Copied!';
-                    btn.classList.add('bg-green-600');
-                    btn.classList.remove('bg-indigo-600', 'bg-blue-600', 'bg-green-600', 'bg-purple-600');
-                    
-                    showToast(`Copied ${symbol} to clipboard!`);
-                    
-                    // Reset button
-                    setTimeout(() => {
-                        btn.textContent = originalText;
-                        btn.classList.remove('copy-success', 'bg-green-600');
-                        
-                        // Restore original color
-                        if (symbol === '©') btn.classList.add('bg-indigo-600');
-                        else if (symbol === '®') btn.classList.add('bg-green-600');
-                        else if (symbol === '™') btn.classList.add('bg-blue-600');
-                        else if (symbol === '℗') btn.classList.add('bg-purple-600');
-                    }, 1500);
-                    
-                } catch (err) {
-                    // Fallback
-                    const textArea = document.createElement('textarea');
-                    textArea.value = symbol;
-                    document.body.appendChild(textArea);
-                    textArea.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(textArea);
-                    
-                    btn.textContent = 'Copied!';
-                    setTimeout(() => {
-                        btn.textContent = originalText;
-                    }, 1500);
-                    
-                    showToast('Copied to clipboard!');
-                }
-            });
-        });
+                // Restore original color
+                if (symbol === '©') btn.classList.add('bg-indigo-600');
+                else if (symbol === '®') btn.classList.add('bg-green-600');
+                else if (symbol === '™') btn.classList.add('bg-blue-600');
+                else if (symbol === '℗') btn.classList.add('bg-purple-600');
+            }, 1500);
+            
+        } catch (err) {
+            // Fallback
+            const textArea = document.createElement('textarea');
+            textArea.value = symbol;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            
+            btn.textContent = 'Copied!';
+            setTimeout(() => {
+                btn.textContent = originalText;
+            }, 1500);
+            
+            showToast('Copied to clipboard!');
+        }
+    });
+});
 
+
+        
         // Copy all functionality
         document.getElementById('copy-all-btn').addEventListener('click', async () => {
             const allSymbols = '© ® ™ ℗';
